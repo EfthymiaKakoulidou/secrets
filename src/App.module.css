@@ -4,34 +4,58 @@
     min-height: 100vh;
     color: antiquewhite;
   }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  a {
-    color: antiquewhite;
-    transition: color ease-in-out 0.3s;
-  }
-  
-  a:hover {
-    text-decoration: none;
-  }
-  
-  a:hover i {
-    color: rgb(254, 218, 171);
-    transition: color ease-in-out 0.3s;
-  }
-  
-  i {
-    color:antiquewhite;
-    font-size: 1.6rem;
-    padding: 7px;
-    vertical-align: middle;
-  }
-  
-  i:hover {
-    cursor: pointer;
-    transition: color ease-in-out 0.3s;
-    color: rgb(254, 218, 171);
-  }
+
+.Content {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #dadadf;
+}
+
+.FillerImage {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.Image {
+  max-height: 40vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+
+* {
+box-sizing: border-box;
+}
+
+.Main {
+    padding-top: 81px;
+}
+
+a {
+color: antiquewhite;
+transition: color ease-in-out 0.3s;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+a:hover i {
+color: rgb(254, 218, 171);
+transition: color ease-in-out 0.3s;
+}
+
+i {
+color:antiquewhite;
+font-size: 1.6rem;
+padding: 7px;
+vertical-align: middle;
+}
+
+i:hover {
+cursor: pointer;
+transition: color ease-in-out 0.3s;
+color: rgb(254, 218, 171);
+}
