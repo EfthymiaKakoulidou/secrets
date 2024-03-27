@@ -1,0 +1,10 @@
+.NavBar {
+    background-color: black;
+    border: 1px solid antiquewhite;
+    color: antiquewhite;
+}
+
+.NavLink {
+    background-color: black;
+    color: antiquewhite;
+}
