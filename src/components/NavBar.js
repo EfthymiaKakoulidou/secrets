@@ -18,7 +18,7 @@ const NavBar = () => {
         <i className='fas fa-home'/>Home</NavLink>
       <NavLink to='signin' className={styles.NavLink}
       activeClassName={styles.Active}>
-      <i class="fa-solid fa-right-to-bracket"/>Sign In</NavLink>
+      <i className="fa-solid fa-right-to-bracket"/>Sign In</NavLink>
       <NavLink to='signup' className={styles.NavLink}
       activeClassName={styles.Active}>
         <i className='fas fa-user-plus'/>Sign Up</NavLink>

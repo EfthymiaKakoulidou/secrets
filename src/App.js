@@ -3,7 +3,7 @@ import styles from './App.module.css';
 import Container from 'react-bootstrap/Container';
 import {Route,Switch} from 'react-router-dom';
 import './api/axiosDefault';
-import SignInUpForm from './pages/auth/SignUpForm';
+import SignUpForm from './pages/auth/SignUpForm';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Switch>
         <Route exact path='/' render={() => <h1>Home Page</h1>} />
         <Route exact path='/signin' render={() => <h1>Sign In</h1>} />
-        <Route exact path='/signup' render={() => <SignInUpForm/>} />
+        <Route exact path='/signup' render={() => <SignUpForm/>} />
         <Route render={() => <h1>Page Not Found</h1>} />
         </Switch>
       </Container>
