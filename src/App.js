@@ -3,7 +3,7 @@ import styles from './App.module.css';
 import Container from 'react-bootstrap/Container';
 import {Route,Switch} from 'react-router-dom';
 import './api/axiosDefault';
-import SignInUpForm from './pages/auth/SignInUpForm';
+import SignInUpForm from './pages/auth/SignUpForm';
 
 function App() {
   return (
