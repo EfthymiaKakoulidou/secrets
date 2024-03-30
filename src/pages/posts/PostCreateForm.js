@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -12,7 +12,7 @@ import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import Asset from "../../components/Asset";
-import { Image } from "react-bootstrap";
+import { Alert, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -47,46 +47,57 @@ function PostCreateForm() {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        const formData = new FormData();
-    
-        formData.append("title", title);
-        formData.append("content", content);
-        formData.append("image", imageInput.current.files[0]);
-    
-        try {
-          const { data } = await axiosReq.post("/seecrets/", formData);
-          history.push(`/posts/${data.id}`);
-        } catch (err) {
-          console.log(err);
-          if (err.response?.status !== 401) {
-            setErrors(err.response?.data);
-          }
+      event.preventDefault();
+      const formData = new FormData();
+  
+      formData.append("title", title);
+      formData.append("content", content);
+      formData.append("image", imageInput.current.files[0]);
+  
+      try {
+        const { data } = await axiosReq.post("/seecrets/", formData);
+        history.push(`/seecrets/${data.id}`);
+      } catch (err) {
+        console.log(err);
+        if (err.response?.status !== 401) {
+          setErrors(err.response?.data);
         }
-      };
-    
+      }
+    };
 
-  const textFields = (
-    <div className="text-center">
-      <Form.Group>
-        <Form.Label>Title</Form.Label>
-        <Form.Control
-          type="text"
-          name="title"
-          value={title}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Content</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows={6}
-          name="content"
-          value={content}
-          onChange={handleChange}
-        />
-      </Form.Group>
+    const textFields = (
+      <div className="text-center">
+        <Form.Group>
+          <Form.Label>Title</Form.Label>
+          <Form.Control
+            type="text"
+            name="title"
+            value={title}
+            onChange={handleChange}
+          />
+        </Form.Group>
+        {errors?.title?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
+  
+        <Form.Group>
+          <Form.Label>Content</Form.Label>
+          <Form.Control
+            as="textarea"
+            rows={6}
+            name="content"
+            value={content}
+            onChange={handleChange}
+          />
+        </Form.Group>
+        {errors?.content?.map((message, idx) => (
+          <Alert variant="warning" key={idx}>
+            {message}
+          </Alert>
+        ))}
+  
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => {}}
