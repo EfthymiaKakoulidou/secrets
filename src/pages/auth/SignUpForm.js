@@ -12,7 +12,7 @@ import {
   Col,
   Row,
   Container,
-  Alert
+  Alert,
 } from "react-bootstrap";
 import axios from "axios";
 
@@ -20,7 +20,7 @@ const SignUpForm = () => {
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
-    password2: ""
+    password2: "",
   });
   const { username, password1, password2 } = signUpData;
 
