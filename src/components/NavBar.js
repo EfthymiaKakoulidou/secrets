@@ -25,7 +25,7 @@ const NavBar = () => {
 
   const addPostIcon = (
       <NavLink
-        to="/seecrets/create"
+        to="/secrets/create"
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
