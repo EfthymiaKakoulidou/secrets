@@ -11,16 +11,16 @@ import Post from "./Post";
 
 function PostPage() {
     const { id } = useParams();
-    const [post, setPost] = useState({ results: [] });
+    const [seecret, setSeecret] = useState({ results: [] });
 
     useEffect(() => {
         const handleMount = async () => {
           try {
-            const [{ data: post }] = await Promise.all([
+            const [{ data: seecret }] = await Promise.all([
               axiosReq.get(`/seecrets/${id}`),
             ]);
-            setPost({ results: [post] });
-            console.log(post);
+            setSeecret({ results: [seecret] });
+            console.log(seecret);
           } catch (err) {
             console.log(err);
           }
@@ -33,7 +33,7 @@ function PostPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-      <Post {...post.results[0]} setPosts={setPost} postPage />
+      <Post {...seecret.results[0]} setSeecrets={setSeecret} postPage />
         <p>Post component</p>
         <Container className={appStyles.Content}>
           Comments

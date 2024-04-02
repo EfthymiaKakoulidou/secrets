@@ -21,9 +21,9 @@ function App() {
           <NavBar />
           <Container className={styles.Main}>
             <Switch>
-              <Route exact path="/" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
-              
-              <Route exact path="/hugs" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword or hug somebody' filter={`hugs__owner__profile=${profile_id}&ordering=-hugs__created_at&`}/> )}/>
+              <Route exact path="/" render= {() => ( <h1>Home</h1> )}/>
+              <Route exact path="/seecrets" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
+              <Route exact path="/hugged" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword or hug somebody' filter={`hugs__owner__profile=${profile_id}&ordering=-hugs__created_at&`}/> )}/>
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/seecrets/create" render={() => <PostCreateForm />} />
