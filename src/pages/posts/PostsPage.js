@@ -15,29 +15,47 @@ function PostsPage({ message, filter = "" }) {
   const [seecrets, setSeecrets] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const fetchSeecrets = async () => {
       try {
-        const { data } = await axiosReq.get(`/seecrets`);
+        const { data } = await axiosReq.get(`/seecrets/?search=${query}`);
         console.log("Seecrets API response:", data); // Log response for debugging
         setSeecrets(data);
-        setHasLoaded(true);
+        setHasLoaded(false);
       } catch (err) {
-        console.error("Error fetching seecrets:", err); // Log error for debugging
-        // Handle error here, e.g., display error message to the user
+        console.log(err);
       }
     };
 
-    console.log("Fetching seecrets..."); // Log message for debugging
-    setHasLoaded(false);
-    fetchSeecrets();
-  }, [filter, pathname]);
+        const timer = setTimeout(() => {
+          fetchSeecrets();
+        }, 1000);
+
+        return () => {
+          clearTimeout(timer);
+        };
+        }, [filter, query, pathname]);
 
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles mobile</p>
+        <i className={`fas fa-search ${styles.SearchIcon}`} />
+        <Form
+          className={styles.SearchBar}
+          onSubmit={(event) => event.preventDefault()}
+        >
+          <Form.Control
+           value={query}
+           onChange={(event) => setQuery(event.target.value)}
+            type="text"
+            className="mr-sm-2"
+            placeholder="Search posts"
+          />
+        </Form>
+
         {hasLoaded ? (
           <>
             {seecrets.results && seecrets.results.length ? (
