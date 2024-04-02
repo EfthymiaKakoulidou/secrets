@@ -22,7 +22,7 @@ function App() {
           <Container className={styles.Main}>
             <Switch>
               <Route exact path="/" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
-              <Route exact path="/feed" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
+              
               <Route exact path="/hugs" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword or hug somebody' filter={`hugs__owner__profile=${profile_id}&ordering=-hugs__created_at&`}/> )}/>
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
