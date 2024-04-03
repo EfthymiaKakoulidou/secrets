@@ -4,25 +4,10 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
-!! IMPORTANT !! RE: Table of Contents
+Sometimes it is easier to tell your secrets to the world than to people you know. Sometimes you feel the need to just get stuff out of your chest. Sometimes you need to know that you are not alone and that there are other people with similar secrets going through the the same stuff. Sometimes it helps to just write stuff down. 
+The 'Secrets' app is a place where people can share their secrets and get support from other users in the form of comments or private messages. The users can read other peoples' secrets and the comments they got so that they can relate to them and feel less alone. The Diary is a place where the user can write his/hers thoughts and secrets and nobody else has access to it.
 
-DO NOT add a Table of Contents to your README or TESTING!!
-These are outdated since 2021 when GitHub added them built-in to Markdown files automatically.
-
-Assessors see this as bad practice since it's outdated for a few years now,
-as if you've taken it from someone else's project that did the same thing.
-
----
-
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
-
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
 
 Consider adding a mockup image using the "Am I Responsive" website.
 Here's your deployed site as an example:
@@ -66,7 +51,6 @@ You'll have to commit/push the changes to GitHub to see it in action.
 
 Source: https://github.com/orgs/community/discussions/16925
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ![screenshot](documentation/mockup.png)
 
