@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"; 
 import Post from "./Post";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 
-function SeecretList() {
+function SeecretList( message, filter = "" ) {
   const [seecrets, setSeecrets] = useState([]);
+  const { pathname } = useLocation();
+
 
   useEffect(() => {
     
     const fetchSeecrets = async () => {
       try {
-        const response = await axios.get("/seecrets"); 
+        const response = await axios.get("/seecrets/"); 
         setSeecrets(response.data); 
       } catch (error) {
         console.error("Error fetching seecrets:", error);
@@ -17,9 +20,10 @@ function SeecretList() {
     };
 
     fetchSeecrets();
-  }, []); // Empty dependency array to run the effect only once when the component mounts
+  }, [filter, pathname]); 
 
   return (
+    
     <div>
       <h2>Seecret List</h2>
       {seecrets.map((seecret) => (
