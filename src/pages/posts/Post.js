@@ -44,7 +44,7 @@ const Post = (props) => {
 
   const handleLike = async () => {
     try {
-      const { data } = await axiosRes.seecret("/hugs/", { seecret: id });
+      const { data } = await axiosRes.post("/hugs/", { seecret: id });
       setSeecrets((prevSeecrets) => ({
         ...prevSeecrets,
         results: prevSeecrets.results.map((seecret) => {
