@@ -219,19 +219,25 @@ etc.
 < summary > Click here to see the Desktop Wireframes < / summary >
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![screenshot](documentation/wireframes/desktop-home1.png)
 
-About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+Home when logged in
+  - ![screenshot](documentation/wireframes/desktop-home2.png)
 
-Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+My Secrets
+  - ![screenshot](documentation/wireframes/desktop-mysecrets.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+Messages
+  - ![screenshot](documentation/wireframes/desktop-messages.png)
 
-etc.
-  - repeat for any remaining desktop wireframes
+My Diary
+  - ![screenshot](documentation/wireframes/desktop-mydiary.png)
+
+Admins blog
+  - ![screenshot](documentation/wireframes/desktop-blog.png)
+
+Profiles
+  - ![screenshot](documentation/wireframes/desktop-profiles.png)
 
 < / details >
 
