@@ -243,48 +243,62 @@ Profiles
 
 ## Features
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ### Existing Features
 
-- **YOUR-TITLE-FOR-FEATURE-#1**
+- **Logo**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - At the top left of the page there is the logo of the site and its name 'Secrets' which the user can click and be redirected to the home page.
 
 ![screenshot](documentation/features/feature01.png)
 
-- **YOUR-TITLE-FOR-FEATURE-#2**
+- **Sign in/Sign Up/Login**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - At the top right of the page the user can be informed if he/she is logged in or not. In the case the user does not have an account he/she can sign up.
 
 ![screenshot](documentation/features/feature02.png)
 
-- **YOUR-TITLE-FOR-FEATURE-#3**
+- **Side Navbar**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The side Navbar is the navigation tool of the user. There the user can find all the content of the page.
 
 ![screenshot](documentation/features/feature03.png)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
+- **Home**
 
-Repeat as necessary for as many features as your site contains.
+    - The home page had all the secrets all the users have added to the site.
 
-Hint: the more, the merrier!
+![screenshot](documentation/features/feature04.png)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+- **My Secrets**
+
+    - On this page the user can see the secrets he/she has added themselves.
+
+![screenshot](documentation/features/feature05.png)
+
+- **My Messages**
+
+    - If the user has reached out to somebody or somebody has reached out to the user then their messages will appear on this page.
+
+![screenshot](documentation/features/feature04.png)
+
+- **My Diary**
+
+    - Here the user can write anything that just he/she will have access to. Previous entries to the diary will also appear on this page.
+
+![screenshot](documentation/features/feature05.png)
+
+- **Admins Blog**
+
+    - On this page the administrator can make blogposts that are relavant to the subject of the site such as articles etc.
+
+![screenshot](documentation/features/feature06.png)
+
+- **Profiles**
+
+    - This page gathers all of the users' profiles. If the user clicks on the avatar of a profile then he/she can see the secrets he/she have shared.
+
+![screenshot](documentation/features/feature07.png)
 
 ### Future Features
 
