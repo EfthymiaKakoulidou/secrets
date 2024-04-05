@@ -302,21 +302,17 @@ Profiles
 
 ### Future Features
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
+- Professional help
+    - I think that it would be helpful if the users get professional help through the site. In the future an authentication of documents can be added so that professionals can submit their degrees be authenticated and then provide their help to the users.
+- Confirm you are over 18
+    - I imagine that the content of this site is going to include entries for adults so some kind of protection for the kids would be useful.
+- User connections
+    - 'Secrets' goal is not popularity so the follow function is not relevant here. The users are connected to each other through comments, hugs and 'reach out' which works like private messages. Maybe in the future some feature could be added to connect profiles between them so that a community can be created.
+- Categories
+    - Already now the secrets of the users are categorized but I imagine that in the future would be helpful to see more categories.
+- Different levels of security
+    - In the future a feature to give permission to a group of people or selected individuals could be implemented. This can provide to the user the choice of his/hers audience so that he/she can choose the people he/she want to open up to.
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#1
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#2
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#3
-    - Any additional notes about this feature.
 
 ## Tools & Technologies Used
 
