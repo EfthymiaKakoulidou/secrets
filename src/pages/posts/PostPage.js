@@ -41,13 +41,13 @@ function PostPage() {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
       <Post {...seecret.results[0]} setSeecrets={setSeecret} postPage />
-        <p>Post component</p>
+        
         <Container className={appStyles.Content}>
           {currentUser ? (
         <CommentCreateForm
         profile_id={currentUser.profile_id}
         profileImage={profile_image}
-        post={id}
+        seecretid={id}
         setSeecret={setSeecret}
         setComments={setComments}
         />
