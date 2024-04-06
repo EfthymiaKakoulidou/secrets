@@ -2,27 +2,27 @@ import React from "react";
 import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
+import { MoreDropdown } from "../../components/MoreDropdown";
 import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
-import { MoreDropdown } from "../../components/MoreDropdown";
 
 const Comment = (props) => {
-    const {
-      profile_id,
-      profile_image,
-      owner,
-      updated_at,
-      content,
-      id,
-      setSeecret,
-      setComments,
-    } = props;
+  const {
+    profile_id,
+    profile_image,
+    owner,
+    updated_at,
+    content,
+    id,
+    setSeecret,
+    setComments,
+  } = props;
 
-const currentUser = useCurrentUser();
-const is_owner = currentUser?.username === owner;
+  const currentUser = useCurrentUser();
+  const is_owner = currentUser?.username === owner;
 
-const handleDelete = async () => {
+  const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}/`);
       setSeecret((prevSeecret) => ({

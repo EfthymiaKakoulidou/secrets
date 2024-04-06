@@ -9,19 +9,20 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
-  const { seecret, setSeecret, setComments, profileImage, profile_id } = props;
+  const { setSeecret, setComments, profileImage, profile_id, seecret, post } = props;
   const [content, setContent] = useState("");
+  
 
   const handleChange = (event) => {
     setContent(event.target.value);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event, seecret) => {
     event.preventDefault();
     try {
       const { data } = await axiosRes.post("/comments/", {
         content,
-        seecret,
+        post, 
       });
       setComments((prevComments) => ({
         ...prevComments,
@@ -37,12 +38,17 @@ function CommentCreateForm(props) {
       }));
       setContent("");
     } catch (err) {
-      console.log(err);
+      console.log(err.response);
+      console.log(err.response.data);
+      console.log(content);
+      console.log(seecret);
+      console.log(post);
+      
     }
   };
 
   return (
-    <Form className="mt-2" onSubmit={handleSubmit}>
+    <Form className="mt-2" onSubmit={(event) => handleSubmit(event, seecret)}>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
