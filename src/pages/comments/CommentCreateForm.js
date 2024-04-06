@@ -9,15 +9,14 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
-  const { setSeecret, setComments, profileImage, profile_id, seecret, post } = props;
+  const { setSeecret, setComments, profileImage, profile_id, post } = props;
   const [content, setContent] = useState("");
-  
 
   const handleChange = (event) => {
     setContent(event.target.value);
   };
 
-  const handleSubmit = async (event, seecret) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const { data } = await axiosRes.post("/comments/", {
@@ -28,27 +27,35 @@ function CommentCreateForm(props) {
         ...prevComments,
         results: [data, ...prevComments.results],
       }));
-      setSeecret((prevSeecret) => ({
-        results: [
+      setSeecret((prevSeecret) => {
+        if (!prevSeecret || !prevSeecret.results || !prevSeecret.results[0]) {
+          return prevSeecret; 
+        }
+      
+        const updatedResults = [
           {
             ...prevSeecret.results[0],
-            comments_count: prevSeecret.results[0].comments_count + 1,
+            comments_count: isNaN(prevSeecret.results[0].comments_count) ? 1 : prevSeecret.results[0].comments_count + 1,
           },
-        ],
-      }));
+        ];
+      
+        return {
+          ...prevSeecret,
+          results: updatedResults,
+        };
+      });
       setContent("");
     } catch (err) {
       console.log(err.response);
       console.log(err.response.data);
       console.log(content);
-      console.log(seecret);
       console.log(post);
       
     }
   };
 
   return (
-    <Form className="mt-2" onSubmit={(event) => handleSubmit(event, seecret)}>
+    <Form className="mt-2" onSubmit={(event) => handleSubmit(event)}>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
