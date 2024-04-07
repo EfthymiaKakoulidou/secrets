@@ -21,42 +21,27 @@ function CommentCreateForm(props) {
     try {
       const { data } = await axiosRes.post("/comments/", {
         content,
-        seecretid, 
+        seecretid,
       });
       setComments((prevComments) => ({
         ...prevComments,
         results: [data, ...prevComments.results],
       }));
-      console.log(data)
-      setSeecret((prevSeecret) => {
-        if (!prevSeecret || !prevSeecret.results || !prevSeecret.results[0]) {
-          return prevSeecret; 
-        }
-      
-        const updatedResults = [
+      setSeecret((prevSeecret) => ({
+        results: [
           {
             ...prevSeecret.results[0],
-            comments_count: isNaN(prevSeecret.results[0].comments_count) ? 1 : prevSeecret.results[0].comments_count + 1,
+            comments_count: prevSeecret.results[0].comments_count + 1,
           },
-        ];
-      
-        return {
-          ...prevSeecret,
-          results: updatedResults,
-        };
-      });
+        ],
+      }));
       setContent("");
     } catch (err) {
-      console.log(err.response);
-      console.log(err.response.data);
-      console.log(content);
-      console.log(seecretid);
-      
+      console.log(err);
     }
   };
-
   return (
-    <Form className="mt-2" onSubmit={(event) => handleSubmit(event)}>
+    <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
