@@ -5,7 +5,7 @@
   
   .Button {
     border: none;
-    background-color: #242a3d;
+    background-color: antiquewhite;;
     color: aliceblue;
     border-radius: 100px;
     padding: 4px 10px;
@@ -16,5 +16,5 @@
   .Button:hover {
     cursor: pointer;
     background-color: aliceblue;
-    color: #242a3d;
+    color: antiquewhite;
   }

@@ -7,6 +7,7 @@ padding: 4px 10px;
 margin-left: 2px;
 margin-right: 2px;
 min-width: 75px;
+color: antiquewhite;
 }
 
 .Button:hover {
@@ -50,7 +51,7 @@ color: #2142b2;
 .BlackOutline:hover {
 /* background-color: #242a3d;
 color: white; */
-background-color: #242a3d;
+background-color:  antiquewhite;
 color: aliceblue;
 }
 
@@ -60,7 +61,7 @@ color: aliceblue;
 color: #242a3d;
 border-color: #242a3d; */
 background-color: aliceblue;
-color: #242a3d;
+color: antiquewhite;
 }
 
 .Bright {
