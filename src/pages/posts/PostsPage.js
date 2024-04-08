@@ -32,7 +32,7 @@ function PostsPage({ message, filter = "" }) {
         console.log("Fetching data...");
         const { data } = await axiosReq.get(`/seecrets/?${filter}search=${query}`);
         console.log("Fetched data:", data);
-        setSeecrets({ results: data });
+        setSeecrets(data);
         setHasLoaded(true);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -50,7 +50,8 @@ function PostsPage({ message, filter = "" }) {
     };
   }, [filter, query, pathname]);
   console.log("Rendering component");
-  console.log(seecrets.results);
+  console.log(seecrets.results.results);
+  console.log(seecrets)
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
@@ -68,10 +69,10 @@ function PostsPage({ message, filter = "" }) {
             placeholder="Search posts"
           />
         </Form>
-        
+       
         {hasLoaded ? (
           <>
-            {seecrets.results?.length ? (
+            {seecrets.results.length ? (
               
               <InfiniteScroll
                 children={seecrets.results.map((seecret) => (
