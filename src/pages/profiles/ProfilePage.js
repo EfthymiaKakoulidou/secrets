@@ -86,12 +86,12 @@ console.log(profileSeecrets.length)
       <p className="text-center">{profile?.owner}'s secrets</p>
       <hr />
       
-      {profileSeecrets.length ? (
+      {profileSeecrets.results.length ? (
         <InfiniteScroll
-          children={profileSeecrets.map((seecret) => (
+          children={profileSeecrets.results.map((seecret) => (
             <Post key={seecret.id} {...seecret} setSeecrets={setProfileSeecrets} />
           ))}
-          dataLength={profileSeecrets.length}
+          dataLength={profileSeecrets.results.length}
           loader={<Asset spinner />}
           hasMore={!!profileSeecrets.next}
           next={() => fetchMoreData(profileSeecrets, setProfileSeecrets)}
