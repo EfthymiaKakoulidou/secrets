@@ -17,7 +17,7 @@ function CommentEditForm(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axiosRes.put(`/comments/${id}/`, {
+      await axiosRes.put(`/comments/${id}`, {
         content: formContent.trim(),
       });
       setComments((prevComments) => ({
