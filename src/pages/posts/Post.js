@@ -36,43 +36,43 @@ const Post = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/seecrets/${id}`);
-      history.goBack();
+      history.push(`/seecrets`);
     } catch (err) {
       console.log(err);
     }
   };
+console.log(hug_id)
+const handleLike = async () => {
+  try {
+    const { data } = await axiosRes.post("/hugs", { seecret: id });
+    setSeecrets((prevSeecrets) => ({
+      ...prevSeecrets,
+      results: prevSeecrets.results.map((seecret) => {
+        return seecret.id === id
+          ? { ...seecret, hugs_count: seecret.hugs_count + 1, hug_id: data.id }
+          : seecret;
+      }),
+    }));
+  } catch (err) {
+    console.log(err);
+  }
+};
 
-  const handleLike = async () => {
-    try {
-      const { data } = await axiosRes.post("/hugs", { seecret: id });
-      setSeecrets((prevSeecrets) => ({
-        ...prevSeecrets,
-        results: prevSeecrets.results.map((seecret) => {
-          return seecret.id === id
-            ? { ...seecret, hugs_count: seecret.hugs_count + 1, hug_id: data.id }
-            : seecret;
-        }),
-      }));
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const handleUnlike = async () => {
-    try {
-      await axiosRes.delete(`/hugs/${hug_id}`);
-      setSeecrets((prevSeecrets) => ({
-        ...prevSeecrets,
-        results: prevSeecrets.results.map((seecret) => {
-          return seecret.id === id
-            ? { ...seecret, hugs_count: seecret.hugs_count - 1, hug_id: null }
-            : seecret;
-        }),
-      }));
-    } catch (err) {
-      console.log(err);
-    }
-  };
+const handleUnlike = async () => {
+  try {
+    await axiosRes.delete(`/hugs/${hug_id}`);
+    setSeecrets((prevSeecrets) => ({
+      ...prevSeecrets,
+      results: prevSeecrets.results.map((seecret) => {
+        return seecret.id === id
+          ? { ...seecret, hugs_count: seecret.hugs_count - 1, hug_id: null }
+          : seecret;
+      }),
+    }));
+  } catch (err) {
+    console.log(err);
+  }
+};
 
   return (
     <Card className={styles.Post}>
