@@ -35,7 +35,7 @@ const Post = (props) => {
 
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/seecrets/${id}/`);
+      await axiosRes.delete(`/seecrets/${id}`);
       history.goBack();
     } catch (err) {
       console.log(err);
@@ -44,7 +44,7 @@ const Post = (props) => {
 
   const handleLike = async () => {
     try {
-      const { data } = await axiosRes.post("/hugs/", { seecret: id });
+      const { data } = await axiosRes.post("/hugs", { seecret: id });
       setSeecrets((prevSeecrets) => ({
         ...prevSeecrets,
         results: prevSeecrets.results.map((seecret) => {
@@ -60,7 +60,7 @@ const Post = (props) => {
 
   const handleUnlike = async () => {
     try {
-      await axiosRes.delete(`/hugs/${hug_id}/`);
+      await axiosRes.delete(`/hugs/${hug_id}`);
       setSeecrets((prevSeecrets) => ({
         ...prevSeecrets,
         results: prevSeecrets.results.map((seecret) => {
