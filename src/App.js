@@ -7,6 +7,7 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
+import ReachOutPage from "./pages/reach_out/ReachOutPage";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
@@ -35,6 +36,8 @@ function App() {
               <Route exact path="/seecrets/:id" render={() => <PostPage />} />
               <Route exact path="/seecrets/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+              <Route exact path="/reach_out" render={() => <ReachOutPage />} />
+              
               <Route
                 exact
                 path="/profiles/:id/edit/username"

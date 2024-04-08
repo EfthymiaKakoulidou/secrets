@@ -128,6 +128,9 @@ const handleUnlike = async () => {
             <i className="far fa-comments" />
           </Link>
           {comments_count}
+          <Link to={`/reach_out/?owner__profile=${id}`}>
+            Reach out to {owner}
+            </Link>
         </div>
       </Card.Body>
     </Card>
