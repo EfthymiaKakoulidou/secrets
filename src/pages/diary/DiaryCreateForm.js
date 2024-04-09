@@ -24,7 +24,7 @@ function DiaryCreateForm() {
     const [postData, setPostData] = useState({
       title: "",
       content: "",
-      image: "",
+      image: null,
     });
     const { title, content, image } = postData;
 
@@ -39,14 +39,21 @@ function DiaryCreateForm() {
     };
   
     const handleChangeImage = (event) => {
-      if (event.target.files.length) {
-        URL.revokeObjectURL(image);
-        setPostData({
-          ...postData,
-          image: URL.createObjectURL(event.target.files[0]),
-        });
+      const file = event.target.files[0]; 
+      if (file) {
+          URL.revokeObjectURL(image); 
+          setPostData({
+              ...postData,
+              image: URL.createObjectURL(file), 
+          });
+      } else {
+          
+          setPostData({
+              ...postData,
+              image: null, 
+          });
       }
-    };
+  };
 
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -54,11 +61,13 @@ function DiaryCreateForm() {
     
       formData.append("title", title);
       formData.append("content", content);
-      formData.append("image", imageInput.current.files[0]);
+      if (imageInput.current.files[0]) {
+        formData.append("image", imageInput.current.files[0]);
+    }
     
       try {
         const { data } = await axiosReq.post("/diary/", formData);
-        history.push(`/diary/${data.id}`);
+        history.push(`/diary/`);
       } catch (err) {
         console.error("Error creating diary entry:", err);
         if (err.response?.status !== 401) {
