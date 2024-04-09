@@ -50,7 +50,7 @@ function BlogPage() {
         <CommentCreateForm
         profile_id={currentUser.profile_id}
         profileImage={profile_image}
-        seecretid={id}
+        seecret={id}
         setBlog={setBlog}
         setComments={setComments}
         />

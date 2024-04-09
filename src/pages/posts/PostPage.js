@@ -38,8 +38,9 @@ function PostPage() {
     
         handleMount();
       }, [id]);
-    
-
+     
+console.log(comments.results)
+console.log(seecret)
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
@@ -50,7 +51,7 @@ function PostPage() {
         <CommentCreateForm
         profile_id={currentUser.profile_id}
         profileImage={profile_image}
-        seecretid={id}
+        seecret={id}
         setSeecret={setSeecret}
         setComments={setComments}
         />

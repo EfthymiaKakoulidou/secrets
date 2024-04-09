@@ -9,7 +9,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
-  const { setSeecret, setComments, profileImage, profile_id, seecretid } = props;
+  const { setSeecret, setComments, profileImage, profile_id, seecret } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -21,7 +21,7 @@ function CommentCreateForm(props) {
     try {
       const { data } = await axiosRes.post("/comments/", {
         content,
-        seecretid,
+        seecret,
       });
       setComments((prevComments) => ({
         ...prevComments,
