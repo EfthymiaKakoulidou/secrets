@@ -44,14 +44,6 @@ const NavBar = () => {
 
     <NavLink
       className={styles.NavLink}
-      activeClassName={styles.Active}
-      to="/hugged"
-    >
-      <i className="fa-solid fa-hand-holding-heart"></i>Hugs
-    </NavLink>
-
-    <NavLink
-      className={styles.NavLink}
       to="/"
       onClick = {handleSignOut}
     >

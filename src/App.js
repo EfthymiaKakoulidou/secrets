@@ -9,7 +9,6 @@ import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import ReachOutPage from "./pages/reach_out/ReachOutPage";
 import PostsPage from "./pages/posts/PostsPage";
-import { useCurrentUser } from "./contexts/CurrentUserContext";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
@@ -22,9 +21,7 @@ import BlogEditForm from "./pages/blogs/BlogEditForm";
 
 
 function App() {
-  const currentUser = useCurrentUser();
-  const profile_id = currentUser?.profile_id || '';
-
+  
   return (
 
         <div className={styles.App}>
@@ -34,7 +31,6 @@ function App() {
               <Route exact path="/" render= {() => ( <h1>Home</h1> )}/>
               <Route exact path="/seecrets" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
               <Route exact path="/blogposts" render= {() => ( <BlogsPage message='No results are found.Adjust the search keyword' /> )}/>
-              <Route exact path="/hugged" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword or hug somebody' filter={`hugs__owner__profile=${profile_id}&ordering=-hugs__created_at&`}/> )}/>
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/seecrets/create" render={() => <PostCreateForm />} />
