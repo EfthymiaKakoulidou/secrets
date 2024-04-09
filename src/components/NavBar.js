@@ -32,7 +32,7 @@ const NavBar = () => {
         <i className="fa-solid fa-plus"></i>Add secret
       </NavLink>
   )
-   
+  
   const loggedInIcons = <>
     <NavLink
     className={styles.NavLink}
@@ -40,6 +40,14 @@ const NavBar = () => {
     to="/seecrets"
     >
     <i className="fas fa-stream"></i>Secrets
+    </NavLink>
+
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/diary"
+    >
+    <i className="fas fa-stream"></i>My Diary
     </NavLink>
 
     <NavLink
@@ -102,7 +110,7 @@ const NavBar = () => {
           </Navbar.Brand>
         </NavLink>
 
-        {currentUser && addPostIcon}
+        {currentUser && addPostIcon }
 
         <Navbar.Toggle ref={ref}
           onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />

@@ -18,6 +18,9 @@ import BlogsPage from "./pages/blogs/BlogsPage";
 import BlogCreateForm from "./pages/blogs/BlogCreateForm";
 import BlogPage from "./pages/blogs/BlogPage";
 import BlogEditForm from "./pages/blogs/BlogEditForm";
+import DiaryPage from "./pages/diary/DiaryPage";
+import DiaryEditForm from "./pages/diary/DiaryEditForm";
+import DiarysPage from "./pages/diary/DiarysPage";
 
 
 function App() {
@@ -30,12 +33,15 @@ function App() {
             <Switch>
               <Route exact path="/" render= {() => ( <h1>Home</h1> )}/>
               <Route exact path="/seecrets" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
+              <Route exact path="/diary" render= {() => ( <DiarysPage message='No results are found.Adjust the search keyword' /> )}/>
               <Route exact path="/blogposts" render= {() => ( <BlogsPage message='No results are found.Adjust the search keyword' /> )}/>
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/seecrets/create" render={() => <PostCreateForm />} />
               <Route exact path="/seecrets/:id" render={() => <PostPage />} />
               <Route exact path="/seecrets/:id/edit" render={() => <PostEditForm />} />
+              <Route exact path="/diary/:id" render={() => <DiaryPage />} />
+              <Route exact path="/diary/:id/edit" render={() => <DiaryEditForm />} />
               <Route exact path="/blogs/create" render={() => <BlogCreateForm />} />
               <Route exact path="/blogs/:id" render={() => <BlogPage />} />
               <Route exact path="/blogs/:id/edit" render={() => <BlogEditForm />} />
