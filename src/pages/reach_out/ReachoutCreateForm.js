@@ -9,7 +9,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function ReachoutCreateForm(props) {
-  const { setProfile, setReach_outs, profileImage, profile_id, reach_out_to, reach_outs } = props;
+  const { setProfile, setReach_outs, profileImage, profile_id, reach_out_to } = props;
   const [reach_out_content, setContent] = useState("");
 
   const handleChange = (event) => {

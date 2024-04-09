@@ -32,35 +32,53 @@ const NavBar = () => {
         <i className="fa-solid fa-plus"></i>Add secret
       </NavLink>
   )
+   
+  const loggedInIcons = <>
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/seecrets"
+    >
+    <i className="fas fa-stream"></i>Secrets
+    </NavLink>
 
-  const loggedInIcons = <><NavLink
-  className={styles.NavLink}
-  activeClassName={styles.Active}
-  to="/seecrets"
->
-  <i className="fas fa-stream"></i>Secrets
-</NavLink>
-<NavLink
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-        to="/hugged"
-      >
-        <i className="fa-solid fa-hand-holding-heart"></i>Hugs
-      </NavLink>
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/hugged"
+    >
+      <i className="fa-solid fa-hand-holding-heart"></i>Hugs
+    </NavLink>
 
-<NavLink
-  className={styles.NavLink}
-  to="/"
-  onClick = {handleSignOut}
->
-  <i className="fa-solid fa-sign-out-alt"></i>Sign Out
-</NavLink>
-<NavLink
+    <NavLink
+      className={styles.NavLink}
+      to="/"
+      onClick = {handleSignOut}
+    >
+      <i className="fa-solid fa-sign-out-alt"></i>Sign Out
+    </NavLink>
+
+    <NavLink
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
-      </NavLink>
+      <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+    </NavLink>
+
+    <NavLink
+        className={styles.NavLink}
+        to={`/blogs/create`}
+      >
+      Add blogpost
+    </NavLink>
+
+    <NavLink
+    className={styles.NavLink}
+    activeClassName={styles.Active}
+    to="/blogposts"
+    >
+    <i className="fas fa-stream"></i>Admin's Blogposts
+    </NavLink>
       
 </>;
   const loggedOutIcons = (
@@ -72,6 +90,7 @@ const NavBar = () => {
       >
         <i className="fas fa-sign-in-alt"></i>Sign in
       </NavLink>
+
       <NavLink
         to="/signup"
         className={styles.NavLink}
@@ -90,7 +109,9 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
+
         {currentUser && addPostIcon}
+
         <Navbar.Toggle ref={ref}
           onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

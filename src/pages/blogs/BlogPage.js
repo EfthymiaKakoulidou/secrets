@@ -7,29 +7,30 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-import Reachout from "./Reachout";
+import Blog from "./Blog";
+import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+import Comment from "../comments/Comment";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import InfiniteScroll from "react-infinite-scroll-component";
-import ReachoutCreateForm from "./ReachoutCreateForm";
 
-function ReachOutPage() {
+function BlogPage() {
     const { id } = useParams();
-    const [profile, setProfile] = useState({ results: [] });
+    const [blog, setBlog] = useState({ results: [] });
     const currentUser = useCurrentUser();
     const profile_image = currentUser?.profile_image;
-    const [reach_out, setReach_out] = useState({ results: [] });
+    const [comments, setComments] = useState({ results: [] });
 
     useEffect(() => {
         const handleMount = async () => {
           try {
-            const [{ data: profile }, { data: reach_out }] = await Promise.all([
-              axiosReq.get(`/profiles`),
-              axiosReq.get(`/reach_out`),
+            const [{ data: blog }, { data: comments }] = await Promise.all([
+              axiosReq.get(`/blogposts/${id}`),
+              axiosReq.get(`/comments/?blog=${id}`),
             ]);
-            setProfile({ results: [profile] });
-            setReach_out(reach_out);
+            setBlog({ results: [blog] });
+            setComments(comments);
           } catch (err) {
             console.log(err);
           }
@@ -42,47 +43,47 @@ function ReachOutPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-      <Reachout {...profile.results[0]} setprofiles={setProfile} profilePage />
+      <Blog {...blog.results[0]} setBlogs={setBlog} blogPage />
         
         <Container className={appStyles.Content}>
           {currentUser ? (
-        <ReachoutCreateForm
+        <CommentCreateForm
         profile_id={currentUser.profile_id}
         profileImage={profile_image}
-        profileid={id}
-        setprofile={setProfile}
-        setreach_out={setReach_out}
+        seecretid={id}
+        setBlog={setBlog}
+        setComments={setComments}
         />
-        ) : reach_out.results.length ? (
-        "reach_out"
+        ) : comments.results.length ? (
+        "Comments"
         ) : null}
-        {reach_out.results.length ? (
+        {comments.results.length ? (
             <InfiniteScroll
-              children={reach_out.results.map((Reachout) => (
-                <Reachout
-                  key={Reachout.id}
-                  {...Reachout}
-                  setProfile={setProfile}
-                  setReach_out={setReach_out}
+              children={comments.results.map((comment) => (
+                <Comment
+                  key={comment.id}
+                  {...comment}
+                  setBlog={setBlog}
+                  setComments={setComments}
                 />
               ))}
-              dataLength={reach_out.results.length}
+              dataLength={comments.results.length}
               loader={<Asset spinner />}
-              hasMore={!!reach_out.next}
-              next={() => fetchMoreData(reach_out, setReach_out)}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
             />
           ) : currentUser ? (
-            <span>Reach out</span>
+            <span>No comments yet, be the first to comment!</span>
           ) : (
-            <span>No messages yet.</span>
+            <span>No comments... yet</span>
           )}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        <Reachout/>
+        Profiles
       </Col>
     </Row>
   );
 }
 
-export default ReachOutPage;
+export default BlogPage;
