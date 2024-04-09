@@ -51,16 +51,16 @@ function DiaryCreateForm() {
     const handleSubmit = async (event) => {
       event.preventDefault();
       const formData = new FormData();
-  
+    
       formData.append("title", title);
       formData.append("content", content);
       formData.append("image", imageInput.current.files[0]);
-  
+    
       try {
-        const { data } = await axiosReq.post("/seecrets/", formData);
-        history.push(`/seecrets/${data.id}`);
+        const { data } = await axiosReq.post("/diary/", formData);
+        history.push(`/diary/${data.id}`);
       } catch (err) {
-        console.log(err);
+        console.error("Error creating diary entry:", err);
         if (err.response?.status !== 401) {
           setErrors(err.response?.data);
         }

@@ -23,13 +23,13 @@ const Diary = (props) => {
   const history = useHistory();
 
   const handleEdit = () => {
-    history.push(`/seecrets/${id}/edit`);
+    history.push(`/diary/${id}/edit`);
   };
 
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/seecrets/${id}`);
-      history.push(`/seecrets`);
+      await axiosRes.delete(`/diary/${id}`);
+      history.push(`/diary`);
     } catch (err) {
       console.log(err);
     }
@@ -52,7 +52,7 @@ const Diary = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <Link to={`/seecrets/${id}`}>
+      <Link to={`/diary/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>

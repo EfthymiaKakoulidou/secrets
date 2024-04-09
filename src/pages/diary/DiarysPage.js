@@ -20,7 +20,7 @@ import Profiles from "../profiles/Profiles";
 import DiaryCreateForm from "./DiaryCreateForm";
 
 function DiarysPage({ message, filter = "" }) {
-  const [seecrets, setSeecrets] = useState({ results: [] });
+  const [diarys, setDiarys] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
@@ -31,9 +31,9 @@ function DiarysPage({ message, filter = "" }) {
     const fetchSeecrets = async () => {
       try {
         console.log("Fetching data...");
-        const { data } = await axiosReq.get(`/seecrets/?is_owner=true`);
+        const { data } = await axiosReq.get(`/diary`);
         console.log("Fetched data:", data);
-        setSeecrets(data);
+        setDiarys(data);
         setHasLoaded(true);
       } catch (err) {
         console.error("Error fetching data:", err);
@@ -51,8 +51,7 @@ function DiarysPage({ message, filter = "" }) {
     };
   }, [filter, query, pathname]);
   console.log("Rendering component");
-  console.log(seecrets.results);
-  console.log(seecrets)
+ 
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
@@ -67,7 +66,7 @@ function DiarysPage({ message, filter = "" }) {
             onChange={(event) => setQuery(event.target.value)}
             type="text"
             className="mr-sm-2"
-            placeholder="Search posts"
+            placeholder="Search diary entries"
           />
         </Form>
         <DiaryCreateForm/>
@@ -75,16 +74,16 @@ function DiarysPage({ message, filter = "" }) {
         {hasLoaded ? (
           
           <>
-            {seecrets.results.length ? (
+            {diarys.results.length ? (
               
               <InfiniteScroll
-                children={seecrets.results.map((seecret) => (
-                  <Diary key={seecret.id} {...seecret} setSeecrets={setSeecrets} />
+                children={diarys.results.map((diary) => (
+                  <Diary key={diary.id} {...diary} setDiarys={setDiarys} />
                 ))}
-                dataLength={seecrets.results.length}
+                dataLength={diarys.results.length}
                 loader={<Asset spinner />}
-                hasMore={!!seecrets.next}
-                next={() => fetchMoreData(seecrets, setSeecrets)}
+                hasMore={!!diarys.next}
+                next={() => fetchMoreData(diarys, setDiarys)}
               />
             ) : (
               <Container className={appStyles.Content}>

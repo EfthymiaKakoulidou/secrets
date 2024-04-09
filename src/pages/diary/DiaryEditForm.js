@@ -32,10 +32,10 @@ function DiaryEditForm() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/seecrets/${id}/`);
+        const { data } = await axiosReq.get(`/diary/${id}/`);
         const { title, content, image, is_owner } = data;
 
-        is_owner ? setPostData({ title, content, image }) : history.push("/");
+        is_owner ? setPostData({ title, content, image }) : history.push("/diary");
       } catch (err) {
         console.log(err);
       }
@@ -73,8 +73,8 @@ function DiaryEditForm() {
     }
 
     try {
-      await axiosReq.put(`/seecrets/${id}/`, formData);
-      history.push(`/seecrets/${id}`);
+      await axiosReq.put(`/diary/${id}/`, formData);
+      history.push(`/diary/${id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
