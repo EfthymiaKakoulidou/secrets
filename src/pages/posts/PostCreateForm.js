@@ -24,7 +24,7 @@ function PostCreateForm() {
     const [postData, setPostData] = useState({
       title: "",
       content: "",
-      image: "",
+      image: null,
     });
     const { title, content, image } = postData;
 
@@ -39,14 +39,21 @@ function PostCreateForm() {
     };
   
     const handleChangeImage = (event) => {
-      if (event.target.files.length) {
-        URL.revokeObjectURL(image);
-        setPostData({
-          ...postData,
-          image: URL.createObjectURL(event.target.files[0]),
-        });
+      const file = event.target.files[0]; 
+      if (file) {
+          URL.revokeObjectURL(image); 
+          setPostData({
+              ...postData,
+              image: URL.createObjectURL(file), // Create URL for the selected file
+          });
+      } else {
+          
+          setPostData({
+              ...postData,
+              image: null, 
+          });
       }
-    };
+  };
 
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -54,7 +61,9 @@ function PostCreateForm() {
   
       formData.append("title", title);
       formData.append("content", content);
-      formData.append("image", imageInput.current.files[0]);
+      if (imageInput.current.files[0]) {
+        formData.append("image", imageInput.current.files[0]);
+    }
   
       try {
         const { data } = await axiosReq.post("/seecrets/", formData);
