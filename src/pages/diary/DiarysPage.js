@@ -17,6 +17,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Profiles from "../profiles/Profiles";
+import DiaryCreateForm from "./DiaryCreateForm";
 
 function DiarysPage({ message, filter = "" }) {
   const [seecrets, setSeecrets] = useState({ results: [] });
@@ -30,7 +31,7 @@ function DiarysPage({ message, filter = "" }) {
     const fetchSeecrets = async () => {
       try {
         console.log("Fetching data...");
-        const { data } = await axiosReq.get(`/seecrets/??owner__profile=${id}`);
+        const { data } = await axiosReq.get(`/seecrets/?is_owner=true`);
         console.log("Fetched data:", data);
         setSeecrets(data);
         setHasLoaded(true);
@@ -69,8 +70,10 @@ function DiarysPage({ message, filter = "" }) {
             placeholder="Search posts"
           />
         </Form>
+        <DiaryCreateForm/>
        
         {hasLoaded ? (
+          
           <>
             {seecrets.results.length ? (
               
