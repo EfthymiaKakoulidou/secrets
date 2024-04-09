@@ -1,73 +1,91 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/UseRedirect";
 
-import styles from "../../styles/CommentCreateEditForm.module.css";
-import Avatar from "../../components/Avatar";
-import { axiosRes } from "../../api/axiosDefaults";
+function ReachoutCreateForm() {
+  useRedirect("loggedOut");
+  const [errors, setErrors] = useState({});
+  const [profiles, setProfiles] = useState([]);
+  const [reachoutData, setReachoutData] = useState({
+    reach_out_to: "",
+    reach_out_content: "",
+  });
+  const { reach_out_to, reach_out_content } = reachoutData;
+  const history = useHistory();
 
-function ReachoutCreateForm(props) {
-  const { setProfile, setReach_outs, profileImage, profile_id, reach_out_to } = props;
-  const [reach_out_content, setContent] = useState("");
+  useEffect(() => {
+    const fetchProfiles = async () => {
+      try {
+        const response = await axiosReq.get("/profiles/");
+        setProfiles(response.data);
+      } catch (error) {
+        console.error("Error fetching profiles:", error);
+      }
+    };
+    fetchProfiles();
+  }, []);
 
   const handleChange = (event) => {
-    setContent(event.target.value);
+    setReachoutData({
+      ...reachoutData,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
     try {
-      const { data } = await axiosRes.post("/reach_out", {
-        reach_out_content,
-        reach_out_to,
-      });
-      console.log('Response:', data);
-      setReach_outs((prevReach_outs) => ({
-        ...prevReach_outs,
-        results: [data, ...prevReach_outs.results],
-      }));
-      console.log('Response:', data);
-      setProfile((prevProfile) => ({
-        results: [
-          {
-            ...prevProfile.results[0],
-            reach_outs_count: prevProfile.results[0].reach_outs_count + 1,
-          },
-        ],
-      }));
-      setContent("");
+      const { data } = await axiosReq.post("/reach_out/", reachoutData);
+      history.push(`/reach_out`);
     } catch (err) {
       console.log(err);
-      
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
     }
   };
+
   return (
-    <Form className="mt-2" onSubmit={handleSubmit}>
-      <Form.Group>
-        <InputGroup>
-          <Link to={`/profiles/${profile_id}`}>
-            <Avatar src={profileImage} />
-          </Link>
-          <Form.Control
-            className={styles.Form}
-            placeholder="reach out to this profile..."
-            as="textarea"
-            value={reach_out_content}
-            onChange={handleChange}
-            rows={5}
-          />
-        </InputGroup>
-      </Form.Group>
-      <button
-        className={`${styles.Button} btn d-block ml-auto`}
-        disabled={!reach_out_content.trim()}
-        type="submit"
-      >
-        reach out
-      </button>
+    <Form onSubmit={handleSubmit}>
+      <Row>
+        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+          <Container>
+            <Form.Group>
+              <Form.Label>Reach Out To</Form.Label>
+              <Form.Control
+                as="select"
+                name="reach_out_to"
+                value={reach_out_to}
+                onChange={handleChange}
+              >
+                <option value="">Select...</option>
+                {profiles.map((profile) => (
+                  <option key={profile.id} value={profile.id}>
+                    {profile.username}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Content</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={4}
+                name="reach_out_content"
+                value={reach_out_content}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Button type="submit">Create</Button>
+          </Container>
+        </Col>
+      </Row>
     </Form>
   );
 }

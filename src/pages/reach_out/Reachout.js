@@ -14,7 +14,7 @@ const Reach_out = (props) => {
     profile_image,
     owner,
     updated_at,
-    content,
+    reach_out_content,
     id,
     setProfile,
     setReach_outs,
@@ -58,13 +58,13 @@ const Reach_out = (props) => {
             <ReachoutEditForm
               id={id}
               profile_id={profile_id}
-              content={content}
+              reach_out_content={reach_out_content}
               profileImage={profile_image}
               setReach_outs={setReach_outs}
               setShowEditForm={setShowEditForm}
             />
           ) : (
-            <p>{content}</p>
+            <p>{reach_out_content}</p>
           )}
         </Media.Body>
         {is_owner && !showEditForm && (

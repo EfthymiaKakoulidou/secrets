@@ -1,72 +1,109 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
-import { axiosRes } from "../../api/axiosDefaults";
+import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
+import { useParams, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosReq } from "../../api/axiosDefaults";
+import { useRedirect } from "../../hooks/UseRedirect";
 
-import styles from "../../styles/CommentCreateEditForm.module.css";
+function ReachoutEditForm() {
+  useRedirect("loggedOut");
+  const [errors, setErrors] = useState({});
+  const [profiles, setProfiles] = useState([]);
+  const [reachoutData, setReachoutData] = useState({
+    reach_out_to: "",
+    reach_out_content: "",
+  });
+  const { reach_out_to, reach_out_content } = reachoutData;
+  const { id } = useParams();
+  const history = useHistory();
 
-function Reach_outEditForm(props) {
-  const { id, content, setShowEditForm, setReach_outs } = props;
+  useEffect(() => {
+    const fetchReachout = async () => {
+      try {
+        const response = await axiosReq.get(`/reach_out/${id}/`);
+        const reachout = response.data;
+        setReachoutData({
+          reach_out_to: reachout.reach_out_to,
+          reach_out_content: reachout.reach_out_content,
+        });
+      } catch (error) {
+        console.error("Error fetching reachout:", error);
+      }
+    };
 
-  const [formContent, setFormContent] = useState(content);
+    const fetchProfiles = async () => {
+      try {
+        const response = await axiosReq.get("/profiles/");
+        setProfiles(response.data);
+      } catch (error) {
+        console.error("Error fetching profiles:", error);
+      }
+    };
+
+    fetchReachout();
+    fetchProfiles();
+  }, [id]);
 
   const handleChange = (event) => {
-    setFormContent(event.target.value);
+    setReachoutData({
+      ...reachoutData,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axiosRes.put(`/reach_outs/${id}`, {
-        content: formContent.trim(),
-      });
-      setReach_outs((prevReach_outs) => ({
-        ...prevReach_outs,
-        results: prevReach_outs.results.map((reach_out) => {
-          return reach_out.id === id
-            ? {
-                ...reach_out,
-                content: formContent.trim(),
-                updated_at: "now",
-              }
-            : reach_out;
-        }),
-      }));
-      setShowEditForm(false);
+      await axiosReq.put(`/reach_out/${id}/`, reachoutData);
+      history.push(`/reach_out`);
     } catch (err) {
       console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
     }
   };
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group className="pr-1">
-        <Form.Control
-          className={styles.Form}
-          as="textarea"
-          value={formContent}
-          onChange={handleChange}
-          rows={2}
-        />
-      </Form.Group>
-      <div className="text-right">
-        <button
-          className={styles.Button}
-          onClick={() => setShowEditForm(false)}
-          type="button"
-        >
-          cancel
-        </button>
-        <button
-          className={styles.Button}
-          disabled={!content.trim()}
-          type="submit"
-        >
-          save
-        </button>
-      </div>
+      <Row>
+        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+          <Container>
+            <Form.Group>
+              <Form.Label>Reach Out To</Form.Label>
+              <Form.Control
+                as="select"
+                name="reach_out_to"
+                value={reach_out_to}
+                onChange={handleChange}
+              >
+                <option value="">Select...</option>
+                {profiles.map((profile) => (
+                  <option key={profile.id} value={profile.id}>
+                    {profile.username}
+                  </option>
+                ))}
+              </Form.Control>
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Content</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={4}
+                name="reach_out_content"
+                value={reach_out_content}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Button type="submit">Update</Button>
+          </Container>
+        </Col>
+      </Row>
     </Form>
   );
 }
 
-export default Reach_outEditForm;
+export default ReachoutEditForm;
