@@ -129,7 +129,7 @@ const handleUnlike = async () => {
           </Link>
           {comments_count}
           <Link to={`/reach_out`}>
-            Reach out to {owner}
+          <i class="fa-solid fa-envelope"></i> {owner}
             </Link>
         </div>
       </Card.Body>

@@ -12,6 +12,7 @@ import Row from "react-bootstrap/Row";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
+  console.log(currentUser);
   const setCurrentUser = useSetCurrentUser();
 
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
@@ -36,6 +37,15 @@ const NavBar = () => {
   )
   
   const loggedInIcons = <>
+
+    <NavLink
+        className={styles.NavLink}
+        to={`/profiles/${currentUser?.profile_id}`}
+      >
+      <i class="fa-solid fa-user"></i>My Profile
+      
+    </NavLink>
+
     <NavLink
     className={styles.NavLink}
     activeClassName={styles.Active}
@@ -49,7 +59,7 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/diary"
     >
-    <i className="fas fa-stream"></i>My Diary
+    <i class="fa-solid fa-book"></i>My Diary
     </NavLink>
 
     <NavLink
@@ -57,7 +67,7 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/reach_out"
     >
-    <i className="fas fa-stream"></i>Messages
+    <i class="fa-solid fa-envelope"></i>Messages
     </NavLink>
 
     <NavLink
@@ -66,13 +76,6 @@ const NavBar = () => {
       onClick = {handleSignOut}
     >
       <i className="fa-solid fa-sign-out-alt"></i>Sign Out
-    </NavLink>
-
-    <NavLink
-        className={styles.NavLink}
-        to={`/profiles/${currentUser?.profile_id}`}
-      >
-      <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
     </NavLink>
 
     <NavLink
@@ -87,10 +90,10 @@ const NavBar = () => {
     activeClassName={styles.Active}
     to="/blogposts"
     >
-    <i className="fas fa-stream"></i>Admin's Blogposts
+    Admin's Blogposts
     </NavLink>
-      
 </>;
+console.log(currentUser);
   const loggedOutIcons = (
     <>
       <NavLink

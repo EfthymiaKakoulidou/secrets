@@ -60,7 +60,7 @@ function ReachOutssPage({ message, filter = "" }) {
       <Col className="py-2 p-0 p-lg-2" lg={6}>
       <p className="p-4">Reach out to someone!</p>
         <Profiles mobile />
-      <ReachoutCreateForm/>
+      <ReachoutCreateForm className={styles.form} />
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={4}>
       <p className="p-4">My Messages</p>
