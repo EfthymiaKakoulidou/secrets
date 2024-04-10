@@ -14,6 +14,8 @@ import Comment from "../comments/Comment";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import InfiniteScroll from "react-infinite-scroll-component";
+import NavBar from "../../components/NavBar";
+import Profiles from "../profiles/Profiles";
 
 function PostPage() {
     const { id } = useParams();
@@ -43,7 +45,11 @@ console.log(comments.results)
 console.log(seecret)
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <p className="p-4">Secret</p>
       <Post {...seecret.results[0]} setSeecrets={setSeecret} postPage />
         
         <Container className={appStyles.Content}>
@@ -81,7 +87,8 @@ console.log(seecret)
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Profiles
+      <p className="p-4">Profiles</p>
+        <Profiles/>
       </Col>
     </Row>
   );
