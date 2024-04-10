@@ -18,6 +18,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Profiles from "../profiles/Profiles";
 import DiaryCreateForm from "./DiaryCreateForm";
+import NavBar from "../../components/NavBar";
 
 function DiarysPage({ message, filter = "" }) {
   const [diarys, setDiarys] = useState({ results: [] });
@@ -54,23 +55,19 @@ function DiarysPage({ message, filter = "" }) {
  
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <p className="p-4">My Diary</p>
         <Profiles mobile />
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
-        <Form
-          className={styles.SearchBar}
-          onSubmit={(event) => event.preventDefault()}
-        >
-          <Form.Control
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            type="text"
-            className="mr-sm-2"
-            placeholder="Search diary entries"
-          />
-        </Form>
+        
         <DiaryCreateForm/>
-       
+        </Col>
+        <Col className="py-2 p-0 p-lg-2" lg={4}>
+
+        <p className="p-4">My Diary entries</p>
+
         {hasLoaded ? (
           
           <>
@@ -97,9 +94,7 @@ function DiarysPage({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <Profiles/>
-      </Col>
+      
     </Row>
   );
 }
