@@ -58,7 +58,7 @@ function ReachOutssPage({ message, filter = "" }) {
           <NavBar />
           </Col>
       <Col className="py-2 p-0 p-lg-2" lg={4}>
-      <p className="p-4">Reach out to someone</p>
+      <p className="p-4">Reach out to someone!</p>
         <Profiles mobile />
       <ReachoutCreateForm/>
       </Col>
