@@ -13,7 +13,6 @@ const Diary = (props) => {
     owner,
     title,
     content,
-    image,
     updated_at,
     postPage,
   } = props;
@@ -52,13 +51,12 @@ const Diary = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <Link to={`/diary/${id}`}>
-        <Card.Img src={image} alt={title} />
-      </Link>
+     
       <Card.Body>
+      <Link to={`/diary/${id}`}>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
-        
+        </Link>
       </Card.Body>
     </Card>
   );
