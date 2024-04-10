@@ -7,6 +7,8 @@ import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContex
 import Avatar from "./Avatar";
 import axios from "axios";
 import useClickOutsideToggle from "../hooks/UseClickOutsideToggle";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
@@ -110,8 +112,10 @@ const NavBar = () => {
   );
 
   return (
-    <Navbar expanded={expanded} className={styles.NavBar} expand="md" fixed="top">
-      <Container>
+    <Col className="py-2 p-0 p-lg-2" lg={12}>
+
+      <Nav className="mr-auto text-right flex-column ">
+        
         <NavLink to="/">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
@@ -120,24 +124,21 @@ const NavBar = () => {
 
         {currentUser && addPostIcon }
 
-        <Navbar.Toggle ref={ref}
-          onClick={() => setExpanded(!expanded)} aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto text-left">
-            <NavLink
-              exact
-              className={styles.NavLink}
-              activeClassName={styles.Active}
-              to="/"
-            >
-              <i className="fas fa-home"></i>Home
-            </NavLink>
+          <NavLink
+            exact
+            className={styles.NavLink}
+            activeClassName={styles.Active}
+            to="/"
+          >
+            <i className="fas fa-home"></i>Home
+          </NavLink>
 
-            {currentUser ? loggedInIcons : loggedOutIcons}
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+          {currentUser ? loggedInIcons : loggedOutIcons}
+
+        </Nav>
+
+      </Col>
+
   );
 };
 

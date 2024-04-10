@@ -16,6 +16,7 @@ import { Alert, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/UseRedirect";
+import NavBar from "../../components/NavBar";
 
 function PostCreateForm() {
   useRedirect("loggedOut");
@@ -122,9 +123,15 @@ function PostCreateForm() {
   );
 
   return (
+    <Row className="h-100 ">
+      <Col className="py-2 p-0 p-lg-2" lg={4}>
+          <NavBar />
+          </Col>
+          <Col className="py-2 p-0 p-lg-2" lg={8}>
+            <p className="p-4">Add a secret</p>
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
+        <Col className="py-2 p-0 p-md-2" md={7} lg={10}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
@@ -165,11 +172,12 @@ function PostCreateForm() {
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+        <Col md={5} lg={10} className="d-none d-md-block p-0 p-md-2">
           <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
       </Row>
-    </Form>
+    </Form></Col>
+    </Row>
   );
 }
 

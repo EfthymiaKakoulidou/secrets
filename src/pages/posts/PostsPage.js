@@ -17,6 +17,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Profiles from "../profiles/Profiles";
+import NavBar from "../../components/NavBar";
 
 function PostsPage({ message, filter = "" }) {
   const [seecrets, setSeecrets] = useState({ results: [] });
@@ -53,8 +54,13 @@ function PostsPage({ message, filter = "" }) {
   console.log(seecrets.results.results);
   console.log(seecrets)
   return (
-    <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+    <Row className="h-100 justify-content-end">
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
+    
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <p className="p-4">Secrets</p>
         <Profiles mobile />
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
@@ -95,7 +101,8 @@ function PostsPage({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
+      <Col className="py-2 p-0 p-lg-2" lg={4}>
+      <p className="p-4">Profiles</p>
         <Profiles/>
       </Col>
     </Row>

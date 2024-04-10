@@ -23,6 +23,7 @@ import DiaryPage from "./pages/diary/DiaryPage";
 import DiaryEditForm from "./pages/diary/DiaryEditForm";
 import DiarysPage from "./pages/diary/DiarysPage";
 import Home from "./pages/home/home";
+import Col from "react-bootstrap/Col";
 
 
 function App() {
@@ -30,8 +31,7 @@ function App() {
   return (
 
         <div className={styles.App}>
-          <NavBar />
-          <Container className={styles.Main}>
+      
             <Switch>
               <Route exact path="/" render= {() => <Home/> }/>
               <Route exact path="/seecrets" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
@@ -68,7 +68,7 @@ function App() {
               />
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
-          </Container>
+          
         </div>
   );
 }

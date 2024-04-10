@@ -22,6 +22,7 @@ import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
+import NavBar from "../../components/NavBar";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
@@ -106,8 +107,14 @@ console.log(profileSeecrets.length)
   );
 
   return (
-    <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+  
+       <Row className="h-100">
+      
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <p className="p-4">Profile</p>
         <Profiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
@@ -120,7 +127,8 @@ console.log(profileSeecrets.length)
           )}
         </Container>
       </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+      <Col className="py-2 p-0 p-lg-2" lg={4}>
+      <p className="p-4">All Profiles</p>
         <Profiles />
       </Col>
     </Row>
