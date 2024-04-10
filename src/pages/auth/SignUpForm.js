@@ -16,6 +16,7 @@ import {
   Alert,
 } from "react-bootstrap";
 import axios from "axios";
+import NavBar from "../../components/NavBar";
 
 const SignUpForm = () => {
   useRedirect("loggedIn");
@@ -49,6 +50,9 @@ const SignUpForm = () => {
 
   return (
     <Row className={styles.Row}>
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign up</h1>
@@ -125,14 +129,8 @@ const SignUpForm = () => {
           </Link>
         </Container>
       </Col>
-      <Col
-        md={6}
-        className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
-      >
-        <Image
-          className={`${appStyles.FillerImage}`}
-          src={"https://codeinstitute.s3.amazonaws.com/AdvancedReact/hero2.jpg"}
-        />
+      <Col className="py-2 p-0 p-lg-2" lg={4}>
+   
       </Col>
     </Row>
   );
