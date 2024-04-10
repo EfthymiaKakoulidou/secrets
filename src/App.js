@@ -8,6 +8,7 @@ import SignInForm from "./pages/auth/SignInForm";
 import PostCreateForm from "./pages/posts/PostCreateForm";
 import PostPage from "./pages/posts/PostPage";
 import ReachOutsPage from "./pages/reach_out/ReachOutsPage";
+import ReachOutPage from "./pages/reach_out/ReachOutPage";
 import PostsPage from "./pages/posts/PostsPage";
 import PostEditForm from "./pages/posts/PostEditForm";
 import ProfilePage from "./pages/profiles/ProfilePage";
@@ -47,6 +48,7 @@ function App() {
               <Route exact path="/blogs/:id/edit" render={() => <BlogEditForm />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
               <Route exact path="/reach_out" render={() => <ReachOutsPage />} />
+              <Route exact path="/reach_out/:id" render={() => <ReachOutPage />} />
               
               <Route
                 exact

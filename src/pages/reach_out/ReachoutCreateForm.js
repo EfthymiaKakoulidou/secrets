@@ -42,7 +42,7 @@ function ReachoutCreateForm() {
     event.preventDefault();
     try {
       const { data } = await axiosReq.post("/reach_out/", reachoutData);
-      history.push(`/reach_out`);
+      history.push(`/reach_out/`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {

@@ -6,18 +6,17 @@ import { MoreDropdown } from "../../components/MoreDropdown";
 import styles from "../../styles/Comment.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
-import ReachoutEditForm from "./ReachoutEditForm";
 
-const Reach_out = (props) => {
+const Reach_out_comment = (props) => {
   const {
     profile_id,
     profile_image,
     owner,
     updated_at,
-    content,
+    reach_out_comment_content,
     id,
-    setProfile,
-    setReach_outs,
+    setReach_out,
+    setReach_out_comments,
   } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
@@ -27,19 +26,19 @@ const Reach_out = (props) => {
 
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/reach_out/${id}`);
-      setProfile((prevProfile) => ({
+      await axiosRes.delete(`/reach_out_comments/${id}`);
+      setReach_out((prevReach_out) => ({
         results: [
           {
-            ...prevProfile.results[0],
-            reach_outs_count: prevProfile.results[0].reach_outs_count - 1,
+            ...prevReach_out.results[0],
+            reach_out_comments_count: prevReach_out.results[0].reach_out_comments_count - 1,
           },
         ],
       }));
 
-      setReach_outs((prevReach_outs) => ({
-        ...prevReach_outs,
-        results: prevReach_outs.results.filter((reach_out) => reach_out.id !== id),
+      setReach_out_comments((prevReach_out_comments) => ({
+        ...prevReach_out_comments,
+        results: prevReach_out_comments.results.filter((reach_out_comment) => reach_out_comment.id !== id),
       }));
     } catch (err) {}
   };
@@ -54,18 +53,7 @@ const Reach_out = (props) => {
         <Media.Body className="align-self-center ml-2">
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>
-          {showEditForm ? (
-            <ReachoutEditForm
-              id={id}
-              profile_id={profile_id}
-              content={content}
-              profileImage={profile_image}
-              setReach_outs={setReach_outs}
-              setShowEditForm={setShowEditForm}
-            />
-          ) : (
-            <Link to={`/reach_out/${id}`}>{content}</Link>
-          )}
+          
         </Media.Body>
         {is_owner && !showEditForm && (
           <MoreDropdown
@@ -77,4 +65,4 @@ const Reach_out = (props) => {
     </>
   );
 };
-export default Reach_out;
+export default Reach_out_comment;
