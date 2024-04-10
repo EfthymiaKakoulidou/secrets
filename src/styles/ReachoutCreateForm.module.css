@@ -1,3 +1,9 @@
 .form {
     color: black; 
   }
+
+.button {
+  background-color: antiquewhite;
+  color: black;
+  border: none;
+}

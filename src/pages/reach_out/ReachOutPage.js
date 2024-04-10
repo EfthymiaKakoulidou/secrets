@@ -46,9 +46,7 @@ function ReachOutPage() {
 console.log(reach_out)
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={2}>
-          <NavBar />
-          </Col>
+     
       <Col className="py-2 p-0 p-lg-2" lg={6}>
       <Reachout {...reach_out.results[0]} setReach_outs={setReach_out} postPage />
         

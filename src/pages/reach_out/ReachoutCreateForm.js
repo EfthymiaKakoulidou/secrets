@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/UseRedirect";
+import styles from "../../styles/ReachoutCreateForm.module.css";
 
 function ReachoutCreateForm() {
   useRedirect("loggedOut");
@@ -82,7 +83,7 @@ function ReachoutCreateForm() {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button type="submit">Create</Button>
+            <Button className={styles.button}  type="submit">Create</Button>
           </Container>
         </Col>
       </Row>

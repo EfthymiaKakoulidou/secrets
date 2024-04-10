@@ -34,9 +34,7 @@ function DiaryPage() {
 
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={2}>
-          <NavBar />
-          </Col>
+ 
       <Col className="py-2 p-0 p-lg-2" lg={6}>
       <Diary {...diary.results[0]} setDiarys={setDiary} diaryPage />
       

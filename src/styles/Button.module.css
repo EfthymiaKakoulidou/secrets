@@ -1,7 +1,7 @@
 .Button {
 font-size: 0.8rem;
 align-self: center;
-border-radius: 100px;
+border-radius: 50px;
 border-color: transparent;
 padding: 4px 10px;
 margin-left: 2px;
@@ -17,15 +17,18 @@ cursor: pointer;
 }
 
 .Button:hover:active {
-background-color: #2142b2 !important;
+background-color: antiquewhite !important;
+color: black;
 }
 
 .Button:active {
-background-color: #2142b2 !important;
+background-color: antiquewhite !important;
+color: black;
 }
 
 .Button:focus {
-background-color: #2142b2;
+background-color: antiquewhite;
+color: black;
 }
 
 .Wide {
@@ -36,15 +39,15 @@ width: 100%;
 .Blue,
 .BlueOutline:hover,
 .Bright:hover {
-background-color: #2142b2;
-color: #ffffff;
+background-color: antiquewhite;
+color: black;
 }
 
 .BlueOutline,
 .Blue:hover {
 /* border: 1px solid #2142b2; */
-background-color: #ffffff;
-color: #2142b2;
+background-color: antiquewhite;
+color: black;
 }
 
 .Black,
@@ -52,7 +55,7 @@ color: #2142b2;
 /* background-color: #242a3d;
 color: white; */
 background-color:  antiquewhite;
-color: aliceblue;
+color: black
 }
 
 .Black:hover,
@@ -65,6 +68,5 @@ color: antiquewhite;
 }
 
 .Bright {
-background-color: #2ed9ff;
-color: #2142b2;
-}
+background-color: antiquewhite;
+color: black;}

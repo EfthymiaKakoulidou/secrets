@@ -58,24 +58,9 @@ function DiaryCreateForm() {
     };
 
     const textFields = (
-      <div className="text-center">
-        <Form.Group>
-          <Form.Label>Title</Form.Label>
-          <Form.Control
-            type="text"
-            name="title"
-            value={title}
-            onChange={handleChange}
-          />
-        </Form.Group>
-        {errors?.title?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
-            {message}
-          </Alert>
-        ))}
-  
-        <Form.Group>
-          <Form.Label>Content</Form.Label>
+      <div>
+        <Form>
+          <Form.Label>Dear Diary...</Form.Label>
           <Form.Control
             as="textarea"
             rows={6}
@@ -83,7 +68,7 @@ function DiaryCreateForm() {
             value={content}
             onChange={handleChange}
           />
-        </Form.Group>
+        </Form>
         {errors?.content?.map((message, idx) => (
           <Alert variant="warning" key={idx}>
             {message}

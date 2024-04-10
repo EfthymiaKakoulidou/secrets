@@ -24,6 +24,7 @@ import DiaryEditForm from "./pages/diary/DiaryEditForm";
 import DiarysPage from "./pages/diary/DiarysPage";
 import Home from "./pages/home/home";
 import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 
 function App() {
@@ -31,7 +32,12 @@ function App() {
   return (
 
         <div className={styles.App}>
+      <Row className="h-100">
       
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
+          <Col className="py-2 p-0 p-lg-2" lg={10}>
             <Switch>
               <Route exact path="/" render= {() => <Home/> }/>
               <Route exact path="/seecrets" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
@@ -68,7 +74,8 @@ function App() {
               />
               <Route render={() => <p>Page not found!</p>} />
             </Switch>
-          
+            </Col>
+          </Row>
         </div>
   );
 }

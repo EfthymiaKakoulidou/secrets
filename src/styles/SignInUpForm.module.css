@@ -1,9 +1,11 @@
 .Row {
     height: calc(100vh - 81px);
+    background-color: black;
   }
   .Input {
     background: black;
-    border: 1px solid #f0f1f9;
+    background-color: black;
+    border: 1px solid black;
     box-sizing: border-box;
     border-radius: 2px;
     color: antiquewhite;
@@ -19,7 +21,7 @@
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #2142b2;
+    color: black;
   }
   
   .Link {

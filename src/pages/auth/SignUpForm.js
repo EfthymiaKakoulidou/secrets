@@ -50,9 +50,7 @@ const SignUpForm = () => {
 
   return (
     <Row className={styles.Row}>
-      <Col className="py-2 p-0 p-lg-2" lg={2}>
-          <NavBar />
-          </Col>
+    
       <Col className="my-auto py-2 p-md-2" md={6}>
         <Container className={`${appStyles.Content} p-4 `}>
           <h1 className={styles.Header}>sign up</h1>
