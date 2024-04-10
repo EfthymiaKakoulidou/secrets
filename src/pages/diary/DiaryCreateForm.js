@@ -24,11 +24,10 @@ function DiaryCreateForm() {
     const [postData, setPostData] = useState({
       title: "",
       content: "",
-      image: null,
+     
     });
-    const { title, content, image } = postData;
+    const { title, content } = postData;
 
-    const imageInput = useRef(null);
     const history = useHistory();
   
     const handleChange = (event) => {
@@ -38,22 +37,6 @@ function DiaryCreateForm() {
       });
     };
   
-    const handleChangeImage = (event) => {
-      const file = event.target.files[0]; 
-      if (file) {
-          URL.revokeObjectURL(image); 
-          setPostData({
-              ...postData,
-              image: URL.createObjectURL(file), 
-          });
-      } else {
-          
-          setPostData({
-              ...postData,
-              image: null, 
-          });
-      }
-  };
 
     const handleSubmit = async (event) => {
       event.preventDefault();
@@ -61,9 +44,7 @@ function DiaryCreateForm() {
     
       formData.append("title", title);
       formData.append("content", content);
-      if (imageInput.current.files[0]) {
-        formData.append("image", imageInput.current.files[0]);
-    }
+     
     
       try {
         const { data } = await axiosReq.post("/diary/", formData);
@@ -124,50 +105,10 @@ function DiaryCreateForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={8}>
-          <Container
-            className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
-          >
-            <Form.Group className="text-center">
-              {image ? (
-                <>
-                  <figure>
-                    <Image className={appStyles.Image} src={image} rounded />
-                  </figure>
-                  <div>
-                    <Form.Label
-                      className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                      htmlFor="image-upload"
-                    >
-                      Change the image
-                    </Form.Label>
-                  </div>
-                </>
-              ) : (
-                <Form.Label
-                  className="d-flex justify-content-center"
-                  htmlFor="image-upload"
-                >
-                  <Asset
-                    src={Upload}
-                    message="Click or tap to upload an image"
-                  />
-                </Form.Label>
-              )}
-
-              <Form.File
-                id="image-upload"
-                accept="image/*"
-                onChange={handleChangeImage}
-                ref={imageInput}
-              />
-            </Form.Group>
-            <div className="d-md-none">{textFields}</div>
-          </Container>
-        </Col>
-        <Col md={5} lg={4} className="d-none d-md-block p-0 p-md-2">
+      <Col md={5} lg={12} className="d-none d-md-block p-0 p-md-2">
           <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
+      
       </Row>
     </Form>
   );
