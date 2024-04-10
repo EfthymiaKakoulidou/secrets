@@ -16,6 +16,7 @@ import { fetchMoreData } from "../../utils/utils";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ReachoutCommentsCreateForm from "./ReachoutCommentsCreateForm";
 import Reach_out_comment from "./Reach_out_comment";
+import NavBar from "../../components/NavBar";
 
 function ReachOutPage() {
     const { id } = useParams();
@@ -45,7 +46,10 @@ function ReachOutPage() {
 console.log(reach_out)
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
       <Reachout {...reach_out.results[0]} setReach_outs={setReach_out} postPage />
         
         <Container className={appStyles.Content}>
@@ -83,7 +87,7 @@ console.log(reach_out)
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Profiles
+     
       </Col>
     </Row>
   );

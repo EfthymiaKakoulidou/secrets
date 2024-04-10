@@ -54,10 +54,10 @@ function ReachOutssPage({ message, filter = "" }) {
   return (
     <Row className="h-100">
       
-      <Col className="py-2 p-0 p-lg-2" lg={4}>
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
           <NavBar />
           </Col>
-      <Col className="py-2 p-0 p-lg-2" lg={4}>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
       <p className="p-4">Reach out to someone!</p>
         <Profiles mobile />
       <ReachoutCreateForm/>

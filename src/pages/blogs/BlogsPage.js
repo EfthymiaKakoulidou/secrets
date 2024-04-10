@@ -17,6 +17,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Profiles from "../profiles/Profiles";
+import NavBar from "../../components/NavBar";
 
 function BlogsPage({ message, filter = "" }) {
   const [blogs, setBlogs] = useState({ results: [] });
@@ -54,22 +55,12 @@ function BlogsPage({ message, filter = "" }) {
   console.log(blogs)
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+          <NavBar />
+          </Col>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
         <Profiles mobile />
-        <i className={`fas fa-search ${styles.SearchIcon}`} />
-        <Form
-          className={styles.SearchBar}
-          onSubmit={(event) => event.preventDefault()}
-        >
-          <Form.Control
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            type="text"
-            className="mr-sm-2"
-            placeholder="Search blogposts"
-          />
-        </Form>
-       
+
         {hasLoaded ? (
           <>
             {blogs.length ? (
