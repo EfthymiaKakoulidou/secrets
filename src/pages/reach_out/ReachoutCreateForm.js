@@ -16,7 +16,7 @@ function ReachoutCreateForm() {
     reach_out_to: "",
     reach_out_content: "",
   });
-  const { reach_out_to, reach_out_content } = reachoutData;
+  const { reach_out_to, content } = reachoutData;
   const history = useHistory();
 
   useEffect(() => {
@@ -77,8 +77,8 @@ function ReachoutCreateForm() {
               <Form.Control
                 as="textarea"
                 rows={4}
-                name="reach_out_content"
-                value={reach_out_content}
+                name="content"
+                value={content}
                 onChange={handleChange}
               />
             </Form.Group>
