@@ -45,7 +45,7 @@ function PostCreateForm() {
           URL.revokeObjectURL(image); 
           setPostData({
               ...postData,
-              image: URL.createObjectURL(file), // Create URL for the selected file
+              image: URL.createObjectURL(file), 
           });
       } else {
           
