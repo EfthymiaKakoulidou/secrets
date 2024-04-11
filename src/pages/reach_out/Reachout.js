@@ -49,8 +49,16 @@ const Reach_out = (props) => {
         <Link to={`/reach_out/${id}`}>
         <Media.Body className="align-self-center ml-2">
           <span className={styles.Owner}>{owner} reached out to</span>
+         
+        </Media.Body>
+        <Media.Body className="align-self-center ml-2">
           <span className={styles.Owner}>{reachOutToName}</span>
+        </Media.Body>
+        <Media.Body className="align-self-center ml-2">
           <span className={styles.Date}>{updated_at}</span>
+        </Media.Body>
+        <Media.Body className="align-self-center ml-2">
+          
           <span className={styles.Date}>{content}</span>
         </Media.Body>
         </Link>
