@@ -3,12 +3,12 @@
     background-color: black;
   }
   .Input {
-    background: black;
-    background-color: black;
+    
+    background-color: antiquewhite;
     border: 1px solid black;
     box-sizing: border-box;
     border-radius: 2px;
-    color: antiquewhite;
+    color: black;
     text-align: center;
     padding: 10px;
   }
