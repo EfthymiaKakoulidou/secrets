@@ -14,7 +14,7 @@ const NavBar = () => {
   const currentUser = useCurrentUser();
   console.log(currentUser);
   const setCurrentUser = useSetCurrentUser();
-
+  
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleSignOut = async() => {
@@ -25,15 +25,16 @@ const NavBar = () => {
       console.log(err);
     }
   };
-
+  
   const addPostIcon = (
+  <>
       <NavLink
         to="/seecrets/create"
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
         <i className="fa-solid fa-plus"></i>Add secret
-      </NavLink>
+      </NavLink></>
   )
   
   const loggedInIcons = <>
@@ -42,7 +43,7 @@ const NavBar = () => {
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
       >
-      <i class="fa-solid fa-user"></i>My Profile
+      <i class="fa-solid fa-user"></i>{currentUser?.username}
       
     </NavLink>
 
@@ -113,7 +114,7 @@ console.log(currentUser);
       </NavLink>
     </>
   );
-
+  
   return (
     <Col className="py-2 p-0 p-lg-2" lg={12}>
 
