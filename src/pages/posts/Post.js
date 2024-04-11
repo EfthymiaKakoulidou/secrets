@@ -103,22 +103,22 @@ const handleUnlike = async () => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              overlay={<Tooltip>You posted this!</Tooltip>}
             >
-              <i className="far fa-heart" />
+              <i class="fa-solid fa-hand-holding-hand"/>
             </OverlayTrigger>
           ) : hug_id ? (
             <span onClick={handleUnlike}>
-              <i className={`fas fa-heart ${styles.Heart}`} />
+              <i className={`fa-solid fa-hand-holding-hand ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
             <span onClick={handleLike}>
-              <i className={`far fa-heart ${styles.HeartOutline}`} />
+              <i className={`fa-solid fa-hand-holding-hand ${styles.HeartOutline}`} />
             </span>
           ) : (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>Log in to like posts!</Tooltip>}
+              overlay={<Tooltip>Log in to hug someone!</Tooltip>}
             >
               <i className="far fa-heart" />
             </OverlayTrigger>
