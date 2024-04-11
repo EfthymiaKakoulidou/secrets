@@ -51,17 +51,7 @@ console.log(reach_out)
       <Reachout {...reach_out.results[0]} setReach_outs={setReach_out} postPage />
         
         <Container className={appStyles.Content}>
-          {currentUser ? (
-        <ReachoutCommentsCreateForm
-        profile_id={currentUser.profile_id}
-        profileImage={profile_image}
-        reach_out={id}
-        setReach_out={setReach_out}
-        setReach_out_comments={setReach_out_comments}
-        />
-        ) : reach_out_comments.results.length ? (
-        "Comments"
-        ) : null}
+          
         {reach_out_comments.results.length ? (
             <InfiniteScroll
               children={reach_out_comments.results.map((comment) => (
@@ -78,10 +68,21 @@ console.log(reach_out)
               next={() => fetchMoreData(reach_out_comments, setReach_out_comments)}
             />
           ) : currentUser ? (
-            <span>No comments yet, be the first to comment!</span>
+            <span>No messages yet.</span>
           ) : (
-            <span>No comments... yet</span>
+            <span>No messages... yet</span>
           )}
+          {currentUser ? (
+            <ReachoutCommentsCreateForm
+            profile_id={currentUser.profile_id}
+            profileImage={profile_image}
+            reach_out={id}
+            setReach_out={setReach_out}
+            setReach_out_comments={setReach_out_comments}
+            />
+        ) : reach_out_comments.results.length ? (
+        "Comments"
+        ) : null}
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
