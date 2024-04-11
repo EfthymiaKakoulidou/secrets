@@ -38,7 +38,7 @@ const Reach_out_comment = (props) => {
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>
         </Media.Body>
-        
+        <p>{reach_out_comment_content}</p>
       </Media>
     </>
   );
