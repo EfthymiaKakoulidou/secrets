@@ -15,7 +15,7 @@ function ReachoutCreateForm() {
   const [profiles, setProfiles] = useState([]);
   const [reachoutData, setReachoutData] = useState({
     reach_out_to: "",
-    reach_out_content: "",
+    content: "",
   });
   const { reach_out_to, content } = reachoutData;
   const history = useHistory();
@@ -68,7 +68,7 @@ function ReachoutCreateForm() {
                 <option value="">Select...</option>
                 {profiles.map((profile) => (
                   <option key={profile.id} value={profile.id}>
-                    {profile.username}
+                    {profile.owner}
                   </option>
                 ))}
               </Form.Control>
