@@ -51,8 +51,8 @@ function App() {
               <Route exact path="/diary/:id" render={() => <DiaryPage />} />
               <Route exact path="/diary/:id/edit" render={() => <DiaryEditForm />} />
               <Route exact path="/blogs/create" render={() => <BlogCreateForm />} />
-              <Route exact path="/blogs/:id" render={() => <BlogPage />} />
-              <Route exact path="/blogs/:id/edit" render={() => <BlogEditForm />} />
+              <Route exact path="/blogpost/:id" render={() => <BlogPage />} />
+              <Route exact path="/blogpost/:id/edit" render={() => <BlogEditForm />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
               <Route exact path="/reach_out" render={() => <ReachOutsPage />} />
               <Route exact path="/reach_out/:id" render={() => <ReachOutPage />} />
