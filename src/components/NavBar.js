@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import styles from "../styles/NavBar.module.css";
@@ -15,6 +15,23 @@ const NavBar = () => {
   console.log(currentUser);
   const setCurrentUser = useSetCurrentUser();
   
+  const [isSuperuser, setIsSuperuser] = useState(false);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get("/dj-rest-auth/user/ ");
+        setIsSuperuser(response.data.is_superuser);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
+  
+  
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleSignOut = async() => {
@@ -25,7 +42,7 @@ const NavBar = () => {
       console.log(err);
     }
   };
-  
+  console.log(currentUser)
   const addPostIcon = (
   <>
       <NavLink
@@ -36,7 +53,7 @@ const NavBar = () => {
         <i className="fa-solid fa-plus"></i>Add secret
       </NavLink></>
   )
-  
+  console.log(isSuperuser);
   const loggedInIcons = <>
 
     <NavLink
@@ -79,12 +96,15 @@ const NavBar = () => {
       <i className="fa-solid fa-sign-out-alt"></i>Sign Out
     </NavLink>
 
-    <NavLink
+    {isSuperuser && (
+      <NavLink
+        to="/blogs/create"
         className={styles.NavLink}
-        to={`/blogs/create`}
+        activeClassName={styles.Active}
       >
-      Add blogpost
-    </NavLink>
+        <i className="fa-solid fa-plus"></i>Add blogpost
+      </NavLink>
+    )}
 
     <NavLink
     className={styles.NavLink}
@@ -95,6 +115,7 @@ const NavBar = () => {
     </NavLink>
 </>;
 console.log(currentUser);
+
   const loggedOutIcons = (
     <>
       <NavLink
