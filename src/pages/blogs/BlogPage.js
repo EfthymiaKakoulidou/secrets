@@ -43,6 +43,7 @@ function BlogPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <p className="p-4">Blogpost </p>
       <Blog {...blog.results[0]} setBlogs={setBlog} blogPage />
         
         <Container className={appStyles.Content}>
