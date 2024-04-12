@@ -40,13 +40,8 @@ const NavBar = () => {
   console.log(currentUser)
   const addPostIcon = (
   <>
-      <NavLink
-        to="/seecrets/create"
-        className={styles.NavLink}
-        activeClassName={styles.Active}
-      >
-        <i className="fa-solid fa-plus"></i>Add secret
-      </NavLink></>
+     
+  </>
   )
   console.log(isSuperuser);
   const loggedInIcons = <>
@@ -58,6 +53,14 @@ const NavBar = () => {
       <i class="fa-solid fa-user"></i>{currentUser?.username}
       
     </NavLink>
+
+    <NavLink
+        to="/seecrets/create"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i className="fa-solid fa-plus"></i>Add secret
+      </NavLink>
 
     <NavLink
     className={styles.NavLink}
@@ -83,14 +86,6 @@ const NavBar = () => {
     <i class="fa-solid fa-envelope"></i>Messages
     </NavLink>
 
-    <NavLink
-      className={styles.NavLink}
-      to="/"
-      onClick = {handleSignOut}
-    >
-      <i className="fa-solid fa-sign-out-alt"></i>Sign Out
-    </NavLink>
-
     {isSuperuser && (
       <NavLink
         to="/blogs/create"
@@ -108,7 +103,17 @@ const NavBar = () => {
     >
     Admin's Blogposts
     </NavLink>
+
+    <NavLink
+      className={styles.NavLink}
+      to="/"
+      onClick = {handleSignOut}
+    >
+      <i className="fa-solid fa-sign-out-alt"></i>Sign Out
+    </NavLink>
+
 </>;
+
 console.log(currentUser);
 
   const loggedOutIcons = (
