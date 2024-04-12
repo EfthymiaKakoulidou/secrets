@@ -8,15 +8,15 @@ import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Reachout from "./Reachout";
-import ReachoutCreateForm2 from "./ReachoutCommentsCreateForm";
+
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Comment from "../comments/Comment";
+
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ReachoutCommentsCreateForm from "./ReachoutCommentsCreateForm";
 import Reach_out_comment from "./Reach_out_comment";
-import NavBar from "../../components/NavBar";
+
 
 function ReachOutPage() {
     const { id } = useParams();

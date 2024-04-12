@@ -17,7 +17,6 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Profiles from "../profiles/Profiles";
-import NavBar from "../../components/NavBar";
 
 function PostsPage({ message, filter = "" }) {
   const [seecrets, setSeecrets] = useState({ results: [] });

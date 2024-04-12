@@ -9,14 +9,13 @@ import { useRedirect } from "../../hooks/UseRedirect";
 import {
   Form,
   Button,
-  Image,
   Col,
   Row,
   Container,
   Alert,
 } from "react-bootstrap";
 import axios from "axios";
-import NavBar from "../../components/NavBar";
+
 
 const SignUpForm = () => {
   useRedirect("loggedIn");

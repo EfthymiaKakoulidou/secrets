@@ -16,7 +16,7 @@ import { Alert, Image } from "react-bootstrap";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/UseRedirect";
-import NavBar from "../../components/NavBar";
+
 
 function PostCreateForm() {
   useRedirect("loggedOut");

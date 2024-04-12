@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Diary from "./Diary";
-import NavBar from "../../components/NavBar";
 
 
 function DiaryPage() {

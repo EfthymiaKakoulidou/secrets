@@ -10,7 +10,7 @@ import { useRedirect } from "../../hooks/UseRedirect";
 
 function ReachoutEditForm() {
   useRedirect("loggedOut");
-  const [errors, setErrors] = useState({});
+  const [ setErrors] = useState({});
   const [profiles, setProfiles] = useState([]);
   const [reachoutData, setReachoutData] = useState({
     reach_out_to: "",

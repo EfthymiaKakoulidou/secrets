@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
@@ -18,7 +17,7 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Profiles from "../profiles/Profiles";
-import NavBar from "../../components/NavBar";
+
 
 function ReachOutssPage({ message, filter = "" }) {
   const [reach_outs, setReach_outs] = useState({ results: [] });

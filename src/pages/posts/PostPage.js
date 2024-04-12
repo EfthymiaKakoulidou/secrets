@@ -14,7 +14,6 @@ import Comment from "../comments/Comment";
 import Asset from "../../components/Asset";
 import { fetchMoreData } from "../../utils/utils";
 import InfiniteScroll from "react-infinite-scroll-component";
-import NavBar from "../../components/NavBar";
 import Profiles from "../profiles/Profiles";
 
 function PostPage() {
