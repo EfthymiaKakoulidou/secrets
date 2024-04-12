@@ -26,7 +26,7 @@ function BlogPage() {
         const handleMount = async () => {
           try {
             const [{ data: blog }, { data: comments }] = await Promise.all([
-              axiosReq.get(`/blogposts/${id}`),
+              axiosReq.get(`/blogpost/${id}`),
               axiosReq.get(`/comments/?blog=${id}`),
             ]);
             setBlog({ results: [blog] });

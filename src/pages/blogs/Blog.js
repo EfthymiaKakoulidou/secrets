@@ -26,12 +26,12 @@ const Blog = (props) => {
   const history = useHistory();
 
   const handleEdit = () => {
-    history.push(`/blogposts/${id}/edit`);
+    history.push(`/blogpost/${id}/edit`);
   };
 
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/blogposts/${id}`);
+      await axiosRes.delete(`/blogpost/${id}`);
       history.push(`/blogposts`);
     } catch (err) {
       console.log(err);
