@@ -101,6 +101,9 @@ function PostsPage({ message, filter = "" }) {
       <p className="p-4">Profiles</p>
         <Profiles/>
       </Col>
+      <Col className="py-2 p-0 p-lg-2" lg={2}>
+     
+      </Col>
     </Row>
   );
 }
