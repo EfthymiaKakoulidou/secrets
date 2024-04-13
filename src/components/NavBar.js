@@ -8,12 +8,11 @@ import axios from "axios";
 import Col from "react-bootstrap/Col";
 
 
-const NavBar = () => {
+const NavBar = ({ mobile }) => {
   const currentUser = useCurrentUser();
-  console.log(currentUser);
   const setCurrentUser = useSetCurrentUser();
-
   const [isSuperuser, setIsSuperuser] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -37,13 +36,13 @@ const NavBar = () => {
       console.log(err);
     }
   };
-  console.log(currentUser)
+ 
   const addPostIcon = (
   <>
      
   </>
   )
-  console.log(isSuperuser);
+  
   const loggedInIcons = <>
 
     <NavLink
@@ -114,7 +113,6 @@ const NavBar = () => {
 
 </>;
 
-console.log(currentUser);
 
   const loggedOutIcons = (
     <>
@@ -138,32 +136,31 @@ console.log(currentUser);
   
   return (
     <Col className="py-2 p-0 p-lg-2" lg={12}>
-
-      <Nav className="mr-auto text-right flex-column ">
-        
-        <NavLink to="/">
+      <Navbar expand="lg" className="p-0">
+        <NavLink to="/" className="d-lg-none">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
 
-        {currentUser && addPostIcon }
+        <Navbar.Toggle className={styles.NavToggle} aria-controls="navbar-nav" onClick={() => setExpanded(!expanded)} />
 
-          <NavLink
-            exact
-            className={styles.NavLink}
-            activeClassName={styles.Active}
-            to="/"
-          >
-            <i className="fas fa-home"></i>Home
-          </NavLink>
-
-          {currentUser ? loggedInIcons : loggedOutIcons}
-
-        </Nav>
-
-      </Col>
-
+        <Navbar.Collapse id="navbar-nav" className={expanded ? "show" : ""}>
+          <Nav className="mr-auto text-right flex-column">
+          <NavLink to="/"className="d-none" >
+          <Navbar.Brand>
+            <img src={logo} alt="logo" height="45" />
+          </Navbar.Brand>
+        </NavLink>
+            <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
+              <i className="fas fa-home"></i>
+              Home
+            </NavLink>
+            {currentUser ? loggedInIcons : loggedOutIcons}
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </Col>
   );
 };
 

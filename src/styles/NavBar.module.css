@@ -4,11 +4,26 @@
     color: antiquewhite;
 }
 
+.NavToggle {
+    background-color: antiquewhite;
+    color: black;
+}
+
 .NavLink {
     background-color: black;
     color: antiquewhite;
+    text-decoration: none;
 }
 
 .Active {
     color:rgb(251, 191, 112);
 }
+
+  
+@media screen and (max-width: 991px) {
+    .NavBar {
+      display: none;
+      width: 250px;
+      height: 250px;
+    }
+  }
