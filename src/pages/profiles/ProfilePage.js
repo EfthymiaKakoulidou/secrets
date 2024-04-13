@@ -8,32 +8,36 @@ import Asset from "../../components/Asset";
 
 import styles from "../../styles/ProfilePage.module.css";
 import appStyles from "../../App.module.css";
+import btnStyles from "../../styles/Button.module.css";
 
 import Profiles from "./Profiles";
+
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-import { Image } from "react-bootstrap";
+import { Button, Image } from "react-bootstrap";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Post from "../posts/Post";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
 import { ProfileEditDropdown } from "../../components/MoreDropdown";
-import NavBar from "../../components/NavBar";
 
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profileSeecrets, setProfileSeecrets] = useState({ results: [] });
 
+  const currentUser = useCurrentUser();
   const { id } = useParams();
 
-  const setProfileData = useSetProfileData();
+  const { setProfileData } = useSetProfileData();
   const { pageProfile } = useProfileData();
 
   const [profile] = pageProfile.results;
+  const is_owner = currentUser?.username === profile?.owner;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -58,7 +62,7 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-    {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
       <Row noGutters className="px-3 text-center">
         <Col lg={3} className="text-lg-left">
           <Image
@@ -69,24 +73,19 @@ function ProfilePage() {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
-          <Row className="justify-content-center no-gutters">
-            <Col xs={3} className="my-2">
-              <div>{profile?.seecrets_count}</div>
-              <div>secrets</div>
-            </Col>
-          </Row>
+          
         </Col>
+        
         {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>
     </>
   );
-console.log(profileSeecrets.length)
+
   const mainProfileSeecrets = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s secrets</p>
+      <p className="text-center">{profile?.owner}'s posts</p>
       <hr />
-      
       {profileSeecrets.results.length ? (
         <InfiniteScroll
           children={profileSeecrets.results.map((seecret) => (
@@ -107,11 +106,8 @@ console.log(profileSeecrets.length)
   );
 
   return (
-  
-       <Row className="h-100">
-  
-      <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="p-4">Profile</p>
+    <Row>
+      <Col className="py-2 p-0 p-lg-2" lg={8}>
         <Profiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
@@ -124,8 +120,7 @@ console.log(profileSeecrets.length)
           )}
         </Container>
       </Col>
-      <Col className="py-2 p-0 p-lg-2" lg={4}>
-      <p className="p-4">All Profiles</p>
+      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         <Profiles />
       </Col>
     </Row>

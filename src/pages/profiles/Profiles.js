@@ -14,17 +14,17 @@ const Profiles = ({ mobile }) => {
         mobile && "d-lg-none text-center mb-3"
       }`}
     >
-      {Profiles.length ? (
+      {Profiles.results.length ? (
         <>
           
           {mobile ? (
             <div className="d-flex justify-content-around">
-              {Profiles.slice(0, 4).map((profile) => (
+              {Profiles.results.slice(0, 4).map((profile) => (
                 <Profile key={profile.id} profile={profile} mobile />
               ))}
             </div>
           ) : (
-            Profiles.map((profile) => (
+            Profiles.results.map((profile) => (
               <Profile key={profile.id} profile={profile} />
             ))
           )}
