@@ -18,7 +18,7 @@ const Blog = (props) => {
     content,
     image,
     updated_at,
-    postPage,
+    blogPage,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -39,7 +39,6 @@ const Blog = (props) => {
   };
 
 
-
   return (
     <Card className={styles.Post}>
       <Card.Body>
@@ -50,7 +49,7 @@ const Blog = (props) => {
           </Link>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && postPage && (
+            {is_owner && blogPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
@@ -59,7 +58,7 @@ const Blog = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <Link to={`/blogposts/${id}`}>
+      <Link to={`/blogpost/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
       <Card.Body>
