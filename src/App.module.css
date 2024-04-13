@@ -3,6 +3,7 @@
     background-color: black;
     min-height: 100vh;
     color: antiquewhite;
+    overflow: hidden;
   }
 
 .Content {
