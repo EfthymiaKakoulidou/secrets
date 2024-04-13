@@ -16,7 +16,7 @@ const Profiles = ({ mobile }) => {
     >
       {Profiles.length ? (
         <>
-          <p>Profiles</p>
+          
           {mobile ? (
             <div className="d-flex justify-content-around">
               {Profiles.slice(0, 4).map((profile) => (
