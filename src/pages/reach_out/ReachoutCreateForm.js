@@ -51,7 +51,7 @@ function ReachoutCreateForm() {
       }
     }
   };
-
+console.log(profiles);
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
@@ -66,7 +66,7 @@ function ReachoutCreateForm() {
                 onChange={handleChange}
               >
                 <option value="">Select...</option>
-                {profiles.map((profile) => (
+                {profiles.results?.map((profile) => (
                   <option key={profile.id} value={profile.id}>
                     {profile.owner}
                   </option>
@@ -83,7 +83,9 @@ function ReachoutCreateForm() {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button className={styles.button}  type="submit">Create</Button>
+            <Button className={styles.button} type="submit">
+              Create
+            </Button>
           </Container>
         </Col>
       </Row>
