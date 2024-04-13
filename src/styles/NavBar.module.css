@@ -1,15 +1,18 @@
 .NavBar {
+    
     background-color: black;
     border: 1px solid antiquewhite;
     color: antiquewhite;
 }
 
 .NavToggle {
+    margin-right: 30px;
     background-color: antiquewhite;
     color: black;
 }
 
 .NavLink {
+    margin-left: 10px;
     background-color: black;
     color: antiquewhite;
     text-decoration: none;
