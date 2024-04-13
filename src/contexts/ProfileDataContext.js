@@ -11,7 +11,7 @@ export const useSetProfileData = () => useContext(SetProfileDataContext);
 
 export const ProfileDataProvider = ({ children }) => {
   const [profileData, setProfileData] = useState({
-    // we will use the pageProfile later!
+
     pageProfile: { results: [] },
     Profiles: { results: [] },
   });
@@ -24,7 +24,7 @@ export const ProfileDataProvider = ({ children }) => {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(
-          "/profiles"
+          "/profiles/"
         );
         setProfileData((prevState) => ({
           ...prevState,
