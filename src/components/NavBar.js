@@ -44,6 +44,11 @@ const NavBar = ({ mobile }) => {
   )
   
   const loggedInIcons = <>
+  <NavLink to="/" className="d-none" >
+          <Navbar.Brand>
+            <img src={logo} alt="logo" height="45" />
+          </Navbar.Brand>
+        </NavLink>
 
     <NavLink
         className={styles.NavLink}
@@ -116,6 +121,11 @@ const NavBar = ({ mobile }) => {
 
   const loggedOutIcons = (
     <>
+    <NavLink to="/" className="d-none">
+          <Navbar.Brand>
+            <img src={logo} alt="logo" height="45" />
+          </Navbar.Brand>
+        </NavLink>
       <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
@@ -136,7 +146,7 @@ const NavBar = ({ mobile }) => {
   
   return (
     <Col className="py-2 p-0 p-lg-2" lg={12}>
-      <Navbar expand="lg" className="p-0">
+      <Navbar expand="lg" className="p-2">
         <NavLink to="/" className="d-lg-none">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
