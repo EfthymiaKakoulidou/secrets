@@ -1,16 +1,11 @@
 import React from "react";
 import styles from "../../styles/Diary.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { axiosRes } from "../../api/axiosDefaults";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { MoreDropdown } from "../../components/MoreDropdown";
+
 
 const Diary = ({ id, owner, title, content, updated_at, diaryPage, truncateContent }) => {
-  const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
-  const history = useHistory();
+
 
   const truncatedContent = truncateContent ? (content ? content.substring(0, 30) : "") : content;
 

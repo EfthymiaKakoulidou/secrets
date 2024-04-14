@@ -6,14 +6,11 @@ import Row from "react-bootstrap/Row";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Blog from "./Blog";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 
 function BlogPage() {
     const { id } = useParams();
     const [blog, setBlog] = useState({ results: [] });
-    const currentUser = useCurrentUser();
-    const profile_image = currentUser?.profile_image;
 
     useEffect(() => {
         const handleMount = async () => {
