@@ -6,6 +6,7 @@ import { NavLink } from "react-router-dom";
 import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
+import { removeTokenTimestamp } from "../utils/utils";
 
 
 const NavBar = ({ mobile }) => {
@@ -32,6 +33,7 @@ const NavBar = ({ mobile }) => {
     try {
       await axios.post("dj-rest-auth/logout/");
       setCurrentUser(null);
+      removeTokenTimestamp();
     } catch (err) {
       console.log(err);
     }
