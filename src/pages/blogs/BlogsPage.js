@@ -28,7 +28,7 @@ function BlogsPage({ message, filter = "" }) {
     const fetchBlogs = async () => {
       try {
         console.log("Fetching data...");
-        const { data } = await axiosReq.get(`/blogposts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(`/blogposts`);
         console.log("Fetched data:", data);
         setBlogs(data);
         setHasLoaded(true);
@@ -59,13 +59,13 @@ function BlogsPage({ message, filter = "" }) {
 
         {hasLoaded ? (
           <>
-            {blogs.length ? (
+            {blogs.results.length ? (
               
               <InfiniteScroll
-                children={blogs.map((blog) => (
+                children={blogs.results.map((blog) => (
                   <Blog key={blog.id} {...blog} setBlogs={setBlogs} />
                 ))}
-                dataLength={blogs.length}
+                dataLength={blogs.results.length}
                 loader={<Asset spinner />}
                 hasMore={!!blogs.next}
                 next={() => fetchMoreData(blogs, setBlogs)}
