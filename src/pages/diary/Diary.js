@@ -7,25 +7,11 @@ import { axiosRes } from "../../api/axiosDefaults";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
-const Diary = ({ id, owner, title, content, updated_at, postPage, truncateContent }) => {
+const Diary = ({ id, owner, title, content, updated_at, diaryPage, truncateContent }) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
 
-  const handleEdit = () => {
-    history.push(`/diary/${id}/edit`);
-  };
-
-  const handleDelete = async () => {
-    try {
-      await axiosRes.delete(`/diary/${id}`);
-      history.push(`/diary`);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  // Function to truncate the content
   const truncatedContent = truncateContent ? (content ? content.substring(0, 30) : "") : content;
 
   return (
