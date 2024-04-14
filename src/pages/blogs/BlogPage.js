@@ -2,18 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
 
-import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
 import Blog from "./Blog";
-import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import Comment from "../comments/Comment";
-import Asset from "../../components/Asset";
-import { fetchMoreData } from "../../utils/utils";
-import InfiniteScroll from "react-infinite-scroll-component";
+
 
 function BlogPage() {
     const { id } = useParams();
@@ -42,7 +36,7 @@ function BlogPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="p-4">Blogpost </p>
+      <p className="px-5">Blogpost </p>
       <Blog {...blog.results[0]} setBlogs={setBlog} blogPage />
        
       </Col>
