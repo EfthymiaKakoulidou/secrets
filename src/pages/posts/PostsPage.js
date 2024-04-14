@@ -26,12 +26,12 @@ function PostsPage({ message, filter = "" }) {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    console.log("Effect triggered");
+    
     const fetchSeecrets = async () => {
       try {
-        console.log("Fetching data...");
+        
         const { data } = await axiosReq.get(`/seecrets/?${filter}search=${query}`);
-        console.log("Fetched data:", data);
+       
         setSeecrets(data);
         setHasLoaded(true);
       } catch (err) {
@@ -49,9 +49,7 @@ function PostsPage({ message, filter = "" }) {
       clearTimeout(timer);
     };
   }, [filter, query, pathname]);
-  console.log("Rendering component");
-  console.log(seecrets.results.results);
-  console.log(seecrets)
+ 
   return (
     <Row className="h-100 justify-content-end">
     

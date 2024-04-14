@@ -25,12 +25,12 @@ function DiarysPage({ message, filter = "" }) {
   const [query] = useState("");
 
   useEffect(() => {
-    console.log("Effect triggered");
+ 
     const fetchSeecrets = async () => {
       try {
-        console.log("Fetching data...");
+       
         const { data } = await axiosReq.get(`/diary`);
-        console.log("Fetched data:", data);
+        
         setDiarys(data);
         setHasLoaded(true);
       } catch (err) {
@@ -48,8 +48,7 @@ function DiarysPage({ message, filter = "" }) {
       clearTimeout(timer);
     };
   }, [filter, query, pathname]);
-  console.log("Rendering component");
- 
+  
   return (
     <Row className="h-100">
       

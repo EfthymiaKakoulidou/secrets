@@ -24,12 +24,12 @@ function BlogsPage({ message, filter = "" }) {
   const [query] = useState("");
 
   useEffect(() => {
-    console.log("Effect triggered");
+   
     const fetchBlogs = async () => {
       try {
-        console.log("Fetching data...");
+       
         const { data } = await axiosReq.get(`/blogposts`);
-        console.log("Fetched data:", data);
+        
         setBlogs(data);
         setHasLoaded(true);
       } catch (err) {
@@ -47,9 +47,7 @@ function BlogsPage({ message, filter = "" }) {
       clearTimeout(timer);
     };
   }, [filter, query, pathname]);
-  console.log("Rendering component");
-  
-  console.log(blogs)
+ 
   return (
     <Row className="h-100">
   

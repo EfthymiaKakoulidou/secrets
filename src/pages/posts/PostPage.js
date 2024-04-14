@@ -39,9 +39,7 @@ function PostPage() {
     
         handleMount();
       }, [id]);
-     
-console.log(comments.results)
-console.log(seecret)
+
   return (
     <Row className="h-100">
 

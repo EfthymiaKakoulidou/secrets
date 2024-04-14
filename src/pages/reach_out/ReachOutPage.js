@@ -42,8 +42,6 @@ function ReachOutPage() {
         handleMount();
       }, [id]);
      
-
-console.log(reach_out)
   return (
     <Row className="h-100">
      

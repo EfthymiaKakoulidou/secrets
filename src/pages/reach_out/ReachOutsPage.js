@@ -25,12 +25,12 @@ function ReachOutssPage({ message, filter = "" }) {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    console.log("Effect triggered");
+   
     const fetchReach_outs = async () => {
       try {
-        console.log("Fetching data...");
+       
         const { data } = await axiosReq.get(`/reach_out/`);
-        console.log("Fetched data:", data);
+        
         setReach_outs(data);
         setHasLoaded(true);
       } catch (err) {
@@ -48,7 +48,6 @@ function ReachOutssPage({ message, filter = "" }) {
       clearTimeout(timer);
     };
   }, [filter, pathname]);
-  console.log("Rendering component");
  
   return (
     <Row className="h-100">

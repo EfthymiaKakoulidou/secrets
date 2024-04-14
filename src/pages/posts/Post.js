@@ -41,9 +41,7 @@ const Post = (props) => {
       console.log(err);
     }
   };
-console.log(hug_id);
-console.log(profile_id);
-console.log(props);
+
 const handleLike = async () => {
   try {
     const { data } = await axiosRes.post("/hugs/", { hug: id });
@@ -75,7 +73,6 @@ const handleUnlike = async () => {
     console.log(err);
   }
 };
-console.log(profile_id);
   return (
     <Card className={styles.Post}>
       <Card.Body>
