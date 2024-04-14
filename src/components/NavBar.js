@@ -39,13 +39,14 @@ const NavBar = ({ mobile }) => {
     }
   };
  
-  const addPostIcon = (
-  <>
-     
-  </>
-  )
   
   const loggedInIcons = <>
+
+    <NavLink to="/" >
+          <Navbar.Brand>
+            <img src={logo} alt="logo" height="45" />
+          </Navbar.Brand>
+    </NavLink>
 
     <NavLink
         className={styles.NavLink}
@@ -159,10 +160,7 @@ const NavBar = ({ mobile }) => {
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
-            <NavLink exact className={styles.NavLink} activeClassName={styles.Active} to="/">
-              <i className="fas fa-home"></i>
-              Home
-            </NavLink>
+            
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
