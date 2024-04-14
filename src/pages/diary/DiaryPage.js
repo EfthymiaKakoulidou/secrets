@@ -36,7 +36,7 @@ function DiaryPage() {
  
       <Col className="py-2 p-0 p-lg-2" lg={6}>
       <p className="p-4">Diary Entry </p>
-      <Diary {...diary.results[0]} setDiarys={setDiary} diaryPage />
+      <Diary {...diary.results[0]} setDiarys={setDiary} diaryPage truncateContent={false} />
       
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={4}>

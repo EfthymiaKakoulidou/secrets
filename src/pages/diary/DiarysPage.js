@@ -54,13 +54,12 @@ function DiarysPage({ message, filter = "" }) {
     <Row className="h-100">
       
       <Col className="py-2 p-0 p-lg-2" lg={6}>
+
       <p className="p-4">My Diary</p>
-        <Profiles mobile />
-        
         <DiaryCreateForm/>
         </Col>
-        <Col className="py-2 p-0 p-lg-2" lg={4}>
 
+        <Col className="py-2 p-0 p-lg-2" lg={4}>
         <p className="p-4">My Diary entries</p>
 
         {hasLoaded ? (
@@ -70,7 +69,7 @@ function DiarysPage({ message, filter = "" }) {
               
               <InfiniteScroll
                 children={diarys.results.map((diary) => (
-                  <Diary key={diary.id} {...diary} setDiarys={setDiarys} />
+                  <Diary key={diary.id} {...diary} setDiarys={setDiarys} truncateContent={true} />
                 ))}
                 dataLength={diarys.results.length}
                 loader={<Asset spinner />}
