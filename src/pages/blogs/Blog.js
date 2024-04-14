@@ -52,14 +52,15 @@ const Blog = (props) => {
           </div>
         </Media>
       </Card.Body>
-      <Link to={`/blogpost/${id}`}>
-        <Card.Img src={image} alt={title} />
-      </Link>
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
         
       </Card.Body>
+      <Link to={`/blogpost/${id}`}>
+        <Card.Img src={image} alt={title} />
+      </Link>
+      
     </Card>
   );
 };
