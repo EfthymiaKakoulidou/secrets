@@ -20,17 +20,16 @@ function BlogPage() {
     const [blog, setBlog] = useState({ results: [] });
     const currentUser = useCurrentUser();
     const profile_image = currentUser?.profile_image;
-    const [comments, setComments] = useState({ results: [] });
 
     useEffect(() => {
         const handleMount = async () => {
           try {
-            const [{ data: blog }, { data: comments }] = await Promise.all([
+            const [{ data: blog }] = await Promise.all([
               axiosReq.get(`/blogpost/${id}`),
               axiosReq.get(`/comments/?blog=${id}`),
             ]);
             setBlog({ results: [blog] });
-            setComments(comments);
+            
           } catch (err) {
             console.log(err);
           }
@@ -42,43 +41,10 @@ function BlogPage() {
 
   return (
     <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
       <p className="p-4">Blogpost </p>
       <Blog {...blog.results[0]} setBlogs={setBlog} blogPage />
-        
-        <Container className={appStyles.Content}>
-          {currentUser ? (
-        <CommentCreateForm
-        profile_id={currentUser.profile_id}
-        profileImage={profile_image}
-        seecret={id}
-        setBlog={setBlog}
-        setComments={setComments}
-        />
-        ) : comments.results.length ? (
-        "Comments"
-        ) : null}
-        {comments.results.length ? (
-            <InfiniteScroll
-              children={comments.results.map((comment) => (
-                <Comment
-                  key={comment.id}
-                  {...comment}
-                  setBlog={setBlog}
-                  setComments={setComments}
-                />
-              ))}
-              dataLength={comments.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!comments.next}
-              next={() => fetchMoreData(comments, setComments)}
-            />
-          ) : currentUser ? (
-            <span>No comments yet, be the first to comment!</span>
-          ) : (
-            <span>No comments... yet</span>
-          )}
-        </Container>
+       
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
        
