@@ -24,6 +24,7 @@ import DiarysPage from "./pages/diary/DiarysPage";
 import Home from "./pages/home/home";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import NotFound from "./components/NotFound";
 
 
 function App() {
@@ -71,7 +72,7 @@ function App() {
                 path="/profiles/:id/edit"
                 render={() => <ProfileEditForm />}
               />
-              <Route render={() => <p>Page not found!</p>} />
+              <Route render={() => <NotFound/>} />
             </Switch>
             </Col>
           </Row>
