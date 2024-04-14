@@ -55,38 +55,39 @@ function DiaryCreateForm() {
 
     const textFields = (
       <div>
-        <Form>
-          <Form.Label>Dear Diary...</Form.Label>
-          <Form.Control
-            as="textarea"
-            rows={6}
-            name="content"
-            value={content}
-            onChange={handleChange}
-          />
-        </Form>
-        {errors?.content?.map((message, idx) => (
-          <Alert variant="warning" key={idx}>
-            {message}
-          </Alert>
-        ))}
-  
-      <Button
-        className={`${btnStyles.Button} ${btnStyles.Blue}`}
-        onClick={() => {}}
-      >
-        cancel
-      </Button>
-      <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
-      </Button>
-    </div>
+  <Form>
+    <Form.Label>Dear Diary...</Form.Label>
+    <Form.Control
+      as="textarea"
+      rows={6}
+      name="content"
+      value={content}
+      onChange={handleChange}
+    />
+  </Form>
+  {errors?.content?.map((message, idx) => (
+    <Alert variant="warning" key={idx}>
+      {message}
+    </Alert>
+  ))}
+  <div>
+    <Button
+      className={`${btnStyles.Button} ${btnStyles.Blue}`}
+      onClick={() => {}}
+    >
+      cancel
+    </Button>
+    <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
+      create
+    </Button>
+  </div>
+</div>
   );
 
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-      <Col md={5} lg={12} className="d-none d-md-block p-0 p-md-2">
+      <Col sm={12} md={5} lg={12} className="d-md-block p-0 p-md-2">
           <Container className={appStyles.Content}>{textFields}</Container>
         </Col>
       
