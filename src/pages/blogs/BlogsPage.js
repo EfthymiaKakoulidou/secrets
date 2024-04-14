@@ -54,8 +54,7 @@ function BlogsPage({ message, filter = "" }) {
     <Row className="h-100">
   
       <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="p-4">Admin blog </p>
-        <Profiles mobile />
+      <p className="px-5">Admin blog </p>
 
         {hasLoaded ? (
           <>

@@ -54,12 +54,12 @@ function ReachOutssPage({ message, filter = "" }) {
     <Row className="h-100">
       
       <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="p-4">Reach out to someone!</p>
+      <p className="px-5">Reach out to someone!</p>
         <Profiles mobile />
       <ReachoutCreateForm className={styles.form} />
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={4}>
-      <p className="p-4">My Messages</p>
+      <p className="px-5">My Messages</p>
         {hasLoaded ? (
           <>
             {reach_outs.results.length ? (

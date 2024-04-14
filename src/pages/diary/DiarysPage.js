@@ -55,12 +55,12 @@ function DiarysPage({ message, filter = "" }) {
       
       <Col className="py-2 p-0 p-lg-2" lg={6}>
 
-      <p className="p-4">My Diary</p>
+      <p className="px-5">My Diary</p>
         <DiaryCreateForm/>
         </Col>
 
         <Col className="py-2 p-0 p-lg-2" lg={4}>
-        <p className="p-4">My Diary entries</p>
+        <p className="px-5">My Diary entries</p>
 
         {hasLoaded ? (
           

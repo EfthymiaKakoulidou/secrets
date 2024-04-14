@@ -53,44 +53,41 @@ function ReachoutCreateForm() {
   };
 console.log(profiles);
   return (
-    <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col md={5} lg={12} className="d-none d-md-block p-0 p-md-2">
-          <Container>
-            <Form.Group>
-              <Form.Label>Reach Out To</Form.Label>
-              <Form.Control
-                as="select"
-                name="reach_out_to"
-                value={reach_out_to}
-                onChange={handleChange}
-              >
-                <option value="">Select...</option>
-                {profiles.results?.map((profile) => (
-                  <option key={profile.id} value={profile.id}>
-                    {profile.owner}
-                  </option>
-                ))}
-              </Form.Control>
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Content</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={4}
-                name="content"
-                value={content}
-                onChange={handleChange}
-              />
-            </Form.Group>
-            <Button className={styles.button} type="submit">
-              Create
-            </Button>
-          </Container>
-        </Col>
-      </Row>
-    </Form>
-  );
+    <Row>
+  <Col sm={12} md={5} lg={12} className="p-0 p-md-2">
+    <Container>
+      <Form.Group>
+        <Form.Label>Reach Out To</Form.Label>
+        <Form.Control
+          as="select"
+          name="reach_out_to"
+          value={reach_out_to}
+          onChange={handleChange}
+        >
+          <option value="">Select...</option>
+          {profiles.results?.map((profile) => (
+            <option key={profile.id} value={profile.id}>
+              {profile.owner}
+            </option>
+          ))}
+        </Form.Control>
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Content</Form.Label>
+        <Form.Control
+          as="textarea"
+          rows={4}
+          name="content"
+          value={content}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      <Button className={styles.button} type="submit">
+        Create
+      </Button>
+    </Container>
+  </Col>
+</Row>)
 }
 
 export default ReachoutCreateForm;

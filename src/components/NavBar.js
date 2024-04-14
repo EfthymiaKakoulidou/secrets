@@ -44,11 +44,6 @@ const NavBar = ({ mobile }) => {
   )
   
   const loggedInIcons = <>
-  <NavLink to="/" className="d-none" >
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
-          </Navbar.Brand>
-        </NavLink>
 
     <NavLink
         className={styles.NavLink}
@@ -104,8 +99,8 @@ const NavBar = ({ mobile }) => {
     className={styles.NavLink}
     activeClassName={styles.Active}
     to="/blogposts"
-    >
-    Admin's Blogposts
+    ><i class="fa-solid fa-align-justify"></i>
+    Blog
     </NavLink>
 
     <NavLink
@@ -121,7 +116,7 @@ const NavBar = ({ mobile }) => {
 
   const loggedOutIcons = (
     <>
-    <NavLink to="/" className="d-none">
+    <NavLink to="/" >
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
