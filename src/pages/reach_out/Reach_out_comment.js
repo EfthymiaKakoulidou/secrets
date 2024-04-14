@@ -3,6 +3,7 @@ import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
+import appstyles from "../../styles/Diary.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 
@@ -15,16 +16,13 @@ const Reach_out_comment = (props) => {
     reach_out_comment_content,
   } = props;
 
-
-
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-
   return (
     <>
-      <hr />
-      <Media>
+     
+      <Media  className={appstyles.Diary}>
 
         <Link to={`/profiles/${profile_id}`}>
           <Avatar src={profile_image} />
