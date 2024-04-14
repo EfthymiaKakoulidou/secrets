@@ -109,7 +109,7 @@ function ProfilePage() {
 
   return (
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <Col className="py-2 px-5 p-lg-2" lg={6}>
       <p className="p-4">My Profile</p>
         <Profiles mobile />
         <Container className={appStyles.Content}>
