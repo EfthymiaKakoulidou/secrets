@@ -42,7 +42,7 @@ const NavBar = ({ mobile }) => {
   
   const loggedInIcons = <>
 
-    <NavLink to="/" >
+    <NavLink to="/" className="d-none d-lg-inline">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
@@ -119,7 +119,7 @@ const NavBar = ({ mobile }) => {
 
   const loggedOutIcons = (
     <>
-    <NavLink to="/" >
+    <NavLink to="/" className="d-none d-lg-inline">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
@@ -143,28 +143,24 @@ const NavBar = ({ mobile }) => {
   );
   
   return (
-    <Col className="py-2 p-0 p-lg-2" lg={12}>
+    <Col className="py-2 px-5 p-lg-2" lg={12}>
+      
       <Navbar expand="lg" className="p-2">
-        <NavLink to="/" className="d-lg-none">
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
-          </Navbar.Brand>
-        </NavLink>
 
         <Navbar.Toggle className={styles.NavToggle} aria-controls="navbar-nav" onClick={() => setExpanded(!expanded)} />
 
         <Navbar.Collapse id="navbar-nav" className={expanded ? "show" : ""}>
           <Nav className="mr-auto text-right flex-column">
-          <NavLink to="/"className="d-none" >
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
-          </Navbar.Brand>
-        </NavLink>
             
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <NavLink to="/" className="p-2 d-flex justify-content-center align-items-center">
+          <Navbar.Brand>
+            <img src={logo} alt="logo" height="45" />
+          </Navbar.Brand>
+        </NavLink>
     </Col>
   );
 };
