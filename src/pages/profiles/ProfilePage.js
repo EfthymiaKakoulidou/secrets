@@ -11,7 +11,6 @@ import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
 
 import Profiles from "./Profiles";
-
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -73,9 +72,13 @@ function ProfilePage() {
         </Col>
         <Col lg={6}>
           <h3 className="m-2">{profile?.owner}</h3>
+          <Row className="justify-content-center no-gutters">
+           
+          </Row>
+        </Col>
+        <Col lg={3} className="text-lg-right">
           
         </Col>
-        
         {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>
     </>
@@ -89,7 +92,7 @@ function ProfilePage() {
       {profileSeecrets.results.length ? (
         <InfiniteScroll
           children={profileSeecrets.results.map((seecret) => (
-            <Post key={seecret.id} {...seecret} setSeecrets={setProfileSeecrets} />
+            <Post key={seecret.id} {...seecret} setPosts={setProfileSeecrets} />
           ))}
           dataLength={profileSeecrets.results.length}
           loader={<Asset spinner />}
@@ -107,7 +110,8 @@ function ProfilePage() {
 
   return (
     <Row>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <p className="p-4">My Profile</p>
         <Profiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
@@ -121,6 +125,7 @@ function ProfilePage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+      <p className="p-4">All profiles</p>
         <Profiles />
       </Col>
     </Row>
