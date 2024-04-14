@@ -55,7 +55,7 @@ console.log(profiles);
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Col md={5} lg={12} className="d-none d-md-block p-0 p-md-2">
+        <Col md={5} lg={12} className=" d-md-block px-5 p-md-2">
           <Container>
             <Form.Group>
               <Form.Label>Reach Out To</Form.Label>
