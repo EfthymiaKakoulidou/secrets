@@ -41,6 +41,16 @@ function ReachOutPage() {
     
         handleMount();
       }, [id]);
+      
+      const isAuthorized =
+        currentUser &&
+        (currentUser.username === reach_out.results[0]?.owner || // Owner of the reachout
+            currentUser.profile_id === reach_out.results[0]?.reach_out_to); // Reachout directed to the current user
+
+    if (!isAuthorized) {
+        return <span>You are not authorized to view this page.</span>;
+    }
+
      
   return (
     <Row className="h-100">
