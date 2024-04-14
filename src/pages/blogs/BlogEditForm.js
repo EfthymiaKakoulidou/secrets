@@ -32,7 +32,7 @@ function BlogEditForm() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/blogposts/${id}/`);
+        const { data } = await axiosReq.get(`/blogpost/${id}/`);
         const { title, content, image, is_owner } = data;
 
         is_owner ? setBlogData({ title, content, image }) : history.push("/");
@@ -73,8 +73,8 @@ function BlogEditForm() {
     }
 
     try {
-      await axiosReq.put(`/blogposts/${id}/`, formData);
-      history.push(`/blogposts/${id}`);
+      await axiosReq.put(`/blogpost/${id}/`, formData);
+      history.push(`/blogpost/${id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
