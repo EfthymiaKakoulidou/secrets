@@ -24,6 +24,7 @@ function ReachOutPage() {
     const currentUser = useCurrentUser();
     const profile_image = currentUser?.profile_image;
     const [reach_out_comments, setReach_out_comments] = useState({ results: [] });
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const handleMount = async () => {
@@ -36,63 +37,59 @@ function ReachOutPage() {
             setReach_out_comments(reach_out_comments);
           } catch (err) {
             console.log(err);
+            setError(err.message);
           }
         };
     
         handleMount();
       }, [id]);
-      
-      const isAuthorized =
-        currentUser &&
-        (currentUser.username === reach_out.results[0]?.owner || // Owner of the reachout
-            currentUser.profile_id === reach_out.results[0]?.reach_out_to); // Reachout directed to the current user
 
-    if (!isAuthorized) {
-        return <span>You are not authorized to view this page.</span>;
-    }
-
-     
   return (
     <Row className="h-100">
-     
+       {error ? ( 
+          <div>Error: {error}</div>
+      ) : (
+          <>
       <Col className="py-2 p-0 p-lg-2" lg={6}>
       <Reachout {...reach_out.results[0]} setReach_outs={setReach_out} postPage />
         
-        <Container className={appStyles.Content}>
+      <Container className={appStyles.Content}>
           
-        {reach_out_comments.results.length ? (
-            <InfiniteScroll
-              children={reach_out_comments.results.map((comment) => (
-                <Reach_out_comment
-                  key={comment.id}
-                  {...comment}
-                  setReach_out={setReach_out}
-                  setReach_out_comments={setReach_out_comments}
-                />
-              ))}
-              dataLength={reach_out_comments.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!reach_out_comments.next}
-              next={() => fetchMoreData(reach_out_comments, setReach_out_comments)}
-            />
-          ) : currentUser ? (
-            <span>No messages yet.</span>
-          ) : (
-            <span>No messages... yet</span>
-          )}
-          {currentUser ? (
-            <ReachoutCommentsCreateForm
-            profile_id={currentUser.profile_id}
-            profileImage={profile_image}
-            reach_out={id}
-            setReach_out={setReach_out}
-            setReach_out_comments={setReach_out_comments}
-            />
-        ) : reach_out_comments.results.length ? (
-        "Comments"
-        ) : null}
+          {reach_out_comments.results.length ? (
+              <InfiniteScroll
+                  children={reach_out_comments.results.map((comment) => (
+                      <Reach_out_comment
+                          key={comment.id}
+                          {...comment}
+                          setReach_out={setReach_out}
+                          setReach_out_comments={setReach_out_comments}
+                      />
+                  ))}
+                  dataLength={reach_out_comments.results.length}
+                  loader={<Asset spinner />}
+                  hasMore={!!reach_out_comments.next}
+                  next={() => fetchMoreData(reach_out_comments, setReach_out_comments)}
+                        />
+                    ) : currentUser ? (
+                        <span>No messages yet.</span>
+                    ) : (
+                        <span>No messages... yet</span>
+                    )}
+                    {currentUser ? (
+                        <ReachoutCommentsCreateForm
+                            profile_id={currentUser.profile_id}
+                            profileImage={profile_image}
+                            reach_out={id}
+                            setReach_out={setReach_out}
+                            setReach_out_comments={setReach_out_comments}
+                        />
+                    ) : reach_out_comments.results.length ? (
+                        "Comments"
+                    ) : null}
+          
+            
         </Container>
-      </Col>
+      </Col></>)}
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
      
       </Col>
