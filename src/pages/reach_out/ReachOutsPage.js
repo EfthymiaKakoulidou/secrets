@@ -16,7 +16,6 @@ import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
-import Profiles from "../profiles/Profiles";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 

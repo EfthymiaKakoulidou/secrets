@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card } from "react-bootstrap";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -8,7 +7,6 @@ import homepic2 from "../../assets/homepic2.jpg";
 
 const Home = () => {
   
-    const currentUser = useCurrentUser();
     
     return (
       <Row className="h-100 ">

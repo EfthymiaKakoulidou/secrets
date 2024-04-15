@@ -11,7 +11,7 @@ import styles from "../../styles/ReachoutCreateForm.module.css";
 
 function ReachoutCreateForm() {
   useRedirect("loggedOut");
-  const [errors, setErrors] = useState({});
+  const [setErrors] = useState({});
   const [profiles, setProfiles] = useState([]);
   const [reachoutData, setReachoutData] = useState({
     reach_out_to: "",
@@ -42,7 +42,7 @@ function ReachoutCreateForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const { data } = await axiosReq.post("/reach_out/", reachoutData);
+      await axiosReq.post("/reach_out/", reachoutData);
       history.push(`/reach_out/`);
       window.location.reload();
     } catch (err) {

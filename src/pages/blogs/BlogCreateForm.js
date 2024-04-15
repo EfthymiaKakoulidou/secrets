@@ -57,7 +57,7 @@ function BlogCreateForm() {
       formData.append("image", imageInput.current.files[0]);
   
       try {
-        const { data } = await axiosReq.post("/blogposts/", formData);
+        await axiosReq.post("/blogposts/", formData);
         history.push(`/blogposts/`);
       } catch (err) {
         

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
 import appstyles from "../../styles/Reachout.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosRes } from "../../api/axiosDefaults";
 
 
@@ -21,8 +20,7 @@ const Reach_out = (props) => {
     truncateContent
   } = props;
 
-  const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
+ 
   const [reachOutToName, setReachOutToName] = useState("");
   const truncatedContent = truncateContent ? (content ? content.substring(0, 30) : "") : content;
   useEffect(() => {
