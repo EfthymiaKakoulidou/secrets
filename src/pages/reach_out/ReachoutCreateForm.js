@@ -44,6 +44,7 @@ function ReachoutCreateForm() {
     try {
       const { data } = await axiosReq.post("/reach_out/", reachoutData);
       history.push(`/reach_out/`);
+      window.location.reload();
     } catch (err) {
     
       if (err.response?.status !== 401) {
