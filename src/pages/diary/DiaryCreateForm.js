@@ -37,14 +37,16 @@ function DiaryCreateForm() {
     const handleSubmit = async (event) => {
       event.preventDefault();
       const formData = new FormData();
-    
       formData.append("title", title);
       formData.append("content", content);
-     
-    
+  
       try {
-        const { data } = await axiosReq.post("/diary/", formData);
+        await axiosReq.post("/diary/", formData);
         history.push(`/diary/`);
+        setPostData({
+          title: "", 
+          content: "",
+        });
       } catch (err) {
         console.error("Error creating diary entry:", err);
         if (err.response?.status !== 401) {
