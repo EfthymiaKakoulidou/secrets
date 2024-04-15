@@ -58,24 +58,23 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      
-      <Row noGutters className="px-3 text-center">
-        {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
-        <Col lg={3} className="text-lg-left">
-          <Image
-            className={styles.ProfileImage}
-            roundedCircle
-            src={profile?.image}
-          />
+      <Row noGutters className="px-3 text-center align-items-center">
+        <Col lg={3} className="text-lg-left position-relative">
+          <div className={styles.ProfileContainer}>
+            <Image className={styles.ProfileImage} roundedCircle src={profile?.image} />
+            
+          </div>
         </Col>
+        
         <Col lg={6}>
-          <h3 className="m-2">{profile?.owner}</h3>
-          <Row className="justify-content-center no-gutters">
-           
-          </Row>
+          <strong className="m-2">{profile?.owner}</strong>
         </Col>
-        <Col lg={3} className="text-lg-right">
-          
+        
+        <Col lg={3} className="text-lg-left position-relative">
+          <div className={styles.ProfileContainer}>
+            
+            {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+          </div>
         </Col>
         {profile?.content && <Col className="p-3">{profile.content}</Col>}
       </Row>

@@ -4,10 +4,33 @@
     width: 80px;
     margin: 4px;
   }
-  
+  .ProfileEditDropdown {
+    position: relative;
+    top: 10px; 
+    right: 10px; 
+  }
   @media screen and (max-width: 991px) {
     .ProfileImage {
       width: 180px;
       height: 180px;
+    }
+  }
+
+  .ProfileContainer {
+    position: relative;
+  }
+  
+
+  @media (max-width: 768px) {
+    .ProfileContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .ProfileEditDropdown {
+      position: absolute;
+      top: 10px; 
+      right: 10px; 
     }
   }
