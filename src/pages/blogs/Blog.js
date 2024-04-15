@@ -31,7 +31,7 @@ const Blog = (props) => {
       await axiosRes.delete(`/blogpost/${id}`);
       history.push(`/blogposts`);
     } catch (err) {
-      console.log(err);
+    
     }
   };
 

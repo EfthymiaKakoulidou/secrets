@@ -37,7 +37,7 @@ function ReachOutPage() {
             setReach_out({ results: [reach_out] });
             setReach_out_comments(reach_out_comments);
           } catch (err) {
-            console.log(err);
+           
             setError(err.message);
           }
         };

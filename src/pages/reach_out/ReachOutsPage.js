@@ -37,7 +37,7 @@ function ReachOutssPage({ message, filter = "" }) {
         setHasLoaded(true);
       } catch (err) {
         console.error("Error fetching data:", err);
-        console.log(err);
+      
       }
     };
 

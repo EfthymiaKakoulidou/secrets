@@ -37,8 +37,7 @@ function ReachoutCommentsCreateForm(props) {
       }));
       setReach_out_comment_content("");
     } catch (err) {
-      console.log(err);
-      console.log(setReach_out_comment_content);
+      
     }
   };
   return (

@@ -37,7 +37,7 @@ function DiaryEditForm() {
 
         is_owner ? setPostData({ title, content, image }) : history.push("/diary");
       } catch (err) {
-        console.log(err);
+        
       }
     };
 
@@ -76,7 +76,7 @@ function DiaryEditForm() {
       await axiosReq.put(`/diary/${id}/`, formData);
       history.push(`/diary/${id}`);
     } catch (err) {
-      console.log(err);
+     
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

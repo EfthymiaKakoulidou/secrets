@@ -52,7 +52,7 @@ function ProfilePage() {
         setProfileSeecrets(profileSeecrets);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        
       }
     };
     fetchData();

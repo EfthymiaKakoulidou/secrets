@@ -37,7 +37,7 @@ function BlogEditForm() {
 
         is_owner ? setBlogData({ title, content, image }) : history.push("/");
       } catch (err) {
-        console.log(err);
+        
       }
     };
 
@@ -76,7 +76,7 @@ function BlogEditForm() {
       await axiosReq.put(`/blogpost/${id}/`, formData);
       history.push(`/blogpost/${id}`);
     } catch (err) {
-      console.log(err);
+      
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

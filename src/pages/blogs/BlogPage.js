@@ -22,7 +22,7 @@ function BlogPage() {
             setBlog({ results: [blog] });
             
           } catch (err) {
-            console.log(err);
+           
           }
         };
     

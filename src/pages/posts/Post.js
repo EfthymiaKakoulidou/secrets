@@ -38,7 +38,7 @@ const Post = (props) => {
       await axiosRes.delete(`/seecrets/${id}`);
       history.push(`/seecrets`);
     } catch (err) {
-      console.log(err);
+      
     }
   };
 
@@ -54,7 +54,7 @@ const handleLike = async () => {
       }),
     }));
   } catch (err) {
-    console.log(err);
+   
   }
 };
 
@@ -70,9 +70,11 @@ const handleUnlike = async () => {
       }),
     }));
   } catch (err) {
-    console.log(err);
+  
   }
 };
+
+
   return (
     <Card className={styles.Post}>
       <Card.Body>

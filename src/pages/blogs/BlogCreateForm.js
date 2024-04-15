@@ -60,7 +60,7 @@ function BlogCreateForm() {
         const { data } = await axiosReq.post("/blogposts/", formData);
         history.push(`/blogposts/`);
       } catch (err) {
-        console.log(err);
+        
         if (err.response?.status !== 401) {
           setErrors(err.response?.data);
         }

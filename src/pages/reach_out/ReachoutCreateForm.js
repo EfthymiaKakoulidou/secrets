@@ -45,13 +45,13 @@ function ReachoutCreateForm() {
       const { data } = await axiosReq.post("/reach_out/", reachoutData);
       history.push(`/reach_out/`);
     } catch (err) {
-      console.log(err);
+    
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
   };
-console.log(profiles);
+
   return (
     <Form onSubmit={handleSubmit}>
       <Row>

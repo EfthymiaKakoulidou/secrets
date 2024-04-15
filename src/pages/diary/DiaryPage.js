@@ -23,7 +23,7 @@ function DiaryPage() {
             setDiary({ results: [diary] });
             
           } catch (err) {
-            console.log(err);
+           
           }
         };
     

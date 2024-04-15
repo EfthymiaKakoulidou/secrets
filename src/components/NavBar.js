@@ -35,7 +35,7 @@ const NavBar = ({ mobile }) => {
       setCurrentUser(null);
       removeTokenTimestamp();
     } catch (err) {
-      console.log(err);
+      
     }
   };
  

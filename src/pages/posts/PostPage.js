@@ -33,7 +33,7 @@ function PostPage() {
             setSeecret({ results: [seecret] });
             setComments(comments);
           } catch (err) {
-            console.log(err);
+            
           }
         };
     
