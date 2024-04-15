@@ -33,8 +33,7 @@ function BlogsPage({ message, filter = "" }) {
         setBlogs(data);
         setHasLoaded(true);
       } catch (err) {
-        console.error("Error fetching data:", err);
-        console.log(err);
+        
       }
     };
 
@@ -51,8 +50,8 @@ function BlogsPage({ message, filter = "" }) {
   return (
     <Row className="h-100">
   
-      <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="px-5">Admin blog </p>
+      <Col className="py-2 px-5 p-lg-2" lg={6}>
+      <p className="px-5 pt-5">Admin blog </p>
 
         {hasLoaded ? (
           <>
