@@ -156,7 +156,7 @@ const NavBar = ({ mobile }) => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <NavLink to="/" className="p-2 d-flex justify-content-center align-items-center">
+      <NavLink to="/" className="p-2 d-flex justify-content-center align-items-center d-lg-none">
           <Navbar.Brand>
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
