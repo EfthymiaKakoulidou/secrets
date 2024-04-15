@@ -15,6 +15,8 @@ import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { useSetCurrentUser } from "../../contexts/CurrentUserContext";
 import { setTokenTimestamp } from "../../utils/utils";
+import Image from "react-bootstrap/Image";
+import signin from "../../assets/signin.jpg";
 
 
 function SignInForm() {
@@ -110,7 +112,10 @@ function SignInForm() {
         </Container>
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={4}>
-        
+      <Image
+          className={`${appStyles.FillerImage}`}
+          src={signin}
+        />
       </Col>
     </Row>
   );

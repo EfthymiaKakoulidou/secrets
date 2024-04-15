@@ -5,6 +5,8 @@ import styles from "../../styles/SignInUpForm.module.css";
 import btnStyles from "../../styles/Button.module.css";
 import appStyles from "../../App.module.css";
 import { useRedirect } from "../../hooks/UseRedirect";
+import Image from "react-bootstrap/Image";
+import signup from "../../assets/signup.jpg";
 
 import {
   Form,
@@ -127,7 +129,10 @@ const SignUpForm = () => {
         </Container>
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={4}>
-   
+      <Image
+          className={`${appStyles.FillerImage}`}
+          src={signup}
+        />
       </Col>
     </Row>
   );
