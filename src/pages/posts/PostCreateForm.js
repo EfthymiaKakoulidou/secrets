@@ -129,7 +129,7 @@ function PostCreateForm() {
             <p className="px-5 pt-5">Add a secret</p>
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Col className="py-2 p-0 p-md-2" md={7} lg={10}>
+        <Col className="py-2 px-5 p-md-2" md={7} lg={10}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
