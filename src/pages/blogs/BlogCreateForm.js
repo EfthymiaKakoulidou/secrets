@@ -116,7 +116,7 @@ function BlogCreateForm() {
     <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 px-5 p-md-2" md={7} lg={6}>
-        <p className="p-4">Add admin blogpost  </p>
+        <p className="px-5 pt-5">Add admin blogpost  </p>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >

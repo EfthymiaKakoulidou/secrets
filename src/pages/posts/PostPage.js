@@ -44,7 +44,7 @@ function PostPage() {
     <Row className="h-100">
 
       <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="px-5">Secret</p>
+      <p className="px-5 pt-5">Secret</p>
       <Post {...seecret.results[0]} setSeecrets={setSeecret} postPage />
         
         <Container className={appStyles.Content}>

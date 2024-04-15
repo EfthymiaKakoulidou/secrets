@@ -54,7 +54,7 @@ function PostsPage({ message, filter = "" }) {
     <Row className="h-100 justify-content-end">
     
       <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="px-5">Secrets</p>
+      <p className="px-5 pt-5">Secrets</p>
         <i className={`fas fa-search ${styles.SearchIcon}`} />
         <Form
           className={styles.SearchBar}

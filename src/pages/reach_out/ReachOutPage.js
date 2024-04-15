@@ -50,7 +50,8 @@ function ReachOutPage() {
           <div>Error: {error}</div>
       ) : (
           <>
-      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <Col className="py-2 p-0 p-lg-2 " lg={6}>
+      <p className="px-5 pt-5">Message </p>
       <Reachout {...reach_out.results[0]} setReach_outs={setReach_out} postPage />
         
       <Container className={appStyles.Content}>

@@ -42,7 +42,7 @@ function ReachoutCommentsCreateForm(props) {
     }
   };
   return (
-    <Form className="mt-2" onSubmit={handleSubmit}>
+    <Form className="mt-2 px-5" onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
