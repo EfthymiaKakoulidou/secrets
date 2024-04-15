@@ -82,7 +82,7 @@ function PostPage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-      <p className="p-4">Profiles</p>
+      <p className="px-5 pt-5">Profiles</p>
         <Profiles/>
       </Col>
     </Row>
