@@ -2,8 +2,18 @@
     color: black; 
   }
 
-.button {
-  background-color: antiquewhite;
-  color: black;
-  border: none;
-}
+  .button {
+    border: none;
+    background-color: antiquewhite;;
+    color: black;
+    border-radius: 100px;
+    padding: 4px 10px;
+    min-width: 75px;
+    margin: 5px;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: antiquewhite;
+  }
