@@ -126,7 +126,7 @@ function PostCreateForm() {
     <Row className="h-100 ">
      
           <Col className="py-2 p-0 p-lg-2" lg={8}>
-            <p className="px-5">Add a secret</p>
+            <p className="px-5 pt-5">Add a secret</p>
     <Form onSubmit={handleSubmit}>
       <Row>
         <Col className="py-2 p-0 p-md-2" md={7} lg={10}>
