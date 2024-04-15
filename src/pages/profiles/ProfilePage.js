@@ -60,8 +60,9 @@ function ProfilePage() {
 
   const mainProfile = (
     <>
-      {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
+      
       <Row noGutters className="px-3 text-center">
+        {profile?.is_owner && <ProfileEditDropdown id={profile?.id} />}
         <Col lg={3} className="text-lg-left">
           <Image
             className={styles.ProfileImage}
@@ -109,8 +110,8 @@ function ProfilePage() {
 
   return (
     <Row>
-      <Col className="py-2 px-5 p-lg-2" lg={6}>
-      <p className="p-4">My Profile</p>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
+      <p className="px-5 pt-5">My Profile</p>
         <Profiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
@@ -124,7 +125,7 @@ function ProfilePage() {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-      <p className="p-4">All profiles</p>
+      <p className="px-5 pt-5">All profiles</p>
         <Profiles />
       </Col>
     </Row>
