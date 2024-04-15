@@ -34,7 +34,7 @@ function ProfilePage() {
 
   const [profile] = pageProfile.results;
 
-
+// Fetch the profile data from the API.
   useEffect(() => {
     const fetchData = async () => {
       try {

@@ -36,8 +36,10 @@ const ProfileEditForm = () => {
 
   useEffect(() => {
     const handleMount = async () => {
+      // redirect user if they are not the owner of this profile
       if (currentUser?.profile_id?.toString() === id) {
         try {
+          // fetch the user's profile data from the API
           const { data } = await axiosReq.get(`/profiles/${id}/`);
           const { name, content, image } = data;
           setProfileData({ name, content, image });
