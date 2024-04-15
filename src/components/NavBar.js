@@ -65,27 +65,27 @@ const NavBar = ({ mobile }) => {
       </NavLink>
 
     <NavLink
-    className={styles.NavLink}
-    activeClassName={styles.Active}
-    to="/seecrets"
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/seecrets"
     >
-    <i className="fas fa-stream"></i>Secrets
+      <i className="fas fa-stream"></i>Secrets
     </NavLink>
 
     <NavLink
-    className={styles.NavLink}
-    activeClassName={styles.Active}
-    to="/diary"
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/diary"
     >
-    <i class="fa-solid fa-book"></i>My Diary
+      <i class="fa-solid fa-book"></i>My Diary
     </NavLink>
 
     <NavLink
-    className={styles.NavLink}
-    activeClassName={styles.Active}
-    to="/reach_out"
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/reach_out"
     >
-    <i class="fa-solid fa-envelope"></i>Messages
+      <i class="fa-solid fa-envelope"></i>Messages
     </NavLink>
 
     {isSuperuser && (
@@ -99,11 +99,12 @@ const NavBar = ({ mobile }) => {
     )}
 
     <NavLink
-    className={styles.NavLink}
-    activeClassName={styles.Active}
-    to="/blogposts"
-    ><i class="fa-solid fa-align-justify"></i>
-    Blog
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/blogposts"
+    >
+      <i class="fa-solid fa-align-justify"></i>Blog
+    
     </NavLink>
 
     <NavLink

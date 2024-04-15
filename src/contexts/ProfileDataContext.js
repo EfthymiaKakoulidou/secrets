@@ -18,8 +18,6 @@ export const ProfileDataProvider = ({ children }) => {
 
   const currentUser = useCurrentUser();
 
- 
-
   useEffect(() => {
     const handleMount = async () => {
       try {
