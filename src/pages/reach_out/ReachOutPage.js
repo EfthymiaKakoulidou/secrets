@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import appStyles from "../../App.module.css";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { axiosReq } from "../../api/axiosDefaults";
-import Reachout from "./Reachout";
+import Reach_out from "./Reachout";
 
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
@@ -25,6 +25,7 @@ function ReachOutPage() {
     const profile_image = currentUser?.profile_image;
     const [reach_out_comments, setReach_out_comments] = useState({ results: [] });
     const [error, setError] = useState(null);
+  
 
     useEffect(() => {
         const handleMount = async () => {
@@ -44,6 +45,12 @@ function ReachOutPage() {
         handleMount();
       }, [id]);
 
+      const reachOutToName = reach_out?.results[0]?.reachOutToName;
+      const isCurrentUserReachOutName = currentUser?.username === reachOutToName;
+  
+      const adjustedReachOutToName = isCurrentUserReachOutName ? "You" : reachOutToName;
+  
+
   return (
     <Row className="h-100">
        {error ? ( 
@@ -51,14 +58,17 @@ function ReachOutPage() {
       ) : (
           <>
       <Col className="py-2 p-0 p-lg-2 " lg={6}>
+
       <p className="px-5 pt-5">Message </p>
-      <Reachout {...reach_out.results[0]} setReach_outs={setReach_out} postPage />
+      
+      <Reach_out {...reach_out.results[0]} reachOutToName={adjustedReachOutToName} setReach_outs={setReach_out} postPage truncateContent={false} />
         
       <Container className={appStyles.Content}>
           
           {reach_out_comments.results.length ? (
               <InfiniteScroll
                   children={reach_out_comments.results.map((comment) => (
+                    
                       <Reach_out_comment
                           key={comment.id}
                           {...comment}

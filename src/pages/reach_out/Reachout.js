@@ -9,6 +9,7 @@ import { axiosRes } from "../../api/axiosDefaults";
 
 
 const Reach_out = (props) => {
+  
   const {
     profile_id,
     profile_image,
@@ -17,13 +18,13 @@ const Reach_out = (props) => {
     content,
     id,
     reach_out_to,
+    truncateContent
   } = props;
-
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const [reachOutToName, setReachOutToName] = useState("");
-
+  const truncatedContent = truncateContent ? (content ? content.substring(0, 30) : "") : content;
   useEffect(() => {
     const fetchProfileName = async () => {
       try {
@@ -56,7 +57,7 @@ const Reach_out = (props) => {
         </Media.Body>
         <Media.Body className="align-self-center ml-2">
           
-          <span>{content}</span>
+          <span>{truncatedContent}...</span>
         </Media.Body>
         </Link>
       </Media>

@@ -17,12 +17,14 @@ import NoResults from "../../assets/no-results.png";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import Profiles from "../profiles/Profiles";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 
 function ReachOutssPage({ message, filter = "" }) {
   const [reach_outs, setReach_outs] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
+  const currentUser = useCurrentUser();
 
   useEffect(() => {
    
@@ -64,9 +66,14 @@ function ReachOutssPage({ message, filter = "" }) {
             {reach_outs.results.length ? (
               
               <InfiniteScroll
-                children={reach_outs.results.map((reach_out) => (
-                  <Reachout key={reach_out.id} {...reach_out} setReach_outs={setReach_outs} />
-                ))}
+                children={reach_outs.results.map((reach_out) => {
+                 
+                  const ownerText = reach_out.owner === currentUser.username ? "You" : reach_out.owner;
+                 
+                  return (
+                    <Reachout key={reach_out.id} {...reach_out} owner={ownerText} setReach_outs={setReach_outs} truncateContent={true} />
+                  );
+                })}
                 dataLength={reach_outs.results.length}
                 loader={<Asset spinner />}
                 hasMore={!!reach_outs.next}
