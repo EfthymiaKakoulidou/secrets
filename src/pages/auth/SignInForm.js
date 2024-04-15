@@ -40,6 +40,7 @@ function SignInForm() {
       setCurrentUser(data.user);
       setTokenTimestamp(data);
       history.push("/");
+      window.location.reload();
     } catch (err) {
       setErrors(err.response?.data);
     }
