@@ -193,55 +193,82 @@ Profiles
 
     - At the top left of the page there is the logo of the site and its name 'Secrets' which the user can click and be redirected to the home page.
 
-![screenshot](documentation/features/feature01.png)
+![screenshot](documentation/features/featurelogo.png)
 
 - **Sign in/Sign Up/Login**
 
-    - At the top right of the page the user can be informed if he/she is logged in or not. In the case the user does not have an account he/she can sign up.
+    - At the top left of the page the user can be informed if he/she is logged in or not. In the case the user does not have an account he/she can sign up.
 
-![screenshot](documentation/features/feature02.png)
+![screenshot](documentation/features/featuresignin.png)
+![screenshot](documentation/features/featuresignup.png)
 
 - **Side Navbar**
 
     - The side Navbar is the navigation tool of the user. There the user can find all the content of the page.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/featurenavbar.png)
 
-- **Home**
+- **Profile**
 
-    - The home page had all the secrets all the users have added to the site.
+    - The username appears next. It is an andication that the user is logged in and a link to profile page.
 
-![screenshot](documentation/features/feature04.png)
+![screenshot](documentation/features/featureprofile.png)
 
-- **My Secrets**
+- **Profile Page**
 
-    - On this page the user can see the secrets he/she has added themselves.
+    - On this page, appart from the profile's details the user can see a list of all the profiles. Each of the users' avatars links to their profile.
 
-![screenshot](documentation/features/feature05.png)
+![screenshot](documentation/features/feature0profilepage.png)
+
+- **Share a secret**
+
+    - On this page the user can fill the form to add a secret.
+
+![screenshot](documentation/features/featuresecretcreate.png)
+
+- **Secrets**
+
+    - Here is the feed with all the posted secrets. When a user clicks on a secret they are redirected to the secret's details and is able to see all the comments that people have left on this secrets. The user can also leave his/hers comments and edit or delete them if they have written them. If the user has posted this secret he/she can edit or delete them.
+
+![screenshot](documentation/features/featureprofileslist.png)
+![screenshot](documentation/features/featureprofileeditdelete.png)
+![screenshot](documentation/features/featureprofileeditform.png)
+![screenshot](documentation/features/featurecommenteditdelete.png)
+![screenshot](documentation/features/featurecommenteditform.png)
 
 - **My Messages**
 
-    - If the user has reached out to somebody or somebody has reached out to the user then their messages will appear on this page.
+    - If the user has reached out to somebody or somebody has reached out to the user then their messages will appear on this page. When the user clicks on an item of the list of the messages then he/she is redirected to the thread he/she has with the user that reached out to him/her or the person he/she has reached out to. There he/she can add a message to that thread.
 
-![screenshot](documentation/features/feature04.png)
+![screenshot](documentation/features/featurereachouts.png)
+![screenshot](documentation/features/featurereachoutform.png)
+![screenshot](documentation/features/featurereachoutlist.png)
+![screenshot](documentation/features/featurereachout.png)
 
 - **My Diary**
 
-    - Here the user can write anything that just he/she will have access to. Previous entries to the diary will also appear on this page.
+    - Here the user can write anything that just he/she will have access to. Previous entries to the diary will also appear on this page. When the user clicks on a diary entry then he/she is redirected to the page that shows the whole content of the entry.
 
-![screenshot](documentation/features/feature05.png)
+![screenshot](documentation/features/featurediary.png)
+![screenshot](documentation/features/featurediaryform.png)
+![screenshot](documentation/features/featurediarylist.png)
+![screenshot](documentation/features/featurediaryentry.png)
 
-- **Admins Blog**
+- **Add blogpost if the user is an administrator and Admins Blog**
 
-    - On this page the administrator can make blogposts that are relavant to the subject of the site such as articles etc.
+    - If the user is an administrator then he gets an extra choice on the navbar to add a blogpost. He/she can add a blogpost and edit or delete it.
 
-![screenshot](documentation/features/feature06.png)
+![screenshot](documentation/features/featureblogform.png)
+![screenshot](documentation/features/featurblogposts.png)
+![screenshot](documentation/features/featurblogeditdelete.png)
+![screenshot](documentation/features/featurblogeditform.png)
 
-- **Profiles**
+- **sign Out**
 
-    - This page gathers all of the users' profiles. If the user clicks on the avatar of a profile then he/she can see the secrets he/she have shared.
+    - The user can sign out.
 
-![screenshot](documentation/features/feature07.png)
+![screenshot](documentation/features/featureblogform.png)
+
 
 ### Future Features
 
@@ -474,15 +501,10 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("AWS_ACCESS_KEY_ID", "user's own value")
-os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user's own value")
 os.environ.setdefault("DATABASE_URL", "user's own value")
-os.environ.setdefault("EMAIL_HOST_PASS", "user's own value")
-os.environ.setdefault("EMAIL_HOST_USER", "user's own value")
+
 os.environ.setdefault("SECRET_KEY", "user's own value")
-os.environ.setdefault("STRIPE_PUBLIC_KEY", "user's own value")
-os.environ.setdefault("STRIPE_SECRET_KEY", "user's own value")
-os.environ.setdefault("STRIPE_WH_SECRET", "user's own value")
+
 
 # local environment only (do not include these in production/deployment!)
 os.environ.setdefault("DEBUG", "True")
@@ -490,18 +512,10 @@ os.environ.setdefault("DEBUG", "True")
 
 Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
 
-- Start the Django app: `python3 manage.py runserver`
+- Start the React app: `npm start`
 - Stop the app once it's loaded: `CTRL+C` or `⌘+C` (Mac)
-- Make any necessary migrations: `python3 manage.py makemigrations`
-- Migrate the data to the database: `python3 manage.py migrate`
-- Create a superuser: `python3 manage.py createsuperuser`
-- Load fixtures (if applicable): `python3 manage.py loaddata file-name.json` (repeat for each file)
 - Everything should be ready now, so run the Django app again: `python3 manage.py runserver`
 
-If you'd like to backup your database models, use the following command for each model you'd like to create a fixture for:
-
-- `python3 manage.py dumpdata your-model > your-model.json`
-- *repeat this action for each model you wish to backup*
 
 #### Cloning
 
@@ -534,21 +548,11 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+There are no differences between the local and the deployed verison of the site.
 
 ## Credits
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+I used the walkthrough "Moments" from the Code Institute's LMS to help me structure my project.
 
 ### Content
 
@@ -580,47 +584,12 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 
 ### Media
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-⚠️⚠️ EXAMPLE LINKS - REPLACE WITH YOUR OWN ⚠️⚠️
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-| Source | Location | Type | Notes |
-| --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+All the media I used for this projects are owned by me or by close friends whom I got permission from to use.
 
 ### Acknowledgements
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-⚠️⚠️ EXAMPLES ONLY - REPLACE WITH YOUR OWN ⚠️⚠️
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Juliia_Konn] for his support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank my partner for helping me to make this transition into software development.
+
