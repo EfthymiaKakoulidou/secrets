@@ -52,7 +52,7 @@ function BlogsPage({ message, filter = "" }) {
   
       <Col className="py-2 p-0 p-lg-2" lg={6}>
       <p className="px-5 pt-5">Admin blog </p>
-
+      <p className="px-5 pt-5">In this blog you will find valuable information about what secret keeping means for your mental health and well being! </p>
         {hasLoaded ? (
           <>
             {blogs.results.length ? (
