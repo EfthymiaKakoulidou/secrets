@@ -59,6 +59,7 @@ const NavBar = ({ mobile }) => {
         to="/seecrets/create"
         className={styles.NavLink}
         activeClassName={styles.Active}
+        exact
       >
         <i className="fa-solid fa-plus"></i>Share a secret
       </NavLink>
@@ -67,6 +68,7 @@ const NavBar = ({ mobile }) => {
       className={styles.NavLink}
       activeClassName={styles.Active}
       to="/seecrets"
+      exact
     >
       <i className="fas fa-stream"></i>Secrets
     </NavLink>
