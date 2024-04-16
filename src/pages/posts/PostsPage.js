@@ -94,8 +94,8 @@ function PostsPage({ message, filter = "" }) {
           </Container>
         )}
       </Col>
-      <Col className="py-2 p-0 p-lg-2" lg={4}>
-      <p className="px-5 pt-5">Profiles</p>
+      <Col className="py-2 px-5 p-lg-2" lg={4}>
+      <p className="pt-5">Profiles</p>
         <Profiles/>
       </Col>
       <Col className="py-2 p-0 p-lg-2" lg={2}>
