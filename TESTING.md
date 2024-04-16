@@ -166,19 +166,39 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Page | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Home | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature01.jpg) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature02.jpg) |
-| About | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature03.jpg) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature04.jpg) |
-| Gallery | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature05.jpg) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature06.jpg) |
-| Contact | | | | | |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature07.jpg) |
-| | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature08.jpg) |
-| repeat for all remaining pages | x | x | x | x | x |
+| Logo | | | | | |
+| | Feature is expected to redirect to the home page when the user clicks on it | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the home page | Test concluded and passed | ![screenshot](documentation/features/featurelogo.jpg) |
+| Sign up | | | | | |
+| | Feature is expected to create anew user and a profile | Tested the feature by filling the form | The feature behaved as expected, and it created a new user | Test concluded and passed | ![screenshot](documentation/features/featuresignup.jpg) |
+| Sign in | | | | | |
+| | Feature is expected to login an existed user | Tested the feature by signing in an already existing user | The feature behaved as expected, and it accessed the site | Test concluded and passed | ![screenshot](documentation/features/featuresignin.jpg) |
+| Profile | | | | | |
+| | Feature is expected to redirect the user to his/hers profile page when the user clicks on it | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the profile| Test concluded and passed | ![screenshot](documentation/features/featureprofile.jpg) |
+| Profile edit | | | | | |
+| | Feature is expected to redirect the user to the profile edit form | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the profile edit form| Test concluded and passed | ![screenshot](documentation/features/featureprofileedit.jpg) |
+| Profile change username| | | | | |
+| | Feature is expected to redirect the user to the form to change his/hers profile | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the profile| Test concluded and passed | ![screenshot](documentation/features/featurechangeusername.jpg) |
+| Profile change password| | | | | |
+| | Feature is expected to redirect the user to the form to change his/hers password | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the change password form| Test concluded and passed | ![screenshot](documentation/features/featurechangepassword.jpg) |
+| Profile list| | | | | |
+| | Feature is expected to redirect the user to other peoples' profile detail page | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to that person's profile page | Test concluded and passed | ![screenshot](documentation/features/featureprofilelist.jpg) |
+| Diary form | | | | | |
+| | Feature is expected to create a diary entry | Tested the feature by filling the form and submit it | The feature behaved as expected, and it created an entr| Test concluded and passed | ![screenshot](documentation/features/featurediary.jpg) |
+| Diary Entry | | | | | |
+| | Feature is expected to redirect the diary entry where the whole content will be revealed| Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to that specific diary entry| Test concluded and passed | ![screenshot](documentation/features/featurediaryentry.jpg) |
+| Messages | | | | | |
+| | Feature is expected to create athread with the specific person chosen | Tested the feature by filling the form and logging in as the other user to see if the message was there | The feature behaved as expected, and it created a thread to mine and the other person's messages list| Test concluded and passed | ![screenshot](documentation/features/featuremessages.jpg) |
+| Messages list | | | | | |
+| | Feature is expected to redirect the user to the thread of this conversation where all the messages between the 2 people appear | Tested the feature by clicking on it | The feature behaved as expected, and showed me the whole conversation| Test concluded and passed | ![screenshot](documentation/features/featuremessage.jpg) |
+| Blog Create | | | | | |
+| | Feature is expected to appear only if the user is an administrator and create a blogpost by filling the form | Tested the feature by logging in as an administrator and filling the form | The feature behaved as expected, and created a blogpost | Test concluded and passed | ![screenshot](documentation/features/featureblogpost.jpg) |
+| Blog Edit or Delete | | | | | |
+| | Feature is expected to redirect the blog edit form or to the blog if the blogpost is deleted | Tested the feature by clicking on the choices | The features behaved as expected, and it redirected me to the blog edit form or the blog respectively| Test concluded and passed | ![screenshot](documentation/features/featureblogedit.jpg) |
+| Blogposts | | | | | |
+| | Feature is expected to redirect the user to the blog | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the blog | Test concluded and passed | ![screenshot](documentation/features/featureblog.jpg) |
+| Sign Out | | | | | |
+| | Feature is expected to sign the user out | Tested the feature by clicking on it | The feature behaved as expected, and it signed me out| Test concluded and passed | ![screenshot](documentation/features/featuresignout.jpg) |
+
 
 
 ## User Story Testing
@@ -186,17 +206,24 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/featurelogo.jpg) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature02.jpg) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature03.jpg) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature04.jpg) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature05.jpg) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature06.jpg) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature07.jpg) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature08.jpg) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature09.jpg) |
-| repeat for all remaining user stories | x |
-
+- As a new site user, I would like signin or signup, so that I can have access to the site. | ![screenshot](documentation/features/featuresignin.jpg) |
+- As a new site user, I would like to be informed about what this site is all about, so that I can decide if it is for me. | ![screenshot](documentation/features/featurehome.jpg) |
+- As a new site user, I would like to check my profile, edit or delete it, so that I can control the information I am giving out. | ![screenshot](documentation/features/featureprofile.jpg) |
+- As a new site user, I would like to check other peoples' profiles, so that I can choose people to interact with. | ![screenshot](documentation/features/featuresecrets.jpg) |
+- As a new site user, I would like to share a secret with users of the site, so that I can unburden myself and feel relief. | ![screenshot](documentation/features/featuresecretcreate.jpg) |
+- As a new site user, I would like to edit and delete my secrets, so that I update information or in case I changed my mind. | ![screenshot](documentation/features/featuresecretedit.jpg) |
+- As a new site user, I would like to check other peoples' secrets, so that I can see if I can find something I can relate to. | ![screenshot](documentation/features/featuresecrets.jpg) |
+- As a new site user, I would like to comment on other peoples posts, so that I can express my opinion. | ![screenshot](documentation/features/featurecomment.jpg) |
+- As a new site user, I would like to edit or delete my comments in case I change my mind. | ![screenshot](documentation/features/featurecommentedit.jpg) |
+- As a new site user, I would like to keep a diary, so that I can document my thoughts and be helped by the process of writing. | ![screenshot](documentation/features/featurediary.jpg) |
+- As a new site user, I would like to message people privately and show support, so that I can connect with others and give and get help. | ![screenshot](documentation/features/featuremessages.jpg) |
+- As a new site user, I would like to read the blog, so that I can get information about topics around keeping secrets and psychology of it. | ![screenshot](documentation/features/featureblog.jpg) |
+- As a new site user, I would like to signout, so that I can feel safe that my information is protected. | ![screenshot](documentation/features/featuresignout.jpg) |
+- As a returning site user, I would like to do all of the above for the same reasons. |  |
+- As a returning site user, I would like to check my messages and see if I have new, so that I can keep in touch with people. | ![screenshot](documentation/features/featuremessages.jpg) |
+- As a returning site user, I would like to check the feed, so that I can be updated with new information. | ![screenshot](documentation/features/featuresecrets.jpg) |
+- As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic. | ![screenshot](documentation/features/featureblogcreate.jpg) |
+- As a site administrator, I should be able to handle all the information that is included in the site, so that I can check the content. | ![screenshot](documentation/features/featurebackend.jpg) |
 
 ## Bugs
 
