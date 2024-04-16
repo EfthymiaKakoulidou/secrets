@@ -40,9 +40,9 @@ function App() {
           <Col className="py-2 p-0 p-lg-2" lg={10}>
             <Switch>
               <Route exact path="/" render= {() => <Home/> }/>
-              <Route exact path="/seecrets" render= {() => ( <PostsPage message='No results are found.Adjust the search keyword' /> )}/>
-              <Route exact path="/diary" render= {() => ( <DiarysPage message='No results are found.Adjust the search keyword' /> )}/>
-              <Route exact path="/blogposts" render= {() => ( <BlogsPage message='No results are found.Adjust the search keyword' /> )}/>
+              <Route exact path="/seecrets" render= {() => ( <PostsPage message='No results are found.' /> )}/>
+              <Route exact path="/diary" render= {() => ( <DiarysPage message='No results are found.' /> )}/>
+              <Route exact path="/blogposts" render= {() => ( <BlogsPage message='No results are found.' /> )}/>
               <Route exact path="/signin" render={() => <SignInForm />} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/seecrets/create" render={() => <PostCreateForm />} />
@@ -54,7 +54,7 @@ function App() {
               <Route exact path="/blogpost/:id" render={() => <BlogPage />} />
               <Route exact path="/blogpost/:id/edit" render={() => <BlogEditForm />} />
               <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
-              <Route exact path="/reach_out" render={() => <ReachOutsPage />} />
+              <Route exact path="/reach_out" render={() => <ReachOutsPage message='No results are found.' />} />
               <Route exact path="/reach_out/:id" render={() => <ReachOutPage />} />
               
               <Route
