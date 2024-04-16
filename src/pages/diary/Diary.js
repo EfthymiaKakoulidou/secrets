@@ -21,9 +21,9 @@ const Diary = ({ id, owner, title, content, updated_at, diaryPage, truncateConte
       </Card.Body>
       <Card.Body>
         <Link className={styles.Diary} to={`/diary/${id}`}>
-          {title && <Card.Title className="text-center">{title}</Card.Title>}
-          <p>Dear Diary,</p>
-          {content && <Card.Text>{truncatedContent}...</Card.Text>}
+          {title && <Card.Title className="text-center" >{title}</Card.Title>}
+          <p className={styles.CustomFont}>Dear Diary,</p>
+          {content && <Card.Text className={styles.CustomFont}>{truncatedContent}...</Card.Text>}
         </Link>
       </Card.Body>
     </Card>
