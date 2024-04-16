@@ -245,12 +245,25 @@ Profiles
 ![screenshot](documentation/features/featurblogeditdelete.png)
 ![screenshot](documentation/features/featurblogeditform.png)
 
-- **sign Out**
+- **Sign Out**
 
     - The user can sign out.
 
 ![screenshot](documentation/features/featureblogform.png)
 
+
+- **Not found**
+
+    - If the page the user tries to access then he/she will be informed about it.
+
+![screenshot](documentation/features/featurenotfound.png)
+
+
+- **Error page**
+
+    - If the user tries to access a page that he/she is not authorized to access then they will be informed about it.
+
+![screenshot](documentation/features/featureerror.png)
 
 ### Future Features
 
