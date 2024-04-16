@@ -116,73 +116,48 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
 | Browser | Home | Signin | Signup | Secrets | Secrets Create | Secret | Secret Edit | Diary | Diary Entry | Blogposts | Blogpost | Blog Edit | Blog Create | Profiles | Profile Edit | Messages | Message | Username | Password | Not Found |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | 
 | Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-signin.png) | ![screenshot](documentation/browsers/browser-chrome-signup.png) | ![screenshot](documentation/browsers/browser-chrome-secrets.png) | ![screenshot](documentation/browsers/browser-chrome-secretscreate.png) | ![screenshot](documentation/browsers/browser-chrome-secret.png) | ![screenshot](documentation/browsers/browser-chrome-secretedit.png) | ![screenshot](documentation/browsers/browser-chrome-diary.png) | ![screenshot](documentation/browsers/browser-chrome-diaryentry.png) | ![screenshot](documentation/browsers/browser-chrome-blogposts.png) | ![screenshot](documentation/browsers/browser-chrome-blogpost.png) | ![screenshot](documentation/browsers/browser-chrome-blogedit.png) | ![screenshot](documentation/browsers/browser-chrome-blogcreate.png) | ![screenshot](documentation/browsers/browser-chrome-profiles.png) | ![screenshot](documentation/browsers/browser-chrome-profileedit.png) | ![screenshot](documentation/browsers/browser-chrome-messages.png) | ![screenshot](documentation/browsers/browser-chrome-message.png) | ![screenshot](documentation/browsers/browser-chrome-username.png) | ![screenshot](documentation/browsers/browser-chrome-password.png) | ![screenshot](documentation/browsers/browser-chrome-notfound.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-signin.png) | ![screenshot](documentation/browsers/browser-firefox-signup.png) | ![screenshot](documentation/browsers/browser-firefox-secrets.png) | ![screenshot](documentation/browsers/browser-firefox-secretscreate.png) | ![screenshot](documentation/browsers/browser-firefox-secret.png) | ![screenshot](documentation/browsers/browser-firefox-secretedit.png) | ![screenshot](documentation/browsers/browser-firefox-diary.png) | ![screenshot](documentation/browsers/browser-firefox-diaryentry.png) | ![screenshot](documentation/browsers/browser-firefox-blogposts.png) | ![screenshot](documentation/browsers/browser-firefox-blogpost.png) | ![screenshot](documentation/browsers/browser-firefox-blogedit.png) | ![screenshot](documentation/browsers/browser-firefox-blogcreate.png) | ![screenshot](documentation/browsers/browser-firefox-profiles.png) | ![screenshot](documentation/browsers/browser-firefox-profileedit.png) | ![screenshot](documentation/browsers/browser-firefox-messages.png) | ![screenshot](documentation/browsers/browser-firefox-message.png) | ![screenshot](documentation/browsers/browser-firefox-username.png) | ![screenshot](documentation/browsers/browser-firefox-password.png) | ![screenshot](documentation/browsers/browser-firefox-notfound.png) | Works as expected |
 | Edge | ![screenshot](documentation/browsers/browser-edge-home.png) | ![screenshot](documentation/browsers/browser-edge-signin.png) | ![screenshot](documentation/browsers/browser-edge-signup.png) | ![screenshot](documentation/browsers/browser-edge-secrets.png) | ![screenshot](documentation/browsers/browser-edge-secretscreate.png) | ![screenshot](documentation/browsers/browser-edge-secret.png) | ![screenshot](documentation/browsers/browser-edge-secretedit.png) | ![screenshot](documentation/browsers/browser-edge-diary.png) | ![screenshot](documentation/browsers/browser-edge-diaryentry.png) | ![screenshot](documentation/browsers/browser-edge-blogposts.png) | ![screenshot](documentation/browsers/browser-edge-blogpost.png) | ![screenshot](documentation/browsers/browser-edge-blogedit.png) | ![screenshot](documentation/browsers/browser-edge-blogcreate.png) | ![screenshot](documentation/browsers/browser-edge-profiles.png) | ![screenshot](documentation/browsers/browser-edge-profileedit.png) | ![screenshot](documentation/browsers/browser-edge-messages.png) | ![screenshot](documentation/browsers/browser-edge-message.png) | ![screenshot](documentation/browsers/browser-edge-username.png) | ![screenshot](documentation/browsers/browser-edge-password.png) | ![screenshot](documentation/browsers/browser-edge-notfound.png) | Works as expected |
+
 ## Responsiveness
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-home.png) | ![screenshot](documentation/responsiveness/responsive-mobile-about.png) | ![screenshot](documentation/responsiveness/responsive-mobile-contact.png) | ![screenshot](documentation/responsiveness/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-home.png) | ![screenshot](documentation/responsiveness/responsive-tablet-about.png) | ![screenshot](documentation/responsiveness/responsive-tablet-contact.png) | ![screenshot](documentation/responsiveness/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-home.png) | ![screenshot](documentation/responsiveness/responsive-desktop-about.png) | ![screenshot](documentation/responsiveness/responsive-desktop-contact.png) | ![screenshot](documentation/responsiveness/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsiveness/responsive-xl-home.png) | ![screenshot](documentation/responsiveness/responsive-xl-about.png) | ![screenshot](documentation/responsiveness/responsive-xl-contact.png) | ![screenshot](documentation/responsiveness/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsiveness/responsive-4k-home.png) | ![screenshot](documentation/responsiveness/responsive-4k-about.png) | ![screenshot](documentation/responsiveness/responsive-4k-contact.png) | ![screenshot](documentation/responsiveness/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsiveness/responsive-pixel-home.png) | ![screenshot](documentation/responsiveness/responsive-pixel-about.png) | ![screenshot](documentation/responsiveness/responsive-pixel-contact.png) | ![screenshot](documentation/responsiveness/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsiveness/responsive-iphone-home.png) | ![screenshot](documentation/responsiveness/responsive-iphone-about.png) | ![screenshot](documentation/responsiveness/responsive-iphone-contact.png) | ![screenshot](documentation/responsiveness/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Device | Home | Signin | Signup | Secrets | Secrets Create | Secret | Secret Edit | Diary | Diary Entry | Blogposts | Blogpost | Blog Edit | Blog Create | Profiles | Profile Edit | Messages | Message | Username | Password | Not Found |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-home.png) | ![screenshot](documentation/responsiveness/responsive-mobile-signin.png) | ![screenshot](documentation/responsiveness/responsive-mobile-signup.png) | ![screenshot](documentation/responsiveness/responsive-mobile-secrets.png) | ![screenshot](documentation/responsiveness/responsive-mobile-secretscreate.png) | ![screenshot](documentation/responsiveness/responsive-mobile-secret.png) | ![screenshot](documentation/responsiveness/responsive-mobile-secretedit.png) | ![screenshot](documentation/responsiveness/responsive-mobile-diary.png) | ![screenshot](documentation/responsiveness/responsive-mobile-diaryentry.png) | ![screenshot](documentation/responsiveness/responsive-mobile-blogposts.png) | ![screenshot](documentation/responsiveness/responsive-mobile-blogpost.png) | ![screenshot](documentation/responsiveness/responsive-mobile-blogedit.png) | ![screenshot](documentation/responsiveness/responsive-mobile-blogcreate.png) | ![screenshot](documentation/responsiveness/responsive-mobile-profiles.png) | ![screenshot](documentation/responsiveness/responsive-mobile-profileedit.png) | ![screenshot](documentation/responsiveness/responsive-mobile-messages.png) | ![screenshot](documentation/responsiveness/responsive-mobile-message.png) | ![screenshot](documentation/responsiveness/responsive-mobile-username.png) | ![screenshot](documentation/responsiveness/responsive-mobile-password.png) | ![screenshot](documentation/responsiveness/responsive-mobile-notfound.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-home.png) | ![screenshot](documentation/responsiveness/responsive-tablet-signin.png) | ![screenshot](documentation/responsiveness/responsive-tablet-signup.png) | ![screenshot](documentation/responsiveness/responsive-tablet-secrets.png) | ![screenshot](documentation/responsiveness/responsive-tablet-secretscreate.png) | ![screenshot](documentation/responsiveness/responsive-tablet-secret.png) | ![screenshot](documentation/responsiveness/responsive-tablet-secretedit.png) | ![screenshot](documentation/responsiveness/responsive-tablet-diary.png) | ![screenshot](documentation/responsiveness/responsive-tablet-diaryentry.png) | ![screenshot](documentation/responsiveness/responsive-tablet-blogposts.png) | ![screenshot](documentation/responsiveness/responsive-tablet-blogpost.png) | ![screenshot](documentation/responsiveness/responsive-tablet-blogedit.png) | ![screenshot](documentation/responsiveness/responsive-tablet-blogcreate.png) | ![screenshot](documentation/responsiveness/responsive-tablet-profiles.png) | ![screenshot](documentation/responsiveness/responsive-tablet-profileedit.png) | ![screenshot](documentation/responsiveness/responsive-tablet-messages.png) | ![screenshot](documentation/responsiveness/responsive-tablet-message.png) | ![screenshot](documentation/responsiveness/responsive-tablet-username.png) | ![screenshot](documentation/responsiveness/responsive-tablet-password.png) | ![screenshot](documentation/responsiveness/responsive-tablet-notfound.png) | Works as expected |
+| Desktop (DevTools) | ![screenshot](documentation/responsiveness/responsive-desktop-home.png) | ![screenshot](documentation/responsiveness/responsive-desktop-signin.png) | ![screenshot](documentation/responsiveness/responsive-desktop-signup.png) | ![screenshot](documentation/responsiveness/responsive-desktop-secrets.png) | ![screenshot](documentation/responsiveness/responsive-desktop-secretscreate.png) | ![screenshot](documentation/responsiveness/responsive-desktop-secret.png) | ![screenshot](documentation/responsiveness/responsive-desktop-secretedit.png) | ![screenshot](documentation/responsiveness/responsive-desktop-diary.png) | ![screenshot](documentation/responsiveness/responsive-desktop-diaryentry.png) | ![screenshot](documentation/responsiveness/responsive-desktop-blogposts.png) | ![screenshot](documentation/responsiveness/responsive-desktop-blogpost.png) | ![screenshot](documentation/responsiveness/responsive-desktop-blogedit.png) | ![screenshot](documentation/responsiveness/responsive-desktop-blogcreate.png) | ![screenshot](documentation/responsiveness/responsive-desktop-profiles.png) | ![screenshot](documentation/responsiveness/responsive-desktop-profileedit.png) | ![screenshot](documentation/responsiveness/responsive-desktop-messages.png) | ![screenshot](documentation/responsiveness/responsive-desktop-message.png) | ![screenshot](documentation/responsiveness/responsive-desktop-username.png) | ![screenshot](documentation/responsiveness/responsive-desktop-password.png) | ![screenshot](documentation/responsiveness/responsive-desktop-notfound.png) | Works as expected |
 
 ## Lighthouse Audit
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Signin | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Some minor warnings |
+| Signup | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Secrets | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Secrets Create | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Secret | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Secret Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Diary | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Diary Entry | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Blogposts | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Blogpost | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Blog Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Blog Create | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Profiles | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Profile Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Messages | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Message | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Username | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Password | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
+| Not Found | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
 
 ## Defensive Programming
 
