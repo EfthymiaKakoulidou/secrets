@@ -21,7 +21,6 @@ function DiarysPage({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
-  const [query] = useState("");
 
   useEffect(() => {
  
@@ -46,7 +45,7 @@ function DiarysPage({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname]);
+  }, [filter, pathname]);
   
   return (
     <Row className="h-100">
