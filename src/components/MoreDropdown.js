@@ -28,14 +28,14 @@ export const MoreDropdown = ({ handleEdit, handleDelete }) => {
           onClick={handleEdit}
           aria-label="edit"
         >
-          <i className="fas fa-edit" />
+          <i className="fas fa-edit" style={{ color: 'black' }} />
         </Dropdown.Item>
         <Dropdown.Item
           className={styles.DropdownItem}
           onClick={handleDelete}
           aria-label="delete"
         >
-          <i className="fas fa-trash-alt" />
+          <i className="fas fa-trash-alt" style={{ color: 'black' }} />
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
@@ -52,20 +52,20 @@ export function ProfileEditDropdown({ id }) {
           onClick={() => history.push(`/profiles/${id}/edit`)}
           aria-label="edit-profile"
         >
-          <i className="fas fa-edit" /> edit profile
+          <i className="fas fa-edit" style={{ color: 'black' }} /> edit profile
         </Dropdown.Item>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/username`)}
           aria-label="edit-username"
         >
-          <i className="far fa-id-card" />
+          <i className="far fa-id-card" style={{ color: 'black' }} />
           change username
         </Dropdown.Item>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/password`)}
           aria-label="edit-password"
         >
-          <i className="fas fa-key" />
+          <i className="fas fa-key" style={{ color: 'black' }}/>
           change password
         </Dropdown.Item>
       </Dropdown.Menu>
