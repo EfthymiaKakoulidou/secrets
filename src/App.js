@@ -19,7 +19,6 @@ import BlogCreateForm from "./pages/blogs/BlogCreateForm";
 import BlogPage from "./pages/blogs/BlogPage";
 import BlogEditForm from "./pages/blogs/BlogEditForm";
 import DiaryPage from "./pages/diary/DiaryPage";
-import DiaryEditForm from "./pages/diary/DiaryEditForm";
 import DiarysPage from "./pages/diary/DiarysPage";
 import Home from "./pages/home/home";
 import Col from "react-bootstrap/Col";
