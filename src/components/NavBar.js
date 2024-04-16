@@ -61,7 +61,7 @@ const NavBar = ({ mobile }) => {
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
-        <i className="fa-solid fa-plus"></i>Add secret
+        <i className="fa-solid fa-plus"></i>Share a secret
       </NavLink>
 
     <NavLink
