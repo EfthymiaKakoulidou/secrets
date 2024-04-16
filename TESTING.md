@@ -38,16 +38,26 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| src | App.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | index.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | Asset.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | Avatar.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | Button.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | NavBar.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | Post.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | PostCreateEditForm.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | PostsPage.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | SignInUpForm.module.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| src | App.module.css | ![screenshot](documentation/validation/cssapp.png) | |
+| src | index.css | ![screenshot](documentation/validation/path-to-cssindex.png) | |
+| src | Asset.module.css | ![screenshot](documentation/validation/cssasset.png) | |
+| src | Avatar.module.css | ![screenshot](documentation/validation/cssavatar.png) | |
+| src | Button.module.css | ![screenshot](documentation/validation/cssbutton.png) | |
+| src | NavBar.module.css | ![screenshot](documentation/validation/cssnavbar.png) | |
+| src | Post.module.css | ![screenshot](documentation/validation/csspost.png) | |
+| src | PostCreateEditForm.module.css | ![screenshot](documentation/csspostcreateeditform.png) | |
+| src | PostsPage.module.css | ![screenshot](documentation/validation/csspostspage.png) | |
+| src | SignInUpForm.module.css | ![screenshot](documentation/validation/csssigninupform.png) | |
+| src | Comment.module.css | ![screenshot](documentation/validation/csscomment.png) | |
+| src | CommentCreateEditForm.module.css | ![screenshot](documentation/validation/csscommentcreateeditform.png) | |
+| src | Diary.module.css | ![screenshot](documentation/validation/cssdiary.png) | |
+| src | Home.module.css | ![screenshot](documentation/validation/csshome.png) | |
+| src | MoreDropdown.module.css | ![screenshot](documentation/validation/cssmoredropdown.png) | |
+| src | NotFound.module.css | ![screenshot](documentation/validation/cssnotfound.png) | |
+| src | Profile.module.css | ![screenshot](documentation/validation/cssprofile.png) | |
+| src | ProfilePage.module.css | ![screenshot](documentation/validation/cssprofilepage.png) | |
+| src | Reachout.module.css | ![screenshot](documentation/validation/cssreachout.png) | |
+| src | ReachoutCreateForm.module.css | ![screenshot](documentation/validation/cssreachoutcreateform.png) | |
 
 ### JavaScript
 
