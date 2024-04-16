@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
-
 import styles from "../../styles/CommentCreateEditForm.module.css";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
+
 function CommentCreateForm(props) {
   const { setSeecret, setComments, profileImage, profile_id, seecret } = props;
   const [content, setContent] = useState("");
-
-// Update the content state when the user types in the textarea
   const handleChange = (event) => {
     setContent(event.target.value);
   };
-// Handle the form submission
+
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -28,8 +26,8 @@ function CommentCreateForm(props) {
         ...prevComments,
         results: [data, ...prevComments.results],
       }));
-      // Update the post state to increment the comment_count
       setSeecret((prevSeecret) => ({
+        ...prevSeecret,
         results: [
           {
             ...prevSeecret.results[0],
@@ -42,7 +40,9 @@ function CommentCreateForm(props) {
     
     }
   };
+
   return (
+    
     <Form className="mt-2 mx-5" onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
@@ -69,5 +69,4 @@ function CommentCreateForm(props) {
     </Form>
   );
 }
-
 export default CommentCreateForm;
