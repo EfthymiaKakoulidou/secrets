@@ -54,9 +54,14 @@ function DiarysPage({ message, filter = "" }) {
 
       <p className="px-5 pt-5">My Diary</p>
         <DiaryCreateForm/>
+        <p className="px-5 pt-5">Sometimes it helps to just write stuff down. </p>
+            <p className="px-5 ">In some cases you might not be ready to open up to the world. </p>
+            <p className="px-5 ">This space is just for you, to document your secrets and your thoughts.
+            In this diary like in real life, you cannot change the past. Reading through your diary will make you observe your journey and realize
+            how long you have come! </p>
         </Col>
 
-        <Col className="py-2 px-5 p-lg-2" lg={4}>
+        <Col className="py-2 p-0 p-lg-2" lg={4}>
         <p className="px-5 pt-5">My Diary entries</p>
 
         {hasLoaded ? (

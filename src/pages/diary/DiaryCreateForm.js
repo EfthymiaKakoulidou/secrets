@@ -91,11 +91,7 @@ function DiaryCreateForm() {
       <Row>
       <Col sm={12} md={5} lg={12} className=" px-5">
           <Container className={appStyles.Content}>{textFields}</Container>
-          <p>Sometimes it helps to just write stuff down. </p>
-            <p>In some cases you might not be ready to open up to the world. </p>
-            <p>This space is just for you, to document your secrets and your thoughts.
-            In this diary like in real life, you cannot change the past. Reading through your diary will make you observe your journey and realize
-            how long you have come! </p>
+          
         </Col>
       
       </Row>

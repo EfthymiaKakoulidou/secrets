@@ -14,14 +14,11 @@ const Diary = ({ id, owner, title, content, updated_at, diaryPage, truncateConte
       <Card.Body>
         <Media className="align-items-center justify-content-between">
           <div className="d-flex align-items-center">
-            <span>{updated_at}</span>
-            
+            <span className={styles.CustomFont}>{updated_at}</span>
           </div>
         </Media>
-      </Card.Body>
-      <Card.Body>
         <Link className={styles.Diary} to={`/diary/${id}`}>
-          {title && <Card.Title className="text-center" >{title}</Card.Title>}
+          {title && <Card.Title className={styles.CustomFont} >{title}</Card.Title>}
           <p className={styles.CustomFont}>Dear Diary,</p>
           {content && <Card.Text className={styles.CustomFont}>{truncatedContent}...</Card.Text>}
         </Link>
