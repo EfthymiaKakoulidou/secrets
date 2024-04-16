@@ -109,7 +109,6 @@ function ProfilePage() {
     <Row>
       <Col className="py-2 p-0 p-lg-2" lg={6}>
       <p className="px-5 pt-5">My Profile</p>
-        <Profiles mobile />
         <Container className={appStyles.Content}>
           {hasLoaded ? (
             <>
@@ -121,7 +120,7 @@ function ProfilePage() {
           )}
         </Container>
       </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+      <Col lg={4} className=" d-lg-block px-5 p-lg-2">
       <p className="px-5 pt-5">All profiles</p>
         <Profiles />
       </Col>
