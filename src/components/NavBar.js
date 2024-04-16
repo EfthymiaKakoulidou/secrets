@@ -39,12 +39,11 @@ const NavBar = ({ mobile }) => {
     }
   };
  
-  
   const loggedInIcons = <>
 
     <NavLink to="/" className="d-none d-lg-inline">
           <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
+            <img src={logo} alt="logo" height="75" />
           </Navbar.Brand>
     </NavLink>
 
@@ -122,7 +121,7 @@ const NavBar = ({ mobile }) => {
     <>
     <NavLink to="/" className="d-none d-lg-inline">
           <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
+            <img src={logo} alt="logo" height="75" />
           </Navbar.Brand>
         </NavLink>
       <NavLink
@@ -144,24 +143,24 @@ const NavBar = ({ mobile }) => {
   );
   
   return (
-    <Col className="py-2 px-5 p-lg-2" lg={12}>
+    <Col className="px-5 p-lg-2 d-flex flex-column justify-content-center" lg={12}>
       
-      <Navbar expand="lg" className="p-2">
-
+      <Navbar expand="lg" className=" d-flex flex-column justify-content-center">
+      <NavLink to="/" className="d-flex justify-content-center align-items-center d-lg-none">
+          <Navbar.Brand>
+            <img src={logo} alt="logo" height="75" />
+          </Navbar.Brand>
+        </NavLink>
         <Navbar.Toggle className={styles.NavToggle} aria-controls="navbar-nav" onClick={() => setExpanded(!expanded)} />
 
         <Navbar.Collapse id="navbar-nav" className={expanded ? "show" : ""}>
-          <Nav className="mr-auto text-right flex-column">
+          <Nav className="mr-auto text-right flex-column ">
             
             {currentUser ? loggedInIcons : loggedOutIcons}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <NavLink to="/" className="p-2 d-flex justify-content-center align-items-center d-lg-none">
-          <Navbar.Brand>
-            <img src={logo} alt="logo" height="45" />
-          </Navbar.Brand>
-        </NavLink>
+      
     </Col>
   );
 };
