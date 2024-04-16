@@ -84,7 +84,7 @@ function ProfilePage() {
   const mainProfileSeecrets = (
     <>
       <hr />
-      <p className="text-center">{profile?.owner}'s posts</p>
+      <p className="text-center">{profile?.owner}'s secrets</p>
       <hr />
       {profileSeecrets.results.length ? (
         <InfiniteScroll
