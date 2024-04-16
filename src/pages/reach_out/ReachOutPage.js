@@ -44,11 +44,6 @@ function ReachOutPage() {
     
         handleMount();
       }, [id]);
-
-      const reachOutToName = reach_out?.results[0]?.reachOutToName;
-      const isCurrentUserReachOutName = currentUser?.username === reachOutToName;
-  
-      const adjustedReachOutToName = isCurrentUserReachOutName ? "You" : reachOutToName;
   
 
   return (
@@ -57,11 +52,11 @@ function ReachOutPage() {
           <div>Error: {error}</div>
       ) : (
           <>
-      <Col className="py-2 p-0 p-lg-2 " lg={6}>
+      <Col className="py-2 p-0 p-lg-2" lg={6}>
 
       <p className="px-5 pt-5">Message </p>
       
-      <Reach_out {...reach_out.results[0]} reachOutToName={adjustedReachOutToName} setReach_outs={setReach_out} postPage truncateContent={false} />
+      <Reach_out {...reach_out.results[0]} setReach_outs={setReach_out} postPage truncateContent={false} />
         
       <Container className={appStyles.Content}>
           
@@ -82,9 +77,9 @@ function ReachOutPage() {
                   next={() => fetchMoreData(reach_out_comments, setReach_out_comments)}
                         />
                     ) : currentUser ? (
-                        <span>No messages yet.</span>
+                        <span className="px-5">No messages yet.</span>
                     ) : (
-                        <span>No messages... yet</span>
+                        <span className="px-5">No messages... yet</span>
                     )}
                     {currentUser ? (
                         <ReachoutCommentsCreateForm
