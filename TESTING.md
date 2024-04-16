@@ -65,23 +65,49 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| src | App.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | App.test.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | axiosDefaults.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | Asset.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | Avatar.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | NavBar.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | CurrentUserContext.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | UseClickOutsideToggle.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | index.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | SignInForm.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | SignUpForm.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | Post.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | PostCreateForm.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | PostPage.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | PostsPage.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | reportWebVitals.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| src | setupTests.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| src | App.js | ![screenshot](documentation/validation/jsapp.png) | |
+| src | axiosDefaults.js | ![screenshot](documentation/validation/jsaxios.png) | |
+| src | Asset.js | ![screenshot](documentation/validation/jsasset.png) | |
+| src | Avatar.js | ![screenshot](documentation/validation/jsavatar.png) | |
+| src | MoreDropdown.js | ![screenshot](documentation/validation/jsmoredropdown.png) | |
+| src | NavBar.js | ![screenshot](documentation/validation/jsnavbar.png) | |
+| src | NotFound.js | ![screenshot](documentation/validation/jsnotfound.png) | |
+| src | CurrentUserContext.js | ![screenshot](documentation/validation/jscurrentuser.png) | |
+| src | ProfileDataContext.js | ![screenshot](documentation/validation/jsprofiledata.png) | |
+| src | UseClickOutsideToggle.js | ![screenshot](documentation/validation/jsuseclick.png) | |
+| src | UseRedirect.js | ![screenshot](documentation/validation/jsuseredirect.png) | |
+| src | index.js | ![screenshot](documentation/validation/jsindex.png) | |
+| src | SignInForm.js | ![screenshot](documentation/validation/jssignin.png) | |
+| src | SignUpForm.js | ![screenshot](documentation/validation/jssignup.png) | |
+| src | Blog.js | ![screenshot](documentation/validation/jsblog.png) | |
+| src | BlogCreateForm.js | ![screenshot](documentation/validation/jsblogcreate.png) | |
+| src | BlogEditForm.js | ![screenshot](documentation/validation/jsblogedit.png) | |
+| src | BlogPage.js | ![screenshot](documentation/validation/jsblogpage.png) | |
+| src | BlogsPage.js | ![screenshot](documentation/validation/jsblogspage.png) | |
+| src | Comment.js | ![screenshot](documentation/validation/jscomment.png) | |
+| src | CommentCreateForm.js | ![screenshot](documentation/validation/jscommentcreate.png) | |
+| src | CommentEditForm.js | ![screenshot](documentation/validation/jscommentcreate.png) | |
+| src | Diary.js | ![screenshot](documentation/validation/jsdiary.png) | |
+| src | DiaryCreateForm.js | ![screenshot](documentation/validation/jsdiarycreate.png) | |
+| src | DiaryPage.js | ![screenshot](documentation/validation/jsdiarypage.png) | |
+| src | DiarysPage.js | ![screenshot](documentation/validation/jsdiaryspage.png) | |
+| src | Home.js | ![screenshot](documentation/validation/jshome.png) | |
+| src | Post.js | ![screenshot](documentation/validation/jspost.png) | |
+| src | PostCreateForm.js | ![screenshot](documentation/validation/jspostcreate.png) | |
+| src | PostPage.js | ![screenshot](documentation/validation/jspostpage.png) | |
+| src | PostsPage.js | ![screenshot](documentation/validation/jspostspage.png) | |
+| src | Profile.js | ![screenshot](documentation/validation/jsprofile.png) | |
+| src | ProfileEditForm.js | ![screenshot](documentation/validation/jsprofileedit.png) | |
+| src | ProfilePage.js | ![screenshot](documentation/validation/jsprofilepage.png) | |
+| src | Profiles.js | ![screenshot](documentation/validation/jsprofiles.png) | |
+| src | UsernameForm.js | ![screenshot](documentation/validation/jsusername.png) | |
+| src | UserPasswordForm.js | ![screenshot](documentation/validation/jspassword.png) | |
+| src | Reach_out_comment.js | ![screenshot](documentation/validation/jsreachoutcomment.png) | |
+| src | Reachout.js | ![screenshot](documentation/validation/jsreachout.png) | |
+| src | ReachoutCommentsCreateForm.js | ![screenshot](documentation/validation/jsreachoutcommentscreate.png) | |
+| src | ReachoutCreateForm.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| src | ReachoutPage.js | ![screenshot](documentation/validation/jsreachoutpage.png) | |
+| src | ReachoutsPage.js | ![screenshot](documentation/validation/jsreachoutspage.png) | |
 | src | utils.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 
 ## Browser Compatibility
