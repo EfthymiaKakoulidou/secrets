@@ -56,7 +56,7 @@ function ReachoutCreateForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-        <Col md={5} lg={12} className="px-5">
+        <Col md={12} lg={12} className="px-5">
           <Container>
             <Form.Group>
               <Form.Label>Reach Out To</Form.Label>

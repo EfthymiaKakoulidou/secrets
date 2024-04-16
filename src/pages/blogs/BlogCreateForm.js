@@ -113,10 +113,13 @@ function BlogCreateForm() {
   );
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Row>
-        <Col className="py-2 px-5 p-md-2" md={7} lg={6}>
+
+      <Row className="h-100 " md={12}>
+        <Col className="py-2 px-5 p-md-2" md={12} lg={6}>
         <p className="px-5 pt-5">Add admin blogpost  </p>
+        <Form onSubmit={handleSubmit}>
+        <Row>
+        <Col className="py-2 px-5 p-md-2" md={12} lg={10}>
           <Container
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
@@ -158,9 +161,11 @@ function BlogCreateForm() {
           </Container>
         
           <Container className={appStyles.Content}>{textFields}</Container>
-        </Col>
+          </Col>
       </Row>
     </Form>
+    </Col>
+    </Row>
   );
 }
 

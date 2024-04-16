@@ -89,7 +89,7 @@ function DiaryCreateForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-      <Col sm={12} md={5} lg={12} className=" px-5">
+      <Col sm={12} md={12} lg={12} className=" px-5">
           <Container className={appStyles.Content}>{textFields}</Container>
           
         </Col>
