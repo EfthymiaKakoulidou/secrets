@@ -40,53 +40,45 @@ function PostPage() {
         handleMount();
       }, [id]);
 
-  return (
-    <Row className="h-100">
-
-      <Col className="py-2 p-0 p-lg-2" lg={6}>
-      <p className="px-5 pt-5">Secret</p>
-      <Post {...seecret.results[0]} setSeecrets={setSeecret} postPage />
-        
-        <Container className={appStyles.Content}>
-          {currentUser ? (
-        <CommentCreateForm
-        profile_id={currentUser.profile_id}
-        profileImage={profile_image}
-        seecret={id}
-        setSeecret={setSeecret}
-        setComments={setComments}
-        />
-        ) : comments.results.length ? (
-        "Comments"
-        ) : null}
-        {comments.results.length ? (
-            <InfiniteScroll
-              children={comments.results.map((comment) => (
-                <Comment
-                  key={comment.id}
-                  {...comment}
-                  setSeecret={setSeecret}
-                  setComments={setComments}
+      return (
+        <Row className="h-100">
+    
+          <Col className="py-2 p-0 p-lg-2" lg={6}>
+          <p className="px-5 pt-5">Secret</p>
+          <Post {...seecret.results[0]} setSeecrets={setSeecret} postPage />
+            
+            <Container className={appStyles.Content}>
+              <CommentCreateForm
+                profile_id={currentUser?.profile_id}
+                profileImage={profile_image}
+                seecret={id}
+                setSeecret={setSeecret}
+                setComments={setComments}
+              />
+              {comments.results.length ? (
+                <InfiniteScroll
+                  children={comments.results.map((comment) => (
+                    <Comment
+                      key={comment.id}
+                      {...comment}
+                      setSeecret={setSeecret}
+                      setComments={setComments}
+                    />
+                  ))}
+                  dataLength={comments.results.length}
+                  loader={<Asset spinner />}
+                  hasMore={!!comments.next}
+                  next={() => fetchMoreData(comments, setComments)}
                 />
-              ))}
-              dataLength={comments.results.length}
-              loader={<Asset spinner />}
-              hasMore={!!comments.next}
-              next={() => fetchMoreData(comments, setComments)}
-            />
-          ) : currentUser ? (
-            <span className="px-5 pt-5">No comments yet...</span>
-          ) : (
-            <span className="px-5 pt-5">No comments... yet</span>
-          )}
-        </Container>
-      </Col>
-      <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-      <p className="px-5 pt-5">Profiles</p>
-        <Profiles/>
-      </Col>
-    </Row>
-  );
+              ) : null}
+            </Container>
+          </Col>
+          <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
+          <p className="px-5 pt-5">Profiles</p>
+            <Profiles/>
+          </Col>
+        </Row>
+      );
 }
 
 export default PostPage;
