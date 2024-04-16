@@ -21,6 +21,7 @@ const Comment = (props) => {
   } = props;
 
   const [showEditForm, setShowEditForm] = useState(false);
+ 
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -28,21 +29,30 @@ const Comment = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}`);
+  
       setSeecret((prevSeecret) => ({
-        results: [
-          {
-            ...prevSeecret.results[0],
-            comments_count: prevSeecret.results[0].comments_count - 1,
-          },
-        ],
+        ...prevSeecret,
+        results: prevSeecret.results.map((seecret) => {
+          if (seecret.id === prevSeecret.results[0].id) {
+            return {
+              ...seecret,
+              comments_count: seecret.comments_count - 1,
+            };
+          }
+          return seecret;
+        }),
       }));
-
+  
+      
       setComments((prevComments) => ({
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id),
       }));
-    } catch (err) {}
+    } catch (err) {
+      console.error("Error deleting comment:", err);
+    }
   };
+  
 
   return (
     <>
