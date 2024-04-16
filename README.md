@@ -279,9 +279,7 @@ Profiles
 - User connections
     - 'Secrets' goal is not popularity so the follow function is not relevant here. The users are connected to each other through comments, hugs and 'reach out' which works like private messages. Maybe in the future some feature could be added to connect profiles between them so that a community can be created.
 - Categories
-    - Already now the secrets of the users are categorized but I imagine that in the future would be helpful to see more categories.
-- Different levels of security
-    - In the future a feature to give permission to a group of people or selected individuals could be implemented. This can provide to the user the choice of his/hers audience so that he/she can choose the people he/she want to open up to.
+    - It would also be very helpful to categorize the secrets so that the users can choose which parts of the contents they are interested in.
 
 
 ## Tools & Technologies Used
@@ -314,51 +312,7 @@ Profiles
 
 ## Database Design
 
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
-Understanding the relationships between different tables can save time later in the project.
-
-
-```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
-
-    def __str__(self):
-        return self.name
-```
-
-I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
-
-The steps taken were as follows:
-- In the terminal: `sudo apt update`
-- then: `sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config`
-- then type `Y` to proceed
-- then: `pip3 install django-extensions pygraphviz`
-- in my `settings.py` file, I added the following to my `INSTALLED_APPS`:
-```python
-INSTALLED_APPS = [
-    ...
-    'django_extensions',
-    ...
-]
-```
-- back in the terminal: `python3 manage.py graph_models -a -o erd.png`
-- dragged the new `erd.png` file into my `documentation/` folder
-- removed `'django_extensions',` from my `INSTALLED_APPS`
-- finally, in the terminal: `pip3 uninstall django-extensions pygraphviz -y`
-
-![erd](documentation/erd.png)
-source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
-
+For all information related to the backend please reffer to the pp5api here : https://github.com/EfthymiaKakoulidou/pp5api
 
 ## Agile Development Process
 
