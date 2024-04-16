@@ -1,12 +1,12 @@
 .NavBar {
-    
     background-color: black;
     border: 1px solid antiquewhite;
     color: antiquewhite;
 }
 
 .NavToggle {
-    margin-right: 30px;
+    display: flex;
+    justify-content: center;
     background-color: antiquewhite;
     color: black;
 }

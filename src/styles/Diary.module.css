@@ -7,4 +7,9 @@
   text-decoration: none;
   padding-left: 30px;
   }
-  
+
+  .CustomFont {
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 24px;
+    
+  }
