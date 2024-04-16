@@ -89,7 +89,7 @@ function ReachoutCreateForm() {
             </Button>
             <p>Getting closer may help!</p>
               <p>Here you can reach out to people privately. 
-              Contact the peoplr you want to share your thoughts with or just show your support without going public!</p>
+              Contact the people you want to share your thoughts with, or just show your support without going public!</p>
           </Container>
         </Col>
       </Row>
