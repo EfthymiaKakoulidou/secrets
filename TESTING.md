@@ -182,6 +182,20 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Feature is expected to redirect the user to the form to change his/hers password | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the change password form| Test concluded and passed | ![screenshot](documentation/features/featurechangepassword.jpg) |
 | Profile list| | | | | |
 | | Feature is expected to redirect the user to other peoples' profile detail page | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to that person's profile page | Test concluded and passed | ![screenshot](documentation/features/featureprofilelist.jpg) |
+| Secret Create| | | | | |
+| | Feature is expected to create a secret to feed of secrets | Tested the feature by filling the form | The feature behaved as expected, and added a secret to the feed | Test concluded and passed | ![screenshot](documentation/features/featuresecretcreate.jpg) |
+| Secrets| | | | | |
+| | Feature is expected to show the secrets and redirect to secrets detail page when the user clicks on it | Tested the feature by clicking on a secret | The feature behaved as expected, and it redirected me to the secrets detail page | Test concluded and passed | ![screenshot](documentation/features/featuresecret.jpg) |
+| Secret Edit| | | | | |
+| | Feature is expected to redirect the user to the secrets edit form | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to the secrets edit form | Test concluded and passed | ![screenshot](documentation/features/featuresecretedit.jpg) |
+| Profile Delete| | | | | |
+| | Feature is expected to redirect the user back to the feed | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the feed | Test concluded and passed | ![screenshot](documentation/features/featuresecrets.jpg) |
+| Comment Create| | | | | |
+| | Feature is expected to create a comment by filling the form and clicking on post | Tested the feature by filling the form and submitting | The feature behaved as expected, and it created a comment| Test concluded and passed | ![screenshot](documentation/features/featurecomment.jpg) |
+| Comment Edit| | | | | |
+| | Feature is expected to show me the comment form in place | Tested the feature by clicking on the edit icon| The feature behaved as expected, and showed me the form filled with the previous content | Test concluded and passed | ![screenshot](documentation/features/featurecommentedit.jpg) |
+| Comment Delete| | | | | |
+| | Feature is expected to remove the comment I made | Tested the feature by clicking on the icon | The feature behaved as expected, and it removed the comment | Test concluded and passed | ![screenshot](documentation/features/featurecommentdelete.jpg) |
 | Diary form | | | | | |
 | | Feature is expected to create a diary entry | Tested the feature by filling the form and submit it | The feature behaved as expected, and it created an entr| Test concluded and passed | ![screenshot](documentation/features/featurediary.jpg) |
 | Diary Entry | | | | | |
