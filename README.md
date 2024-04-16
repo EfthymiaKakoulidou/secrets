@@ -58,36 +58,14 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://secrets-276f7be
 
 ## UX
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+  - The choice of the UX design derives from the charected of the site. Secrets are something that is hidden in the first place and that is why only authenticated users can view the content of the site. 
+  - Easy navigation was also goal and thats why the navbar items are descriptive to what they include. The "Share a secret" item is a separate link making even more easy to upload your secrets. The deault picture that is used when the user does not upload his/her owns pictures makes it also very clear that now the secret is revealed. 
+  - The diary section is the only one that uses a different font. This font is like handwritting making it more personal and inticating that this part of the site is only accessible to the specific user. Diary has no CRUD functionality in the same way that you wouldn't go back and change or delete your actual diary. Entries belong to history.
+  - The messages section is structured like the ones we all been used to. The ordering of the messages and the fact that there is no CRUD functionality here either is intentinal to make it more like the social apps we are used to.
 
 ### Colour Scheme
 
 I chose to use black and antiquewhite as my basic colours being inspired by the image of an old notebook or diary that is used to store our secrets. 
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
 
 
 ### Typography
