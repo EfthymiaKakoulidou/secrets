@@ -188,7 +188,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Feature is expected to show the secrets and redirect to secrets detail page when the user clicks on it | Tested the feature by clicking on a secret | The feature behaved as expected, and it redirected me to the secrets detail page | Test concluded and passed | ![screenshot](documentation/features/featuresecret.jpg) |
 | Secret Edit| | | | | |
 | | Feature is expected to redirect the user to the secrets edit form | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to the secrets edit form | Test concluded and passed | ![screenshot](documentation/features/featuresecretedit.jpg) |
-| Profile Delete| | | | | |
+| Secret Delete| | | | | |
 | | Feature is expected to redirect the user back to the feed | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the feed | Test concluded and passed | ![screenshot](documentation/features/featuresecrets.jpg) |
 | Comment Create| | | | | |
 | | Feature is expected to create a comment by filling the form and clicking on post | Tested the feature by filling the form and submitting | The feature behaved as expected, and it created a comment| Test concluded and passed | ![screenshot](documentation/features/featurecomment.jpg) |
