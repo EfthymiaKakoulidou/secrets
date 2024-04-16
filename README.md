@@ -83,27 +83,31 @@ I chose a very clear font for almost all text in the site except when the user i
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like signin or signup, so that I can have access to the site.
+- As a new site user, I would like to be informed about what this site is all about, so that I can decide if it is for me.
+- As a new site user, I would like to check my profile, edit or delete it, so that I can control the information I am giving out.
+- As a new site user, I would like to check other peoples' profiles, so that I can choose people to interact with.
+- As a new site user, I would like to share a secret with users of the site, so that I can unburden myself and feel relief.
+- As a new site user, I would like to edit and delete my secrets, so that I update information or in case I changed my mind.
+- As a new site user, I would like to check other peoples' secrets, so that I can see if I can find something I can relate to.
+- As a new site user, I would like to comment on other peoples posts, so that I can express my opinion.
+- As a new site user, I would like to edit or delete my comments in case I change my mind.
+- As a new site user, I would like to keep a diary, so that I can document my thoughts and be helped by the process of writing.
+- As a new site user, I would like to message people privately and show support, so that I can connect with others and give and get help.
+- As a new site user, I would like to read the blog, so that I can get information about topics around keeping secrets and psychology of it.
+- As a new site user, I would like to signout, so that I can feel safe that my information is protected.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to do all of the above for the same reasons.
+- As a returning site user, I would like to check my messages and see if I have new, so that I can keep in touch with people.
+- As a returning site user, I would like to check the feed, so that I can be updated with new information.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic.
+- As a site administrator, I should be able to handle all the information that is included in the site, so that I can check the content.
+
 
 ## Wireframes
 
