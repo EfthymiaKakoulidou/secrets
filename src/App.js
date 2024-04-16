@@ -49,7 +49,6 @@ function App() {
               <Route exact path="/seecrets/:id" render={() => <PostPage />} />
               <Route exact path="/seecrets/:id/edit" render={() => <PostEditForm />} />
               <Route exact path="/diary/:id" render={() => <DiaryPage />} />
-              <Route exact path="/diary/:id/edit" render={() => <DiaryEditForm />} />
               <Route exact path="/blogs/create" render={() => <BlogCreateForm />} />
               <Route exact path="/blogpost/:id" render={() => <BlogPage />} />
               <Route exact path="/blogpost/:id/edit" render={() => <BlogEditForm />} />
