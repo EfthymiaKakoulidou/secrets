@@ -5,6 +5,7 @@ import Avatar from "../../components/Avatar";
 import styles from "../../styles/Comment.module.css";
 import appstyles from "../../styles/Reachout.module.css";
 import { axiosRes } from "../../api/axiosDefaults";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 
 const Reach_out = (props) => {
@@ -20,7 +21,7 @@ const Reach_out = (props) => {
     truncateContent
   } = props;
 
- 
+  const currentUser = useCurrentUser();
   const [reachOutToName, setReachOutToName] = useState("");
   const truncatedContent = truncateContent ? (content ? content.substring(0, 30) : "") : content;
   useEffect(() => {
@@ -44,7 +45,7 @@ const Reach_out = (props) => {
         </Link>
         <Link className={appstyles.Reachout} to={`/reach_out/${id}`}>
         <Media.Body className="align-self-center ml-2">
-          <span className={styles.Owner}>{owner} reached out to</span>
+        {currentUser && currentUser.username === owner ? "You" : owner} reached out to
          
         </Media.Body>
         <Media.Body className="align-self-center ml-2">
