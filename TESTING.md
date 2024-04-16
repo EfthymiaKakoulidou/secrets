@@ -115,7 +115,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Browser | Home | About | Contact | etc | Notes |
+| Browser | Home | Signin | Signup | Secrets | Secrets Create | Secret | Secret Edit | Diary | Diary Entry | Blogposts | Blogpost | Blog Edit | Diary | Blog Create | Profiles | Profile Edit | Messages | Message | Username | Password | Not Found |
 | --- | --- | --- | --- | --- | --- |
 | Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-about.png) | ![screenshot](documentation/browsers/browser-chrome-contact.png) | ![screenshot](documentation/browsers/browser-chrome-etc.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-about.png) | ![screenshot](documentation/browsers/browser-firefox-contact.png) | ![screenshot](documentation/browsers/browser-firefox-etc.png) | Works as expected |
