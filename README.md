@@ -9,49 +9,6 @@ Sometimes it is easier to tell your secrets to the world than to people you know
 The 'Secrets' app is a place where people can share their secrets and get support from other users in the form of comments or private messages. The users can read other peoples' secrets and the comments they got so that they can relate to them and feel less alone. The Diary is a place where the user can write his/hers thoughts and secrets and nobody else has access to it.
 
 
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://secrets-276f7be740ae.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.jpg")
-
-![screenshot](documentation/mockup.jpg)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
----
-
-GitHub now supports CALLOUTS in Markdown files.
-There are some callouts already embedded in this application for you.
-However, if you feel that you want to add more, there are certain ones you can use.
-
-NOTE: the preview for callouts isn't yet supported in Gitpod/Codeanywhere/VSCode/etc.
-You'll have to commit/push the changes to GitHub to see it in action.
-
-> [!NOTE]  
-> BLUE: Highlights information that users should take into account, even when skimming.
-
-> [!TIP]  
-> GREEN: Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> PURPLE: Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> YELLOW: Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]  
-> RED: Negative potential consequences of an action.
-
-Source: https://github.com/orgs/community/discussions/16925
-
-
 ![screenshot](documentation/mockup.jpg)
 
 source: [amiresponsive](https://ui.dev/amiresponsive?url=https://secrets-276f7be740ae.herokuapp.com)
@@ -112,59 +69,38 @@ I chose a very clear font for almost all text in the site except when the user i
 ## Wireframes
 
 
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+To follow best practice, wireframes were developed.
+These wireframes were made at the arly stages of the projects so there are some changes made along the way.
+They provide the layoutstructure that was used for the site.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
-### Mobile Wireframes
+### Wireframes
 
 <details>
-<summary> Click here to see the Mobile Wireframes </ summary>
+<summary> Click here to see the Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.jpg)
-
-About
-  - ![screenshot](documentation/wireframes/mobile-about.jpg)
-
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.jpg)
-
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.jpg)
-
-etc.
-  - repeat for any remaining mobile wireframes
-
-</ details>
-
-
-### Desktop Wireframes
-
-<details>
-<summary> Click here to see the Desktop Wireframes </ summary>
-
-Home
-  - ![screenshot](documentation/wireframes/desktop-home1.jpg)
+  - ![screenshot](documentation/wireframes/desktop-home1.png)
 
 Home when logged in
-  - ![screenshot](documentation/wireframes/desktop-home2.jpg)
+  - ![screenshot](documentation/wireframes/desktop-home2.png)
 
 My Secrets
-  - ![screenshot](documentation/wireframes/desktop-mysecrets.jpg)
+  - ![screenshot](documentation/wireframes/desktop-mysecrets.png)
 
 Messages
-  - ![screenshot](documentation/wireframes/desktop-messages.jpg)
+  - ![screenshot](documentation/wireframes/desktop-messages.png)
 
 My Diary
-  - ![screenshot](documentation/wireframes/desktop-mydiary.jpg)
+  - ![screenshot](documentation/wireframes/desktop-mydiary.png)
 
 Admins blog
-  - ![screenshot](documentation/wireframes/desktop-blog.jpg)
+  - ![screenshot](documentation/wireframes/desktop-blog.png)
 
 Profiles
-  - ![screenshot](documentation/wireframes/desktop-profiles.jpg)
+  - ![screenshot](documentation/wireframes/desktop-profiles.png)
 
-</ details>
+</details>
 
 ## Features
 
@@ -177,7 +113,7 @@ Profiles
 
 ![screenshot](documentation/features/featurelogo.jpg)
 
-- **Sign in/Sign Up/Login**
+- **Sign in/Sign Up**
 
     - At the top left of the page the user can be informed if he/she is logged in or not. In the case the user does not have an account he/she can sign up.
 
@@ -291,7 +227,6 @@ Profiles
 - [![HTML](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
-- [![jQuery](https://img.shields.io/badge/jQuery-grey?logo=jquery&logoColor=0769AD)](https://jquery.com) used for user interaction on the site.
 - [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
 - [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-grey?logo=githubpages&logoColor=222222)](https://pages.github.com) used for hosting the deployed front-end site.
 - [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
@@ -303,7 +238,6 @@ Profiles
 - [![Cloudinary](https://img.shields.io/badge/Cloudinary-grey?logo=cloudinary&logoColor=3448C5)](https://cloudinary.com) used for online static file storage.
 - [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files with Heroku.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
-- [![Google Maps API](https://img.shields.io/badge/Google_Maps_API-grey?logo=googlemaps&logoColor=4285F4)](https://developers.google.com/maps) used as an interactive map on my site.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 - [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to help debug, troubleshoot, and explain things.
 
