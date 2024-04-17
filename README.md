@@ -17,9 +17,9 @@ Screenshots for the README and testing should not be inside of `assets/` or `sta
 (reminder: `assets/` and `static/` are for files used on the live site, not documentation)
 Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
 To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
+(assuming you have a new folder called `documentation` with an image called "mockup.jpg")
 
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/mockup.jpg)
 
 Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
 Find out more about using Markdown elements here:
@@ -52,7 +52,7 @@ You'll have to commit/push the changes to GitHub to see it in action.
 Source: https://github.com/orgs/community/discussions/16925
 
 
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/mockup.jpg)
 
 source: [amiresponsive](https://ui.dev/amiresponsive?url=https://secrets-276f7be740ae.herokuapp.com)
 
@@ -121,16 +121,16 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary> Click here to see the Mobile Wireframes </ summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![screenshot](documentation/wireframes/mobile-home.jpg)
 
 About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+  - ![screenshot](documentation/wireframes/mobile-about.jpg)
 
 Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
+  - ![screenshot](documentation/wireframes/mobile-contact.jpg)
 
 Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
+  - ![screenshot](documentation/wireframes/mobile-gallery.jpg)
 
 etc.
   - repeat for any remaining mobile wireframes
@@ -144,25 +144,25 @@ etc.
 <summary> Click here to see the Desktop Wireframes </ summary>
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home1.png)
+  - ![screenshot](documentation/wireframes/desktop-home1.jpg)
 
 Home when logged in
-  - ![screenshot](documentation/wireframes/desktop-home2.png)
+  - ![screenshot](documentation/wireframes/desktop-home2.jpg)
 
 My Secrets
-  - ![screenshot](documentation/wireframes/desktop-mysecrets.png)
+  - ![screenshot](documentation/wireframes/desktop-mysecrets.jpg)
 
 Messages
-  - ![screenshot](documentation/wireframes/desktop-messages.png)
+  - ![screenshot](documentation/wireframes/desktop-messages.jpg)
 
 My Diary
-  - ![screenshot](documentation/wireframes/desktop-mydiary.png)
+  - ![screenshot](documentation/wireframes/desktop-mydiary.jpg)
 
 Admins blog
-  - ![screenshot](documentation/wireframes/desktop-blog.png)
+  - ![screenshot](documentation/wireframes/desktop-blog.jpg)
 
 Profiles
-  - ![screenshot](documentation/wireframes/desktop-profiles.png)
+  - ![screenshot](documentation/wireframes/desktop-profiles.jpg)
 
 </ details>
 
@@ -175,95 +175,97 @@ Profiles
 
     - At the top left of the page there is the logo of the site and its name 'Secrets' which the user can click and be redirected to the home page.
 
-![screenshot](documentation/features/featurelogo.png)
+![screenshot](documentation/features/featurelogo.jpg)
 
 - **Sign in/Sign Up/Login**
 
     - At the top left of the page the user can be informed if he/she is logged in or not. In the case the user does not have an account he/she can sign up.
 
-![screenshot](documentation/features/featuresignin.png)
-![screenshot](documentation/features/featuresignup.png)
+![screenshot](documentation/features/featuresignin.jpg)
+![screenshot](documentation/features/featuresignup.jpg)
 
 - **Side Navbar**
 
     - The side Navbar is the navigation tool of the user. There the user can find all the content of the page.
 
-![screenshot](documentation/features/featurenavbar.png)
+![screenshot](documentation/features/featurenavbar.jpg)
 
 - **Profile**
 
     - The username appears next. It is an andication that the user is logged in and a link to profile page.
 
-![screenshot](documentation/features/featureprofile.png)
+![screenshot](documentation/features/featureprofile.jpg)
 
 - **Profile Page**
 
     - On this page, appart from the profile's details the user can see a list of all the profiles. Each of the users' avatars links to their profile.
 
-![screenshot](documentation/features/feature0profilepage.png)
+![screenshot](documentation/features/featureprofilepage.jpg)
 
 - **Share a secret**
 
     - On this page the user can fill the form to add a secret.
 
-![screenshot](documentation/features/featuresecretcreate.png)
+![screenshot](documentation/features/featuresecretcreate.jpg)
 
 - **Secrets**
 
     - Here is the feed with all the posted secrets. When a user clicks on a secret they are redirected to the secret's details and is able to see all the comments that people have left on this secrets. The user can also leave his/hers comments and edit or delete them if they have written them. If the user has posted this secret he/she can edit or delete them.
 
-![screenshot](documentation/features/featureprofileslist.png)
-![screenshot](documentation/features/featureprofileeditdelete.png)
-![screenshot](documentation/features/featureprofileeditform.png)
-![screenshot](documentation/features/featurecommenteditdelete.png)
-![screenshot](documentation/features/featurecommenteditform.png)
+![screenshot](documentation/features/featuresecretslist.jpg)
+![screenshot](documentation/features/featuresecreteditdelete.jpg)
+![screenshot](documentation/features/featuresecreteditform.jpg)
+![screenshot](documentation/features/featurecommentform.jpg)
+![screenshot](documentation/features/featurecommenteditdelete.jpg)
+![screenshot](documentation/features/featurecommenteditform.jpg)
 
 - **My Messages**
 
     - If the user has reached out to somebody or somebody has reached out to the user then their messages will appear on this page. When the user clicks on an item of the list of the messages then he/she is redirected to the thread he/she has with the user that reached out to him/her or the person he/she has reached out to. There he/she can add a message to that thread.
 
-![screenshot](documentation/features/featurereachouts.png)
-![screenshot](documentation/features/featurereachoutform.png)
-![screenshot](documentation/features/featurereachoutlist.png)
-![screenshot](documentation/features/featurereachout.png)
+![screenshot](documentation/features/featurereachouts.jpg)
+![screenshot](documentation/features/featurereachoutform.jpg)
+![screenshot](documentation/features/featurereachoutlist.jpg)
+![screenshot](documentation/features/featurereachout.jpg)
+![screenshot](documentation/features/featurereachoutcomment.jpg)
 
 - **My Diary**
 
     - Here the user can write anything that just he/she will have access to. Previous entries to the diary will also appear on this page. When the user clicks on a diary entry then he/she is redirected to the page that shows the whole content of the entry.
 
-![screenshot](documentation/features/featurediary.png)
-![screenshot](documentation/features/featurediaryform.png)
-![screenshot](documentation/features/featurediarylist.png)
-![screenshot](documentation/features/featurediaryentry.png)
+![screenshot](documentation/features/featurediary.jpg)
+![screenshot](documentation/features/featurediaryform.jpg)
+![screenshot](documentation/features/featurediarylist.jpg)
+![screenshot](documentation/features/featurediaryentry.jpg)
 
 - **Add blogpost if the user is an administrator and Admins Blog**
 
     - If the user is an administrator then he gets an extra choice on the navbar to add a blogpost. He/she can add a blogpost and edit or delete it.
 
-![screenshot](documentation/features/featureblogform.png)
-![screenshot](documentation/features/featurblogposts.png)
-![screenshot](documentation/features/featurblogeditdelete.png)
-![screenshot](documentation/features/featurblogeditform.png)
+![screenshot](documentation/features/featureblogposts.jpg)
+![screenshot](documentation/features/featureblogcreate.jpg)
+![screenshot](documentation/features/featureblogposteditdelete.jpg)
+![screenshot](documentation/features/featureblogedit.jpg)
 
 - **Sign Out**
 
     - The user can sign out.
 
-![screenshot](documentation/features/featureblogform.png)
+![screenshot](documentation/features/featuresignout.jpg)
 
 
 - **Not found**
 
     - If the page the user tries to access then he/she will be informed about it.
 
-![screenshot](documentation/features/featurenotfound.png)
+![screenshot](documentation/features/featurenotfound.jpg)
 
 
 - **Error page**
 
     - If the user tries to access a page that he/she is not authorized to access then they will be informed about it.
 
-![screenshot](documentation/features/featureerror.png)
+![screenshot](documentation/features/featureerror.jpg)
 
 ### Future Features
 
@@ -318,7 +320,7 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/gh-projects.jpg)
 
 ### GitHub Issues
 
@@ -328,11 +330,11 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/EfthymiaKakoulidou/secrets/issues) [![GitHub issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets/issues)
 
-    ![screenshot](documentation/gh-issues-open.png)
+    ![screenshot](documentation/gh-issues-open.jpg)
 
 - [Closed Issues](https://github.com/EfthymiaKakoulidou/secrets/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](documentation/gh-issues-closed.jpg)
 
 ### MoSCoW Prioritization
 
