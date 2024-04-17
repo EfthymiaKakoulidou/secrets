@@ -38,15 +38,15 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| src | App.module.css | ![screenshot](documentation/validation/cssapp.jpg) | |
-| src | index.css | ![screenshot](documentation/validation/path-to-cssindex.jpg) | |
+| src | App.module.css | ![screenshot](documentation/validation/cssapp.jpg) | 
+| src | index.css | ![screenshot](documentation/validation/cssindex.jpg) | |
 | src | Asset.module.css | ![screenshot](documentation/validation/cssasset.jpg) | |
 | src | Avatar.module.css | ![screenshot](documentation/validation/cssavatar.jpg) | |
 | src | Button.module.css | ![screenshot](documentation/validation/cssbutton.jpg) | |
 | src | NavBar.module.css | ![screenshot](documentation/validation/cssnavbar.jpg) | |
 | src | Post.module.css | ![screenshot](documentation/validation/csspost.jpg) | |
-| src | PostCreateEditForm.module.css | ![screenshot](documentation/csspostcreateeditform.jpg) | |
-| src | PostsPage.module.css | ![screenshot](documentation/validation/csspostspage.jpg) | |
+| src | PostCreateEditForm.module.css | ![screenshot](documentation/validation/csspostcreateeditform.jpg) | |
+| src | PostsPage.module.css | ![screenshot](documentation/validation/csspostpage.jpg) | |
 | src | SignInUpForm.module.css | ![screenshot](documentation/validation/csssigninupform.jpg) | |
 | src | Comment.module.css | ![screenshot](documentation/validation/csscomment.jpg) | |
 | src | CommentCreateEditForm.module.css | ![screenshot](documentation/validation/csscommentcreateeditform.jpg) | |
@@ -139,25 +139,25 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.jpg) | Some minor warnings |
-| Signin | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.jpg) | Some minor warnings |
-| Signup | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Secrets | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Secrets Create | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Secret | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Secret Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Diary | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Diary Entry | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Blogposts | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Blogpost | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Blog Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Blog Create | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Profiles | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Profile Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
+| Signin | ![screenshot](documentation/lighthouse/lighthouse-signin-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-signin-desktop.jpg) | Some minor warnings |
+| Signup | ![screenshot](documentation/lighthouse/lighthouse-signup-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-signup-desktop.jpg) | Slow response time due to large images |
+| Secrets | ![screenshot](documentation/lighthouse/lighthouse-secrets-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secrets-desktop.jpg) | Slow response time due to large images |
+| Secrets Create | ![screenshot](documentation/lighthouse/lighthouse-secretscreate-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secretscreate-desktop.jpg) | Slow response time due to large images |
+| Secret | ![screenshot](documentation/lighthouse/lighthouse-gallery-secret.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secret-desktop.jpg) | Slow response time due to large images |
+| Secret Edit | ![screenshot](documentation/lighthouse/lighthouse-secretedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secretedit-desktop.jpg) | Slow response time due to large images |
+| Diary | ![screenshot](documentation/lighthouse/lighthouse-diary-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-diary-desktop.jpg) | Slow response time due to large images |
+| Diary Entry | ![screenshot](documentation/lighthouse/lighthouse-diaryentry-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-diaryentry-desktop.jpg) | Slow response time due to large images |
+| Blogposts | ![screenshot](documentation/lighthouse/lighthouse-blogposts-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogposts-desktop.jpg) | Slow response time due to large images |
+| Blogpost | ![screenshot](documentation/lighthouse/lighthouse-blogpost-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogpost-desktop.jpg) | Slow response time due to large images |
+| Blog Edit | ![screenshot](documentation/lighthouse/lighthouse-blogedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogedit-desktop.jpg) | Slow response time due to large images |
+| Blog Create | ![screenshot](documentation/lighthouse/lighthouse-blogentry-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogentry-desktop.jpg) | Slow response time due to large images |
+| Profiles | ![screenshot](documentation/lighthouse/lighthouse-prfoiles-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-profiles-desktop.jpg) | Slow response time due to large images |
+| Profile Edit | ![screenshot](documentation/lighthouse/lighthouse-profileedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-profileedit-desktop.jpg) | Slow response time due to large images |
 | Messages | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Message | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Username | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Password | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
-| Not Found | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.jpg) | Slow response time due to large images |
+| Message | ![screenshot](documentation/lighthouse/lighthouse-messages-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-messages-desktop.jpg) | Slow response time due to large images |
+| Username | ![screenshot](documentation/lighthouse/lighthouse-username-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-username-desktop.jpg) | Slow response time due to large images |
+| Password | ![screenshot](documentation/lighthouse/lighthouse-password-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-password-desktop.jpg) | Slow response time due to large images |
+| Not Found | ![screenshot](documentation/lighthouse/lighthouse-notfound-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-notfound-desktop.jpg) | Slow response time due to large images |
 
 ## Defensive Programming
 
