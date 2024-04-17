@@ -177,39 +177,39 @@ Defensive programming was manually tested with the below user acceptance testing
 | Profile edit | | | | | |
 | | Feature is expected to redirect the user to the profile edit form | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the profile edit form| Test concluded and passed | ![screenshot](documentation/features/featureprofileedit.jpg) |
 | Profile change username| | | | | |
-| | Feature is expected to redirect the user to the form to change his/hers profile | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the profile| Test concluded and passed | ![screenshot](documentation/features/featurechangeusername.jpg) |
+| | Feature is expected to redirect the user to the form to change his/hers profile | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the profile| Test concluded and passed | ![screenshot](documentation/features/featureusername.jpg) |
 | Profile change password| | | | | |
-| | Feature is expected to redirect the user to the form to change his/hers password | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the change password form| Test concluded and passed | ![screenshot](documentation/features/featurechangepassword.jpg) |
+| | Feature is expected to redirect the user to the form to change his/hers password | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the change password form| Test concluded and passed | ![screenshot](documentation/features/featurepassword.jpg) |
 | Profile list| | | | | |
-| | Feature is expected to redirect the user to other peoples' profile detail page | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to that person's profile page | Test concluded and passed | ![screenshot](documentation/features/featureprofilelist.jpg) |
+| | Feature is expected to redirect the user to other peoples' profile detail page | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to that person's profile page | Test concluded and passed | ![screenshot](documentation/features/featureprofilepage.jpg) |
 | Secret Create| | | | | |
 | | Feature is expected to create a secret to feed of secrets | Tested the feature by filling the form | The feature behaved as expected, and added a secret to the feed | Test concluded and passed | ![screenshot](documentation/features/featuresecretcreate.jpg) |
 | Secrets| | | | | |
-| | Feature is expected to show the secrets and redirect to secrets detail page when the user clicks on it | Tested the feature by clicking on a secret | The feature behaved as expected, and it redirected me to the secrets detail page | Test concluded and passed | ![screenshot](documentation/features/featuresecret.jpg) |
+| | Feature is expected to show the secrets and redirect to secrets detail page when the user clicks on it | Tested the feature by clicking on a secret | The feature behaved as expected, and it redirected me to the secrets detail page | Test concluded and passed | ![screenshot](documentation/features/featuresecretslist.jpg) |
 | Secret Edit| | | | | |
-| | Feature is expected to redirect the user to the secrets edit form | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to the secrets edit form | Test concluded and passed | ![screenshot](documentation/features/featuresecretedit.jpg) |
+| | Feature is expected to redirect the user to the secrets edit form | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to the secrets edit form | Test concluded and passed | ![screenshot](documentation/features/featuresecreteditform.jpg) |
 | Secret Delete| | | | | |
 | | Feature is expected to redirect the user back to the feed | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the feed | Test concluded and passed | ![screenshot](documentation/features/featuresecrets.jpg) |
 | Comment Create| | | | | |
-| | Feature is expected to create a comment by filling the form and clicking on post | Tested the feature by filling the form and submitting | The feature behaved as expected, and it created a comment| Test concluded and passed | ![screenshot](documentation/features/featurecomment.jpg) |
+| | Feature is expected to create a comment by filling the form and clicking on post | Tested the feature by filling the form and submitting | The feature behaved as expected, and it created a comment| Test concluded and passed | ![screenshot](documentation/features/featurescommentform.jpg) |
 | Comment Edit| | | | | |
-| | Feature is expected to show me the comment form in place | Tested the feature by clicking on the edit icon| The feature behaved as expected, and showed me the form filled with the previous content | Test concluded and passed | ![screenshot](documentation/features/featurecommentedit.jpg) |
+| | Feature is expected to show me the comment form in place | Tested the feature by clicking on the edit icon| The feature behaved as expected, and showed me the form filled with the previous content | Test concluded and passed | ![screenshot](documentation/features/featurecommenteditform.jpg) |
 | Comment Delete| | | | | |
 | | Feature is expected to remove the comment I made | Tested the feature by clicking on the icon | The feature behaved as expected, and it removed the comment | Test concluded and passed | ![screenshot](documentation/features/featurecommentdelete.jpg) |
 | Diary form | | | | | |
 | | Feature is expected to create a diary entry | Tested the feature by filling the form and submit it | The feature behaved as expected, and it created an entr| Test concluded and passed | ![screenshot](documentation/features/featurediary.jpg) |
 | Diary Entry | | | | | |
 | | Feature is expected to redirect the diary entry where the whole content will be revealed| Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to that specific diary entry| Test concluded and passed | ![screenshot](documentation/features/featurediaryentry.jpg) |
-| Messages | | | | | |
-| | Feature is expected to create athread with the specific person chosen | Tested the feature by filling the form and logging in as the other user to see if the message was there | The feature behaved as expected, and it created a thread to mine and the other person's messages list| Test concluded and passed | ![screenshot](documentation/features/featuremessages.jpg) |
-| Messages list | | | | | |
-| | Feature is expected to redirect the user to the thread of this conversation where all the messages between the 2 people appear | Tested the feature by clicking on it | The feature behaved as expected, and showed me the whole conversation| Test concluded and passed | ![screenshot](documentation/features/featuremessage.jpg) |
+| Message form | | | | | |
+| | Feature is expected to create a thread with the specific person chosen | Tested the feature by filling the form and logging in as the other user to see if the message was there | The feature behaved as expected, and it created a thread to mine and the other person's messages list| Test concluded and passed | ![screenshot](documentation/features/featurereachoutcreate.jpg) |
+| Message | | | | | |
+| | Feature is expected to redirect the user to the thread of this conversation where all the messages between the 2 people appear | Tested the feature by clicking on it | The feature behaved as expected, and showed me the whole conversation| Test concluded and passed | ![screenshot](documentation/features/featurereachout.jpg) |
 | Blog Create | | | | | |
-| | Feature is expected to appear only if the user is an administrator and create a blogpost by filling the form | Tested the feature by logging in as an administrator and filling the form | The feature behaved as expected, and created a blogpost | Test concluded and passed | ![screenshot](documentation/features/featureblogpost.jpg) |
+| | Feature is expected to appear only if the user is an administrator and create a blogpost by filling the form | Tested the feature by logging in as an administrator and filling the form | The feature behaved as expected, and created a blogpost | Test concluded and passed | ![screenshot](documentation/features/featureblogcreate.jpg) |
 | Blog Edit or Delete | | | | | |
 | | Feature is expected to redirect the blog edit form or to the blog if the blogpost is deleted | Tested the feature by clicking on the choices | The features behaved as expected, and it redirected me to the blog edit form or the blog respectively| Test concluded and passed | ![screenshot](documentation/features/featureblogedit.jpg) |
 | Blogposts | | | | | |
-| | Feature is expected to redirect the user to the blog | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the blog | Test concluded and passed | ![screenshot](documentation/features/featureblog.jpg) |
+| | Feature is expected to redirect the user to the blog | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the blog | Test concluded and passed | ![screenshot](documentation/features/featureblogposts.jpg) |
 | Sign Out | | | | | |
 | | Feature is expected to sign the user out | Tested the feature by clicking on it | The feature behaved as expected, and it signed me out| Test concluded and passed | ![screenshot](documentation/features/featuresignout.jpg) |
 
