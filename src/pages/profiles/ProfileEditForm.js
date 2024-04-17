@@ -116,12 +116,12 @@ const ProfileEditForm = () => {
   );
 
   return (
-    <Row className="h-100 ">
+    <Row className="h-100">
     <Col className="py-2 p-0 p-lg-2" lg={8}>
     <p className="px-5 pt-5">Edit your profile</p>
       <Form onSubmit={handleSubmit}>
         <Row >
-        <Col className="py-2 px-5 p-md-2" md={7} lg={10}>
+        <Col className="py-2 px-5 p-md-2" md={12} lg={10}>
           <Container className={appStyles.Content}>
             <Form.Group>
               {image && (
@@ -159,7 +159,7 @@ const ProfileEditForm = () => {
             <div className="d-md-none">{textFields}</div>
           </Container>
         </Col>
-        <Col md={5} lg={6} className="d-none d-md-block p-0 p-md-2 text-center">
+        <Col md={12} lg={6} className="d-none d-md-block p-0 p-md-2 justify-content-center text-center">
           <Container className={appStyles.Content}>{textFields}</Container>
           </Col>
       </Row>

@@ -130,7 +130,7 @@ function PostEditForm() {
 
   return (
     <Row className="h-100 " md={12}>
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
+      <Col className="py-2 p-0 p-lg-2" lg={8} md={12}>
       <p className="px-5 pt-5">Edit your secret</p>
         <Form onSubmit={handleSubmit}>
           <Row >
