@@ -141,17 +141,17 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.jpg) | Some minor warnings |
 | Signin | ![screenshot](documentation/lighthouse/lighthouse-signin-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-signin-desktop.jpg) | Some minor warnings |
 | Signup | ![screenshot](documentation/lighthouse/lighthouse-signup-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-signup-desktop.jpg) | Slow response time due to large images |
-| Secrets | ![screenshot](documentation/lighthouse/lighthouse-secrets-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secrets-desktop.jpg) | Slow response time due to large images |
+| Secrets | ![screenshot](documentation/lighthouse/lighthouse-secrets-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secrets-desktop.jpg) | Low scores expected because of loading multiple images from the API |
 | Secrets Create | ![screenshot](documentation/lighthouse/lighthouse-secretscreate-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secretscreate-desktop.jpg) | Slow response time due to large images |
-| Secret | ![screenshot](documentation/lighthouse/lighthouse-secret-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secret-desktop.jpg) | Slow response time due to large images |
+| Secret | ![screenshot](documentation/lighthouse/lighthouse-secret-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secret-desktop.jpg) | Low scores expected because of loading multiple images from the API |
 | Secret Edit | ![screenshot](documentation/lighthouse/lighthouse-secretedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-secretedit-desktop.jpg) | Slow response time due to large images |
 | Diary | ![screenshot](documentation/lighthouse/lighthouse-diary-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-diary-desktop.jpg) | Slow response time due to large images |
 | Diary Entry | ![screenshot](documentation/lighthouse/lighthouse-diaryentry-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-diaryentry-desktop.jpg) | Slow response time due to large images |
 | Blogposts | ![screenshot](documentation/lighthouse/lighthouse-blogposts-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogposts-desktop.jpg) | Slow response time due to large images |
 | Blogpost | ![screenshot](documentation/lighthouse/lighthouse-blogpost-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogpost-desktop.jpg) | Slow response time due to large images |
-| Blog Edit | ![screenshot](documentation/lighthouse/lighthouse-blogedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogedit-desktop.jpg) | Slow response time due to large images |
+| Blog Edit | ![screenshot](documentation/lighthouse/lighthouse-blogedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogedit-desktop.jpg) | Low scores expected because of loading multiple images from the API |
 | Blog Create | ![screenshot](documentation/lighthouse/lighthouse-blogcreate-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogcreate-desktop.jpg) | Slow response time due to large images |
-| Profiles | ![screenshot](documentation/lighthouse/lighthouse-profiles-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-profiles-desktop.jpg) | Slow response time due to large images |
+| Profiles | ![screenshot](documentation/lighthouse/lighthouse-profiles-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-profiles-desktop.jpg) | Low scores expected because of loading multiple images from the API |
 | Profile Edit | ![screenshot](documentation/lighthouse/lighthouse-profileedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-profileedit-desktop.jpg) | Slow response time due to large images |
 | Messages | ![screenshot](documentation/lighthouse/lighthouse-messages-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-messages-desktop.jpg) | Slow response time due to large images |
 | Message | ![screenshot](documentation/lighthouse/lighthouse-message-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-message-desktop.jpg) | Slow response time due to large images |
@@ -254,10 +254,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | --- | --- |
 | I was encountering a bug with the link to add a blogpost when the user is an administrator. The paged had to be refreshed for it to appear (or disappear if the user is not an administrator.) To fix that I added window.location.reload() to refresh the page upon sign in or sign up. | Fixed |
 
-![screenshot](documentation/bugs/bug01.jpg)
-![screenshot](documentation/bugs/bug02.jpg)
-![screenshot](documentation/bugs/bug03.jpg)
-![screenshot](documentation/bugs/bug04.jpg)
+![screenshot](documentation/bugs/bug1.jpg)
+![screenshot](documentation/bugs/bug2.jpg)
+![screenshot](documentation/bugs/bug3.jpg)
+![screenshot](documentation/bugs/bug4.jpg)
 
 **Open Issues**
 
@@ -276,5 +276,5 @@ Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakou
 
 - I have an unfixed bug related to the profiles_id. The link to the profile in the Post component leads to the profile with the previous id than the one in the link. I am suspecting that this happened when at some point I tried to import data from the local environment of my api to heroku, or when I deleted users from the backend. I have not found how it was caused and the rest of the app works fine it is just the link in the Post that has this problem. A quick fix to this was to add 1 to the url that user is requesting. Even though this is not really a solution it fixed the problem for now. Further debugging in the future is going to be needed.
 
-    ![screenshot](documentation/bugs/unfixed-bug01.jpg)
+    ![screenshot](documentation/bugs/bug5.jpg)
 
