@@ -7,12 +7,11 @@
 
 ### HTML
 
-I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate  my HTML files.
 
 | Directory | File | Screenshot | Links |
 | --- | --- | --- | --- |
 | public | index.html | ![screenshot](documentation/validation/htmlbyinput.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2F |
-
 
 
 ### CSS
@@ -44,7 +43,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JavaScript
 
-ESlint - Has been used during developement and had the warning below which derives from my backend model name 
+ESlint - Has been used during developement and had the warning below which derives from my backend model name.
 | ESlint |
 | --- |
 |![screenshot](documentation/validation/eslint.jpg)|

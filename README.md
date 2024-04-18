@@ -302,7 +302,6 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 
 ## Deployment
 
-
 The live deployed application can be found deployed on [Heroku](https://secrets-276f7be740ae.herokuapp.com).
 
 ### PostgreSQL Database
@@ -415,12 +414,12 @@ I used the walkthrough "Moments" from the Code Institute's LMS to help me struct
 
 ### Content
 
-
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [Bootstrap Documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction/) | entire site |  |
+| [Github](https://github.com/) |  |  |
 
 
 ### Media
@@ -429,7 +428,7 @@ All the content I used for this project is fictional and is owned by me or by cl
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Juliia_Konn] for his support throughout the development of this project.
+- I would like to thank my Code Institute mentor, Iuliia Konovalova for her support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 - I would like to thank my partner for helping me to make this transition into software development.
