@@ -11,26 +11,9 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | Screenshot | Links |
 | --- | --- | --- | --- |
-| public | index.html | ![screenshot](documentation/validation/html_home.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2F |
-| signin | signin.html | ![screenshot](documentation/validation/html_signin.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fsignin |
-| signup | signup.html | ![screenshot](documentation/validation/html_signup.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fsignup |
-| profile | profile.html | ![screenshot](documentation/validation/html_profile.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fprofiles%2F27 |
-| profile edit | profile/id/edit.html | ![screenshot](documentation/validation/html_profileedit.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fprofiles%2F32%2Fedit |
-| change username | profiles/id/edit/username.html | ![screenshot](documentation/validation/html_changeusername.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fprofiles%2F27%2Fedit%2Fusername |
-| change password | profiles/id/edit/password.html | ![screenshot](documentation/validation/html_changepassword.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fprofiles%2F27%2Fedit%2Fpassword |
-| create secret | secretcreate.html | ![screenshot](documentation/validation/html_secretcreate.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fseecrets%2Fcreate |
-| secrets | seecrets.html | ![screenshot](documentation/validation/html_secrets.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fseecrets |
-| secret | seecret.html | ![screenshot](documentation/validation/html_secret.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fseecrets%2F50 |
-| secrets edit | seecrets/id/edit.html | ![screenshot](documentation/validation/html_secretedit.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fseecrets%2F50%2Fedit |
-| my diary | diary.html | ![screenshot](documentation/validation/html_diary.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fdiary |
-| diary entry | diary/id.html | ![screenshot](documentation/validation/html_diaryentry.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fdiary%2F25 |
-| messages | reach_out.html | ![screenshot](documentation/validation/html_reach_out.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Freach_out |
-| message | reach_out.html | ![screenshot](documentation/validation/html_reach_out_id.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Freach_out%2F36 |
-| add blogpost | blog/create.html | ![screenshot](documentation/validation/html_blogcreate.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fblogs%2Fcreate |
-| blogposts | blogposts.html | ![screenshot](documentation/validation/html_blogposts.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fblogposts |
-| blogpost | blogpost.html | ![screenshot](documentation/validation/html_blogpost.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fblogpost%2F5 |
-| blogpost edit | blogpost/id/edit.html | ![screenshot](documentation/validation/html_blogpostedit.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fblogpost%2F5%2Fedit |
-| not found | notfound.html | ![screenshot](documentation/validation/html_notfound.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2Fsignins |
+| public | index.html | ![screenshot](documentation/validation/htmlbyinput.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2F |
+
+
 
 ### CSS
 
@@ -61,54 +44,11 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JavaScript
 
-I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
+ESlint - Has been used during developement and had the warning below which derives from my backend model name 
+| ESlint |
+| --- |
+|![screenshot](documentation/validation/eslint.jpg)|
 
-| Directory | File | Screenshot | Notes |
-| --- | --- | --- | --- |
-| src | App.js | ![screenshot](documentation/validation/jsapp.jpg) | |
-| src | axiosDefaults.js | ![screenshot](documentation/validation/jsaxios.jpg) | |
-| src | Asset.js | ![screenshot](documentation/validation/jsasset.jpg) | |
-| src | Avatar.js | ![screenshot](documentation/validation/jsavatar.jpg) | |
-| src | MoreDropdown.js | ![screenshot](documentation/validation/jsmoredropdown.jpg) | |
-| src | NavBar.js | ![screenshot](documentation/validation/jsnavbar.jpg) | |
-| src | NotFound.js | ![screenshot](documentation/validation/jsnotfound.jpg) | |
-| src | CurrentUserContext.js | ![screenshot](documentation/validation/jscurrentuser.jpg) | |
-| src | ProfileDataContext.js | ![screenshot](documentation/validation/jsprofiledata.jpg) | |
-| src | UseClickOutsideToggle.js | ![screenshot](documentation/validation/jsuseclick.jpg) | |
-| src | UseRedirect.js | ![screenshot](documentation/validation/jsuseredirect.jpg) | |
-| src | index.js | ![screenshot](documentation/validation/jsindex.jpg) | |
-| src | SignInForm.js | ![screenshot](documentation/validation/jssignin.jpg) | |
-| src | SignUpForm.js | ![screenshot](documentation/validation/jssignup.jpg) | |
-| src | Blog.js | ![screenshot](documentation/validation/jsblog.jpg) | |
-| src | BlogCreateForm.js | ![screenshot](documentation/validation/jsblogcreate.jpg) | |
-| src | BlogEditForm.js | ![screenshot](documentation/validation/jsblogedit.jpg) | |
-| src | BlogPage.js | ![screenshot](documentation/validation/jsblogpage.jpg) | |
-| src | BlogsPage.js | ![screenshot](documentation/validation/jsblogspage.jpg) | |
-| src | Comment.js | ![screenshot](documentation/validation/jscomment.jpg) | |
-| src | CommentCreateForm.js | ![screenshot](documentation/validation/jscommentcreate.jpg) | |
-| src | CommentEditForm.js | ![screenshot](documentation/validation/jscommentcreate.jpg) | |
-| src | Diary.js | ![screenshot](documentation/validation/jsdiary.jpg) | |
-| src | DiaryCreateForm.js | ![screenshot](documentation/validation/jsdiarycreate.jpg) | |
-| src | DiaryPage.js | ![screenshot](documentation/validation/jsdiarypage.jpg) | |
-| src | DiarysPage.js | ![screenshot](documentation/validation/jsdiaryspage.jpg) | |
-| src | Home.js | ![screenshot](documentation/validation/jshome.jpg) | |
-| src | Post.js | ![screenshot](documentation/validation/jspost.jpg) | |
-| src | PostCreateForm.js | ![screenshot](documentation/validation/jspostcreate.jpg) | |
-| src | PostPage.js | ![screenshot](documentation/validation/jspostpage.jpg) | |
-| src | PostsPage.js | ![screenshot](documentation/validation/jspostspage.jpg) | |
-| src | Profile.js | ![screenshot](documentation/validation/jsprofile.jpg) | |
-| src | ProfileEditForm.js | ![screenshot](documentation/validation/jsprofileedit.jpg) | |
-| src | ProfilePage.js | ![screenshot](documentation/validation/jsprofilepage.jpg) | |
-| src | Profiles.js | ![screenshot](documentation/validation/jsprofiles.jpg) | |
-| src | UsernameForm.js | ![screenshot](documentation/validation/jsusername.jpg) | |
-| src | UserPasswordForm.js | ![screenshot](documentation/validation/jspassword.jpg) | |
-| src | Reach_out_comment.js | ![screenshot](documentation/validation/jsreachoutcomment.jpg) | |
-| src | Reachout.js | ![screenshot](documentation/validation/jsreachout.jpg) | |
-| src | ReachoutCommentsCreateForm.js | ![screenshot](documentation/validation/jsreachoutcommentscreate.jpg) | |
-| src | ReachoutCreateForm.js | ![screenshot](documentation/validation/path-to-screenshot.jpg) | |
-| src | ReachoutPage.js | ![screenshot](documentation/validation/jsreachoutpage.jpg) | |
-| src | ReachoutsPage.js | ![screenshot](documentation/validation/jsreachoutspage.jpg) | |
-| src | utils.js | ![screenshot](documentation/validation/path-to-screenshot.jpg) | |
 
 ## Browser Compatibility
 
@@ -152,11 +92,8 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Blog Edit | ![screenshot](documentation/lighthouse/lighthouse-blogedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogedit-desktop.jpg) | Low scores expected because of loading multiple images from the API |
 | Blog Create | ![screenshot](documentation/lighthouse/lighthouse-blogcreate-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-blogcreate-desktop.jpg) | Slow response time due to large images |
 | Profiles | ![screenshot](documentation/lighthouse/lighthouse-profiles-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-profiles-desktop.jpg) | Low scores expected because of loading multiple images from the API |
-| Profile Edit | ![screenshot](documentation/lighthouse/lighthouse-profileedit-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-profileedit-desktop.jpg) | Slow response time due to large images |
 | Messages | ![screenshot](documentation/lighthouse/lighthouse-messages-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-messages-desktop.jpg) | Slow response time due to large images |
 | Message | ![screenshot](documentation/lighthouse/lighthouse-message-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-message-desktop.jpg) | Slow response time due to large images |
-| Username | ![screenshot](documentation/lighthouse/lighthouse-username-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-username-desktop.jpg) | Slow response time due to large images |
-| Password | ![screenshot](documentation/lighthouse/lighthouse-password-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-password-desktop.jpg) | Slow response time due to large images |
 | Not Found | ![screenshot](documentation/lighthouse/lighthouse-notfound-mobile.jpg) | ![screenshot](documentation/lighthouse/lighthouse-notfound-desktop.jpg) | Slow response time due to large images |
 
 ## Defensive Programming
