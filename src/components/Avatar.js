@@ -5,7 +5,6 @@ const Avatar = ({ src, height = 45, text }) => {
   return (
     <span>
       <img 
-        loading="lazy"
         className={styles.Avatar}
         src={src}
         height={height}
