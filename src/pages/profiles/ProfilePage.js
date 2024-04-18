@@ -61,7 +61,7 @@ function ProfilePage () {
       <Row noGutters className='px-3 text-center align-items-center'>
         <Col lg={3} className='text-lg-left position-relative'>
           <div className={styles.ProfileContainer}>
-            <Image loading="lazy" className={styles.ProfileImage} roundedCircle src={profile?.image} />
+            <Image className={styles.ProfileImage} roundedCircle src={profile?.image} />
 
           </div>
         </Col>
