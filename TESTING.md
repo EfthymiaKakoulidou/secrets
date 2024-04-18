@@ -213,13 +213,16 @@ Defensive programming was manually tested with the below user acceptance testing
 | Blogposts | | | | | |
 | | Feature is expected to redirect the user to the blog | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the blog | Test concluded and passed | ![screenshot](documentation/features/featureblogposts.jpg) |
 | Sign Out | | | | | |
-| | Feature is expected to sign the user out | Tested the feature by clicking on it | The feature behaved as expected, and it signed me out| Test concluded and passed | ![screenshot](documentation/features/featuresignout.jpg) |
+| | Feature is expected to sign the user out and redirect him/her to the home page | Tested the feature by clicking on it | The feature behaved as expected, and it signed me out| Test concluded and passed | ![screenshot](documentation/features/featuresignout.jpg) |
 | Forms | | | | | |
 | | Feature is expected to not let the users submit a blank form | Tested the feature by trying to submit a blank form | The feature behaved as expected, and did not let me | Test concluded and passed | ![screenshot](documentation/features/featureblankform1.jpg) |
 | | | | | Test concluded and passed | ![screenshot](documentation/features/featureblankform2.jpg) |
 | | | | | Test concluded and passed | ![screenshot](documentation/features/featureblankform3.jpg) |
 | | | | | Test concluded and passed | ![screenshot](documentation/features/featureblankform4.jpg) |
-
+| Not Found | | | | | |
+| | Feature is expected to display the not found page | Tested the feature by typing a url that does not exist| The feature behaved as expected, and it showed me the not found page | Test concluded and passed | ![screenshot](documentation/features/featurenotfound.jpg) |
+| Not Authorized | | | | | |
+| | Feature is expected to display the error page | Tested the feature by logging in as a different user and typed the url of the messages page of the previous user | The feature behaved as expected, and it showed me the error | Test concluded and passed | ![screenshot](documentation/features/featureerror.jpg) |
 
 
 ## User Story Testing
@@ -227,13 +230,13 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like signin or signup, so that I can have access to the site. | ![screenshot](documentation/features/featuresignin.jpg) |
+| As a new site user, I would like signin or signup, so that I can have access to the site. | ![screenshot](documentation/features/featuresignin.jpg) ![screenshot](documentation/features/featuresignup.jpg) |
 | As a new site user, I would like to be informed about what this site is all about, so that I can decide if it is for me. | ![screenshot](documentation/features/featurehome.jpg) |
-| As a new site user, I would like to check my profile, edit or delete it, so that I can control the information I am giving out. | ![screenshot](documentation/features/featureprofile.jpg) |
+| As a new site user, I would like to check my profile and edit it, so that I can control the information I am giving out. | ![screenshot](documentation/features/featureprofile.jpg) ![screenshot](documentation/features/featureprofileedit.jpg) |
 | As a new site user, I would like to check other peoples' profiles, so that I can choose people to interact with. | ![screenshot](documentation/features/featuresecretslist.jpg) |
 | As a new site user, I would like to share a secret with users of the site, so that I can unburden myself and feel relief. | ![screenshot](documentation/features/featuresecretcreate.jpg) |
 | As a new site user, I would like to edit and delete my secrets, so that I update information or in case I changed my mind. | ![screenshot](documentation/features/featuresecreteditdelete.jpg) |
-| As a new site user, I would like to check other peoples' secrets, so that I can see if I can find something I can relate to. | ![screenshot](documentation/features/featuresecretslist.jpg) |
+| As a new site user, I would like to check other peoples' secrets, so that I can see if I can find something I can relate to. | ![screenshot](documentation/features/featureotherpeoplesecrets.jpg) |
 | As a new site user, I would like to comment on other peoples posts, so that I can express my opinion. | ![screenshot](documentation/features/featurecommentform.jpg) |
 | As a new site user, I would like to edit or delete my comments in case I change my mind. | ![screenshot](documentation/features/featurecommenteditdelete.jpg) |
 | As a new site user, I would like to keep a diary, so that I can document my thoughts and be helped by the process of writing. | ![screenshot](documentation/features/featurediary.jpg) |
@@ -243,7 +246,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning site user, I would like to do all of the above for the same reasons. |  |
 | As a returning site user, I would like to check my messages and see if I have new, so that I can keep in touch with people. | ![screenshot](documentation/features/featurereachoutcomment.jpg) |
 | As a returning site user, I would like to check the feed, so that I can be updated with new information. | ![screenshot](documentation/features/featuresecretslist.jpg) |
-| As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic. | ![screenshot](documentation/features/featureblogcreate.jpg) |
+| As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic. | ![screenshot](documentation/features/featureblogcreate.jpg) ![screenshot](documentation/features/featureblogposteditdelete.jpg) |
 
 
 ## Bugs
@@ -266,10 +269,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakoulidou/secrets/issues).
 
-| Bug | Status |
-| --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/EfthymiaKakoulidou/secrets/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/EfthymiaKakoulidou/secrets/issues/5) | Open |
 
 ## Unfixed Bugs
 
