@@ -9,10 +9,11 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 import { axiosReq } from '../../api/axiosDefaults'
 import { useRedirect } from '../../hooks/UseRedirect'
 import styles from '../../styles/ReachoutCreateForm.module.css'
+import { Alert } from 'react-bootstrap'
 
 function ReachoutCreateForm () {
   useRedirect('loggedOut')
-  const [setErrors] = useState({})
+  const [errors, setErrors] = useState({})
   const [profiles, setProfiles] = useState([])
   const [reachoutData, setReachoutData] = useState({
     reach_out_to: '',
@@ -84,6 +85,11 @@ function ReachoutCreateForm () {
                 onChange={handleChange}
               />
             </Form.Group>
+            {errors?.title?.map((message, idx) => (
+        <Alert variant='warning' key={idx}>
+          {message}
+        </Alert>
+      ))}
             <Button className={styles.button} type='submit'>
               Create
             </Button>

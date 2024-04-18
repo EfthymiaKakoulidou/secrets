@@ -111,97 +111,98 @@ Profiles
 
     - At the top left of the page there is the logo of the site and its name 'Secrets' which the user can click and be redirected to the home page.
 
-![screenshot](documentation/features/featurelogo.jpg)
+    - ![screenshot](documentation/features/featurelogo.jpg)
 
 - **Sign in/Sign Up**
 
     - At the top left of the page the user can be informed if he/she is logged in or not. In the case the user does not have an account he/she can sign up.
 
-![screenshot](documentation/features/featuresignin.jpg)
-![screenshot](documentation/features/featuresignup.jpg)
+    - ![screenshot](documentation/features/featuresignin.jpg)
+    - ![screenshot](documentation/features/featuresignup.jpg)
 
 - **Side Navbar**
 
     - The side Navbar is the navigation tool of the user. There the user can find all the content of the page.
 
-![screenshot](documentation/features/featurenavbar.jpg)
+    - ![screenshot](documentation/features/featurenavbar.jpg)
 
 - **Profile**
 
     - The username appears next. It is an andication that the user is logged in and a link to profile page.
 
-![screenshot](documentation/features/featureprofile.jpg)
+    - ![screenshot](documentation/features/featureprofile.jpg)
 
 - **Profile Page**
 
     - On this page, appart from the profile's details the user can see a list of all the profiles. Each of the users' avatars links to their profile.
 
-![screenshot](documentation/features/featureprofilepage.jpg)
+    - ![screenshot](documentation/features/featureprofilepage.jpg)
 
 - **Share a secret**
 
     - On this page the user can fill the form to add a secret.
 
-![screenshot](documentation/features/featuresecretcreate.jpg)
+    - ![screenshot](documentation/features/featuresecretcreate.jpg)
 
 - **Secrets**
 
-    - Here is the feed with all the posted secrets. When a user clicks on a secret they are redirected to the secret's details and is able to see all the comments that people have left on this secrets. The user can also leave his/hers comments and edit or delete them if they have written them. If the user has posted this secret he/she can edit or delete them.
+    - Here is the feed with all the posted secrets. When a user clicks on a secret they are redirected to the secret's details and is able to see all the comments that people have left on this secrets. The user can also leave his/hers comments and edit or delete them if they have written them. If the user has posted this secret he/she can edit or delete them. The user can also search for a secret.
 
-![screenshot](documentation/features/featuresecretslist.jpg)
-![screenshot](documentation/features/featuresecreteditdelete.jpg)
-![screenshot](documentation/features/featuresecreteditform.jpg)
-![screenshot](documentation/features/featurecommentform.jpg)
-![screenshot](documentation/features/featurecommenteditdelete.jpg)
-![screenshot](documentation/features/featurecommenteditform.jpg)
+    - ![screenshot](documentation/features/featuresecretslist.jpg)
+    - ![screenshot](documentation/features/featuresecreteditdelete.jpg)
+    - ![screenshot](documentation/features/featuresecreteditform.jpg)
+    - ![screenshot](documentation/features/featurecommentform.jpg)
+    - ![screenshot](documentation/features/featurecommenteditdelete.jpg)
+    - ![screenshot](documentation/features/featurecommenteditform.jpg)
+    - ![screenshot](documentation/features/featuresearch.jpg)
 
 - **My Messages**
 
     - If the user has reached out to somebody or somebody has reached out to the user then their messages will appear on this page. When the user clicks on an item of the list of the messages then he/she is redirected to the thread he/she has with the user that reached out to him/her or the person he/she has reached out to. There he/she can add a message to that thread.
 
-![screenshot](documentation/features/featurereachouts.jpg)
-![screenshot](documentation/features/featurereachoutform.jpg)
-![screenshot](documentation/features/featurereachoutlist.jpg)
-![screenshot](documentation/features/featurereachout.jpg)
-![screenshot](documentation/features/featurereachoutcomment.jpg)
+    - ![screenshot](documentation/features/featurereachouts.jpg)
+    - ![screenshot](documentation/features/featurereachoutform.jpg)
+    - ![screenshot](documentation/features/featurereachoutlist.jpg)
+    - ![screenshot](documentation/features/featurereachout.jpg)
+    - ![screenshot](documentation/features/featurereachoutcomment.jpg)
 
 - **My Diary**
 
     - Here the user can write anything that just he/she will have access to. Previous entries to the diary will also appear on this page. When the user clicks on a diary entry then he/she is redirected to the page that shows the whole content of the entry.
 
-![screenshot](documentation/features/featurediary.jpg)
-![screenshot](documentation/features/featurediaryform.jpg)
-![screenshot](documentation/features/featurediarylist.jpg)
-![screenshot](documentation/features/featurediaryentry.jpg)
+    - ![screenshot](documentation/features/featurediary.jpg)
+    - ![screenshot](documentation/features/featurediaryform.jpg)
+    - ![screenshot](documentation/features/featurediarylist.jpg)
+    - ![screenshot](documentation/features/featurediaryentry.jpg)
 
 - **Add blogpost if the user is an administrator and Admins Blog**
 
     - If the user is an administrator then he gets an extra choice on the navbar to add a blogpost. He/she can add a blogpost and edit or delete it.
 
-![screenshot](documentation/features/featureblogposts.jpg)
-![screenshot](documentation/features/featureblogcreate.jpg)
-![screenshot](documentation/features/featureblogposteditdelete.jpg)
-![screenshot](documentation/features/featureblogedit.jpg)
+    - ![screenshot](documentation/features/featureblogposts.jpg)
+    - ![screenshot](documentation/features/featureblogcreate.jpg)
+    - ![screenshot](documentation/features/featureblogposteditdelete.jpg)
+    - ![screenshot](documentation/features/featureblogedit.jpg)
 
 - **Sign Out**
 
     - The user can sign out.
 
-![screenshot](documentation/features/featuresignout.jpg)
+    - ![screenshot](documentation/features/featuresignout.jpg)
 
 
 - **Not found**
 
     - If the page the user tries to access then he/she will be informed about it.
 
-![screenshot](documentation/features/featurenotfound.jpg)
+    - ![screenshot](documentation/features/featurenotfound.jpg)
 
 
 - **Error page**
 
     - If the user tries to access a page that he/she is not authorized to access then they will be informed about it.
 
-![screenshot](documentation/features/featureerror.jpg)
+    - ![screenshot](documentation/features/featureerror.jpg)
 
 ### Future Features
 

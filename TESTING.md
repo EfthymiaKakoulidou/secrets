@@ -189,19 +189,21 @@ Defensive programming was manually tested with the below user acceptance testing
 | Secret Edit| | | | | |
 | | Feature is expected to redirect the user to the secrets edit form | Tested the feature by clicking on an avatar | The feature behaved as expected, and it redirected me to the secrets edit form | Test concluded and passed | ![screenshot](documentation/features/featuresecreteditform.jpg) |
 | Secret Delete| | | | | |
-| | Feature is expected to redirect the user back to the feed | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the feed | Test concluded and passed | ![screenshot](documentation/features/featuresecrets.jpg) |
+| | Feature is expected to redirect the user back to the feed | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the feed | Test concluded and passed | |
+| Secret Search| | | | | |
+| | Feature is expected to find the secrets the user asks for | Tested the feature by search a secret | The feature behaved as expected, and found the secret | Test concluded and passed | ![screenshot](documentation/features/featuresearch.jpg) |
 | Comment Create| | | | | |
-| | Feature is expected to create a comment by filling the form and clicking on post | Tested the feature by filling the form and submitting | The feature behaved as expected, and it created a comment| Test concluded and passed | ![screenshot](documentation/features/featurescommentform.jpg) |
+| | Feature is expected to create a comment by filling the form and clicking on post | Tested the feature by filling the form and submitting | The feature behaved as expected, and it created a comment| Test concluded and passed | ![screenshot](documentation/features/featurecommentform.jpg) |
 | Comment Edit| | | | | |
 | | Feature is expected to show me the comment form in place | Tested the feature by clicking on the edit icon| The feature behaved as expected, and showed me the form filled with the previous content | Test concluded and passed | ![screenshot](documentation/features/featurecommenteditform.jpg) |
 | Comment Delete| | | | | |
-| | Feature is expected to remove the comment I made | Tested the feature by clicking on the icon | The feature behaved as expected, and it removed the comment | Test concluded and passed | ![screenshot](documentation/features/featurecommentdelete.jpg) |
+| | Feature is expected to remove the comment I made | Tested the feature by clicking on the icon | The feature behaved as expected, and it removed the comment | Test concluded and passed | |
 | Diary form | | | | | |
 | | Feature is expected to create a diary entry | Tested the feature by filling the form and submit it | The feature behaved as expected, and it created an entr| Test concluded and passed | ![screenshot](documentation/features/featurediary.jpg) |
 | Diary Entry | | | | | |
 | | Feature is expected to redirect the diary entry where the whole content will be revealed| Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to that specific diary entry| Test concluded and passed | ![screenshot](documentation/features/featurediaryentry.jpg) |
 | Message form | | | | | |
-| | Feature is expected to create a thread with the specific person chosen | Tested the feature by filling the form and logging in as the other user to see if the message was there | The feature behaved as expected, and it created a thread to mine and the other person's messages list| Test concluded and passed | ![screenshot](documentation/features/featurereachoutcreate.jpg) |
+| | Feature is expected to create a thread with the specific person chosen | Tested the feature by filling the form and logging in as the other user to see if the message was there | The feature behaved as expected, and it created a thread to mine and the other person's messages list| Test concluded and passed | ![screenshot](documentation/features/featurereachoutform.jpg) |
 | Message | | | | | |
 | | Feature is expected to redirect the user to the thread of this conversation where all the messages between the 2 people appear | Tested the feature by clicking on it | The feature behaved as expected, and showed me the whole conversation| Test concluded and passed | ![screenshot](documentation/features/featurereachout.jpg) |
 | Blog Create | | | | | |
@@ -212,6 +214,11 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Feature is expected to redirect the user to the blog | Tested the feature by clicking on it | The feature behaved as expected, and it redirected me to the blog | Test concluded and passed | ![screenshot](documentation/features/featureblogposts.jpg) |
 | Sign Out | | | | | |
 | | Feature is expected to sign the user out | Tested the feature by clicking on it | The feature behaved as expected, and it signed me out| Test concluded and passed | ![screenshot](documentation/features/featuresignout.jpg) |
+| Forms | | | | | |
+| | Feature is expected to not let the users submit a blank form | Tested the feature by trying to submit a blank form | The feature behaved as expected, and did not let me | Test concluded and passed | ![screenshot](documentation/features/featureblankform1.jpg) |
+| | | | | Test concluded and passed | ![screenshot](documentation/features/featureblankform2.jpg) |
+| | | | | Test concluded and passed | ![screenshot](documentation/features/featureblankform3.jpg) |
+| | | | | Test concluded and passed | ![screenshot](documentation/features/featureblankform4.jpg) |
 
 
 
@@ -220,24 +227,24 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story | Screenshot |
 | --- | --- |
-- As a new site user, I would like signin or signup, so that I can have access to the site. | ![screenshot](documentation/features/featuresignin.jpg) |
-- As a new site user, I would like to be informed about what this site is all about, so that I can decide if it is for me. | ![screenshot](documentation/features/featurehome.jpg) |
-- As a new site user, I would like to check my profile, edit or delete it, so that I can control the information I am giving out. | ![screenshot](documentation/features/featureprofile.jpg) |
-- As a new site user, I would like to check other peoples' profiles, so that I can choose people to interact with. | ![screenshot](documentation/features/featuresecrets.jpg) |
-- As a new site user, I would like to share a secret with users of the site, so that I can unburden myself and feel relief. | ![screenshot](documentation/features/featuresecretcreate.jpg) |
-- As a new site user, I would like to edit and delete my secrets, so that I update information or in case I changed my mind. | ![screenshot](documentation/features/featuresecretedit.jpg) |
-- As a new site user, I would like to check other peoples' secrets, so that I can see if I can find something I can relate to. | ![screenshot](documentation/features/featuresecrets.jpg) |
-- As a new site user, I would like to comment on other peoples posts, so that I can express my opinion. | ![screenshot](documentation/features/featurecomment.jpg) |
-- As a new site user, I would like to edit or delete my comments in case I change my mind. | ![screenshot](documentation/features/featurecommentedit.jpg) |
-- As a new site user, I would like to keep a diary, so that I can document my thoughts and be helped by the process of writing. | ![screenshot](documentation/features/featurediary.jpg) |
-- As a new site user, I would like to message people privately and show support, so that I can connect with others and give and get help. | ![screenshot](documentation/features/featuremessages.jpg) |
-- As a new site user, I would like to read the blog, so that I can get information about topics around keeping secrets and psychology of it. | ![screenshot](documentation/features/featureblog.jpg) |
-- As a new site user, I would like to signout, so that I can feel safe that my information is protected. | ![screenshot](documentation/features/featuresignout.jpg) |
-- As a returning site user, I would like to do all of the above for the same reasons. |  |
-- As a returning site user, I would like to check my messages and see if I have new, so that I can keep in touch with people. | ![screenshot](documentation/features/featuremessages.jpg) |
-- As a returning site user, I would like to check the feed, so that I can be updated with new information. | ![screenshot](documentation/features/featuresecrets.jpg) |
-- As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic. | ![screenshot](documentation/features/featureblogcreate.jpg) |
-- As a site administrator, I should be able to handle all the information that is included in the site, so that I can check the content. | ![screenshot](documentation/features/featurebackend.jpg) |
+| As a new site user, I would like signin or signup, so that I can have access to the site. | ![screenshot](documentation/features/featuresignin.jpg) |
+| As a new site user, I would like to be informed about what this site is all about, so that I can decide if it is for me. | ![screenshot](documentation/features/featurehome.jpg) |
+| As a new site user, I would like to check my profile, edit or delete it, so that I can control the information I am giving out. | ![screenshot](documentation/features/featureprofile.jpg) |
+| As a new site user, I would like to check other peoples' profiles, so that I can choose people to interact with. | ![screenshot](documentation/features/featuresecretslist.jpg) |
+| As a new site user, I would like to share a secret with users of the site, so that I can unburden myself and feel relief. | ![screenshot](documentation/features/featuresecretcreate.jpg) |
+| As a new site user, I would like to edit and delete my secrets, so that I update information or in case I changed my mind. | ![screenshot](documentation/features/featuresecreteditdelete.jpg) |
+| As a new site user, I would like to check other peoples' secrets, so that I can see if I can find something I can relate to. | ![screenshot](documentation/features/featuresecretslist.jpg) |
+| As a new site user, I would like to comment on other peoples posts, so that I can express my opinion. | ![screenshot](documentation/features/featurecommentform.jpg) |
+| As a new site user, I would like to edit or delete my comments in case I change my mind. | ![screenshot](documentation/features/featurecommenteditdelete.jpg) |
+| As a new site user, I would like to keep a diary, so that I can document my thoughts and be helped by the process of writing. | ![screenshot](documentation/features/featurediary.jpg) |
+| As a new site user, I would like to message people privately and show support, so that I can connect with others and give and get help. | ![screenshot](documentation/features/featurereachouts.jpg) |
+| As a new site user, I would like to read the blog, so that I can get information about topics around keeping secrets and psychology of it. | ![screenshot](documentation/features/featureblogposts.jpg) |
+| As a new site user, I would like to signout, so that I can feel safe that my information is protected. | ![screenshot](documentation/features/featuresignout.jpg) |
+| As a returning site user, I would like to do all of the above for the same reasons. |  |
+| As a returning site user, I would like to check my messages and see if I have new, so that I can keep in touch with people. | ![screenshot](documentation/features/featurereachoutcomment.jpg) |
+| As a returning site user, I would like to check the feed, so that I can be updated with new information. | ![screenshot](documentation/features/featuresecretslist.jpg) |
+| As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic. | ![screenshot](documentation/features/featureblogcreate.jpg) |
+
 
 ## Bugs
 
