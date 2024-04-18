@@ -43,29 +43,31 @@ I chose a very clear font for almost all text in the site except when the user i
 
 ### New Site Users
 
-- As a new site user, I would like signin or signup, so that I can have access to the site.
-- As a new site user, I would like to be informed about what this site is all about, so that I can decide if it is for me.
-- As a new site user, I would like to check my profile, edit or delete it, so that I can control the information I am giving out.
-- As a new site user, I would like to check other peoples' profiles, so that I can choose people to interact with.
-- As a new site user, I would like to share a secret with users of the site, so that I can unburden myself and feel relief.
-- As a new site user, I would like to edit and delete my secrets, so that I update information or in case I changed my mind.
-- As a new site user, I would like to check other peoples' secrets, so that I can see if I can find something I can relate to.
-- As a new site user, I would like to comment on other peoples posts, so that I can express my opinion.
-- As a new site user, I would like to edit or delete my comments in case I change my mind.
-- As a new site user, I would like to keep a diary, so that I can document my thoughts and be helped by the process of writing.
-- As a new site user, I would like to message people privately and show support, so that I can connect with others and give and get help.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/4 As a new site user, I would like signin or signup, so that I can have access to the site.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/3 As a new site user, I would like to be informed about what this site is all about, so that I can decide if it is for me.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/26 As a new site user, I would like to check my profile, edit or delete it, so that I can control the information I am giving out.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/24 As a new site user, I would like to check other peoples' profiles, so that I can choose people to interact with.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/9 As a new site user, I would like to share a secret with users of the site, so that I can unburden myself and feel relief.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/18 As a new site user, I would like to edit and delete my secrets, so that I update information or in case I changed my mind.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/25 As a new site user, I would like to check other peoples' secrets, so that I can see if I can catch up on their latest secrets.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/19 As a new site user, I would like to comment on other peoples posts, so that I can express my opinion.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/23 As a new site user, I would like to edit or delete my comments in case I change my mind.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/43 As a new site user, I would like to keep a diary, so that I can document my thoughts, check the progress I have made and be helped by the process of writing.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/39 As a new site user, I would like to message people privately and show support, so that I can connect with others and give and get help.
 - As a new site user, I would like to read the blog, so that I can get information about topics around keeping secrets and psychology of it.
-- As a new site user, I would like to signout, so that I can feel safe that my information is protected.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/7 As a new site user, I would like to signout, so that I can feel safe that my information is protected.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/27 As a new site user, I would like to update my username and password, so that I can control my information.
+
 
 ### Returning Site Users
 
 - As a returning site user, I would like to do all of the above for the same reasons.
-- As a returning site user, I would like to check my messages and see if I have new, so that I can keep in touch with people.
-- As a returning site user, I would like to check the feed, so that I can be updated with new information.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/40 As a returning site user, I would like to check my messages and see if I have new, so that I can keep in touch with people.
+
 
 ### Site Admin
 
-- As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic.
+- https://github.com/EfthymiaKakoulidou/secrets/issues/44 As a site administrator, I should be able to add, edit and delete a blogpost, so that I can keep the users informed about this topic.
 - As a site administrator, I should be able to handle all the information that is included in the site, so that I can check the content.
 
 
@@ -244,7 +246,7 @@ Profiles
 - [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
 
-## Fraeworks Used
+## Frameworks Used
 
 - [![React Bootstrap](https://img.shields.io/badge/ReactBootstrap-grey?logo=reactbootstrap&logoColor=7952B3)](https://react-bootstrap.netlify.app/) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
@@ -281,7 +283,6 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/EfthymiaKakoulidou/secrets/issues) [![GitHub issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets/issues)
 
-    ![screenshot](documentation/openissues.jpg)
 
 - [Closed Issues](https://github.com/EfthymiaKakoulidou/secrets/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets/issues?q=is%3Aissue+is%3Aclosed)
 
