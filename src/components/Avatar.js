@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "../styles/Avatar.module.css";
+import React from 'react'
+import styles from '../styles/Avatar.module.css'
 
 const Avatar = ({ src, height = 45, text }) => {
   return (
@@ -9,11 +9,11 @@ const Avatar = ({ src, height = 45, text }) => {
         src={src}
         height={height}
         width={height}
-        alt="avatar"
+        alt='avatar'
       />
       {text}
     </span>
-  );
-};
+  )
+}
 
-export default Avatar;
+export default Avatar

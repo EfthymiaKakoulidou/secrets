@@ -1,48 +1,49 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable camelcase */
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+import Form from 'react-bootstrap/Form'
+import InputGroup from 'react-bootstrap/InputGroup'
 
-import styles from "../../styles/CommentCreateEditForm.module.css";
-import Avatar from "../../components/Avatar";
-import { axiosRes } from "../../api/axiosDefaults";
+import styles from '../../styles/CommentCreateEditForm.module.css'
+import Avatar from '../../components/Avatar'
+import { axiosRes } from '../../api/axiosDefaults'
 
-function CommentCreateForm(props) {
-  const { seecret, setSeecret, setComments, profileImage, profile_id } = props;
-  const [content, setContent] = useState("");
+function CommentCreateForm (props) {
+  const { seecret, setSeecret, setComments, profileImage, profile_id } = props
+  const [content, setContent] = useState('')
 
   const handleChange = (event) => {
-    setContent(event.target.value);
-  };
+    setContent(event.target.value)
+  }
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
-      const { data } = await axiosRes.post("/comments/", {
+      const { data } = await axiosRes.post('/comments/', {
         content,
-        seecret,
-      });
+        seecret
+      })
       setComments((prevComments) => ({
         ...prevComments,
-        results: [data, ...prevComments.results],
-      }));
+        results: [data, ...prevComments.results]
+      }))
       setSeecret((prevSeecret) => ({
         results: [
           {
             ...prevSeecret.results[0],
-            comments_count: prevSeecret.results[0].comments_count + 1,
-          },
-        ],
-      }));
-      setContent("");
+            comments_count: prevSeecret.results[0].comments_count + 1
+          }
+        ]
+      }))
+      setContent('')
     } catch (err) {
-     
+
     }
-  };
+  }
 
   return (
-    <Form className="mt-2 px-5" onSubmit={handleSubmit}>
+    <Form className='mt-2 px-5' onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
@@ -50,8 +51,8 @@ function CommentCreateForm(props) {
           </Link>
           <Form.Control
             className={styles.Form}
-            placeholder="my comment..."
-            as="textarea"
+            placeholder='my comment...'
+            as='textarea'
             value={content}
             onChange={handleChange}
             rows={2}
@@ -61,12 +62,12 @@ function CommentCreateForm(props) {
       <button
         className={`${styles.Button} btn d-block ml-auto`}
         disabled={!content.trim()}
-        type="submit"
+        type='submit'
       >
         post
       </button>
     </Form>
-  );
+  )
 }
 
-export default CommentCreateForm;
+export default CommentCreateForm

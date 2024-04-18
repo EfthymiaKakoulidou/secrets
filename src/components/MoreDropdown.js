@@ -1,74 +1,74 @@
-import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-import styles from "../styles/MoreDropdown.module.css";
-import { useHistory } from "react-router";
+import React from 'react'
+import Dropdown from 'react-bootstrap/Dropdown'
+import styles from '../styles/MoreDropdown.module.css'
+import { useHistory } from 'react-router'
 
 const ThreeDots = React.forwardRef(({ onClick }, ref) => (
   <i
-    className="fas fa-ellipsis-v"
+    className='fas fa-ellipsis-v'
     ref={ref}
     onClick={(e) => {
-      e.preventDefault();
-      onClick(e);
+      e.preventDefault()
+      onClick(e)
     }}
   />
-));
+))
 
 export const MoreDropdown = ({ handleEdit, handleDelete }) => {
   return (
-    <Dropdown className="ml-auto" drop="left">
+    <Dropdown className='ml-auto' drop='left'>
       <Dropdown.Toggle as={ThreeDots} />
 
       <Dropdown.Menu
-        className="text-center"
-        popperConfig={{ strategy: "fixed" }}
+        className='text-center'
+        popperConfig={{ strategy: 'fixed' }}
       >
         <Dropdown.Item
           className={styles.DropdownItem}
           onClick={handleEdit}
-          aria-label="edit"
+          aria-label='edit'
         >
-          <i className="fas fa-edit" style={{ color: 'black' }} />
+          <i className='fas fa-edit' style={{ color: 'black' }} />
         </Dropdown.Item>
         <Dropdown.Item
           className={styles.DropdownItem}
           onClick={handleDelete}
-          aria-label="delete"
+          aria-label='delete'
         >
-          <i className="fas fa-trash-alt" style={{ color: 'black' }} />
+          <i className='fas fa-trash-alt' style={{ color: 'black' }} />
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
-  );
-};
+  )
+}
 
-export function ProfileEditDropdown({ id }) {
-  const history = useHistory();
+export function ProfileEditDropdown ({ id }) {
+  const history = useHistory()
   return (
-    <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop="left">
+    <Dropdown className={`ml-auto px-3 ${styles.Absolute}`} drop='left'>
       <Dropdown.Toggle as={ThreeDots} />
       <Dropdown.Menu>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit`)}
-          aria-label="edit-profile"
+          aria-label='edit-profile'
         >
-          <i className="fas fa-edit" style={{ color: 'black' }} /> edit profile
+          <i className='fas fa-edit' style={{ color: 'black' }} /> edit profile
         </Dropdown.Item>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/username`)}
-          aria-label="edit-username"
+          aria-label='edit-username'
         >
-          <i className="far fa-id-card" style={{ color: 'black' }} />
+          <i className='far fa-id-card' style={{ color: 'black' }} />
           change username
         </Dropdown.Item>
         <Dropdown.Item
           onClick={() => history.push(`/profiles/${id}/edit/password`)}
-          aria-label="edit-password"
+          aria-label='edit-password'
         >
-          <i className="fas fa-key" style={{ color: 'black' }}/>
+          <i className='fas fa-key' style={{ color: 'black' }} />
           change password
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
-  );
+  )
 }

@@ -1,11 +1,12 @@
-import React from "react";
-import styles from "../../styles/Post.module.css";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { axiosRes } from "../../api/axiosDefaults";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { MoreDropdown } from "../../components/MoreDropdown";
+/* eslint-disable camelcase */
+import React from 'react'
+import styles from '../../styles/Post.module.css'
+import { useCurrentUser } from '../../contexts/CurrentUserContext'
+import { Card, Media } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { axiosRes } from '../../api/axiosDefaults'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
+import { MoreDropdown } from '../../components/MoreDropdown'
 
 const Blog = (props) => {
   const {
@@ -15,33 +16,32 @@ const Blog = (props) => {
     content,
     image,
     updated_at,
-    blogPage,
-  } = props;
+    blogPage
+  } = props
 
-  const currentUser = useCurrentUser();
-  const is_owner = currentUser?.username === owner;
-  const history = useHistory();
+  const currentUser = useCurrentUser()
+  const is_owner = currentUser?.username === owner
+  const history = useHistory()
 
   const handleEdit = () => {
-    history.push(`/blogpost/${id}/edit`);
-  };
+    history.push(`/blogpost/${id}/edit`)
+  }
 
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/blogpost/${id}`);
-      history.push(`/blogposts`);
+      await axiosRes.delete(`/blogpost/${id}`)
+      history.push('/blogposts')
     } catch (err) {
-    
-    }
-  };
 
+    }
+  }
 
   return (
     <Card className={styles.Post}>
       <Card.Body>
-        <Media className="align-items-center justify-content-between">
-         
-          <div className="d-flex align-items-center">
+        <Media className='align-items-center justify-content-between'>
+
+          <div className='d-flex align-items-center'>
             <span>{updated_at}</span>
             {is_owner && blogPage && (
               <MoreDropdown
@@ -53,16 +53,16 @@ const Blog = (props) => {
         </Media>
       </Card.Body>
       <Card.Body>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
+        {title && <Card.Title className='text-center'>{title}</Card.Title>}
         {content && <Card.Text>{content}</Card.Text>}
-        
+
       </Card.Body>
       <Link to={`/blogpost/${id}`}>
         <Card.Img src={image} alt={title} />
       </Link>
-      
-    </Card>
-  );
-};
 
-export default Blog;
+    </Card>
+  )
+}
+
+export default Blog

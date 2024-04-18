@@ -1,47 +1,48 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable camelcase */
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import Form from "react-bootstrap/Form";
-import InputGroup from "react-bootstrap/InputGroup";
+import Form from 'react-bootstrap/Form'
+import InputGroup from 'react-bootstrap/InputGroup'
 
-import styles from "../../styles/CommentCreateEditForm.module.css";
-import Avatar from "../../components/Avatar";
-import { axiosRes } from "../../api/axiosDefaults";
+import styles from '../../styles/CommentCreateEditForm.module.css'
+import Avatar from '../../components/Avatar'
+import { axiosRes } from '../../api/axiosDefaults'
 
-function ReachoutCommentsCreateForm(props) {
-  const { setReach_out, setReach_out_comments, profileImage, profile_id, reach_out } = props;
-  const [reach_out_comment_content, setReach_out_comment_content] = useState("");
+function ReachoutCommentsCreateForm (props) {
+  const { setReach_out, setReach_out_comments, profileImage, profile_id, reach_out } = props
+  const [reach_out_comment_content, setReach_out_comment_content] = useState('')
 
   const handleChange = (event) => {
-    setReach_out_comment_content(event.target.value);
-  };
+    setReach_out_comment_content(event.target.value)
+  }
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
-      const { data } = await axiosRes.post("/reach_out_comments/", {
+      const { data } = await axiosRes.post('/reach_out_comments/', {
         reach_out_comment_content,
-        reach_out,
-      });
+        reach_out
+      })
       setReach_out_comments((prevReach_out_comments) => ({
         ...prevReach_out_comments,
-        results: [data, ...prevReach_out_comments.results],
-      }));
+        results: [data, ...prevReach_out_comments.results]
+      }))
       setReach_out((prevReach_out) => ({
         results: [
           {
             ...prevReach_out.results[0],
-            comments_count: prevReach_out.results[0].reach_out_comments_count + 1,
-          },
-        ],
-      }));
-      setReach_out_comment_content("");
+            comments_count: prevReach_out.results[0].reach_out_comments_count + 1
+          }
+        ]
+      }))
+      setReach_out_comment_content('')
     } catch (err) {
-      
+
     }
-  };
+  }
   return (
-    <Form className="mt-2 px-5" onSubmit={handleSubmit}>
+    <Form className='mt-2 px-5' onSubmit={handleSubmit}>
       <Form.Group>
         <InputGroup>
           <Link to={`/profiles/${profile_id}`}>
@@ -49,8 +50,8 @@ function ReachoutCommentsCreateForm(props) {
           </Link>
           <Form.Control
             className={styles.Form}
-            placeholder="Reply..."
-            as="textarea"
+            placeholder='Reply...'
+            as='textarea'
             value={reach_out_comment_content}
             onChange={handleChange}
             rows={2}
@@ -60,12 +61,12 @@ function ReachoutCommentsCreateForm(props) {
       <button
         className={`${styles.Button} btn d-block ml-auto`}
         disabled={!reach_out_comment_content.trim()}
-        type="submit"
+        type='submit'
       >
         post
       </button>
     </Form>
-  );
+  )
 }
 
-export default ReachoutCommentsCreateForm;
+export default ReachoutCommentsCreateForm
