@@ -26,11 +26,11 @@ const Reach_out_comment = (props) => {
           <Avatar src={profile_image} />
         </Link>
 
-        <Media.Body className='align-self-center ml-2'>
+        <Media.Body className='px-5 align-self-center ml-2'>
           <span className={styles.Owner}>{owner}</span>
           <span className={styles.Date}>{updated_at}</span>
         </Media.Body>
-        <p>{reach_out_comment_content}</p>
+        <p className='px-5'>{reach_out_comment_content}</p>
       </Media>
     </>
   )
