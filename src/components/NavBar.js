@@ -49,6 +49,8 @@ const NavBar = ({ mobile }) => {
       <NavLink
         className={styles.NavLink}
         to={`/profiles/${currentUser?.profile_id}`}
+        activeClassName={styles.Active}
+        exact
       >
         <i class='fa-solid fa-user' />{currentUser?.username}
 
