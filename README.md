@@ -277,7 +277,7 @@ Through it, user stories, issues, and milestone tasks were planned, then tracked
 
 ### GitHub Issues
 
-[GitHub Issues](https://github.com/EfthymiaKakoulidou/secrets/issues) served as an another Agile tool.
+[GitHub Issues](https://github.com/EfthymiaKakoulidou/secrets/issues) served as another Agile tool.
 
 It also helped with milestone iterations on a weekly basis.
 
