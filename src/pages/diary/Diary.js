@@ -9,8 +9,8 @@ const Diary = ({ id, owner, title, content, updated_at, diaryPage, truncateConte
 
   return (
     <Card className={styles.Diary}>
-      <Card.Body>
-        <Media className='align-items-center justify-content-between'>
+      <Card.Body className='px-5'>
+        <Media className='align-items-center justify-content-between px-5'>
           <div className='d-flex align-items-center'>
             <span className={styles.CustomFont}>{updated_at}</span>
           </div>
