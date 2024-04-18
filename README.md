@@ -271,11 +271,11 @@ It also helped with milestone iterations on a weekly basis.
 
 - [Open Issues](https://github.com/EfthymiaKakoulidou/secrets/issues) [![GitHub issues](https://img.shields.io/github/issues/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets/issues)
 
-    ![screenshot](documentation/gh-issues-open.jpg)
+    ![screenshot](documentation/openissues.jpg)
 
 - [Closed Issues](https://github.com/EfthymiaKakoulidou/secrets/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.jpg)
+    ![screenshot](documentation/closedissues.jpg)
 
 ### MoSCoW Prioritization
 
