@@ -5,13 +5,16 @@
 [![GitHub repo size](https://img.shields.io/github/repo-size/EfthymiaKakoulidou/secrets)](https://github.com/EfthymiaKakoulidou/secrets)
 
 
-Sometimes it is easier to tell your secrets to the world than to people you know. Sometimes you feel the need to just get stuff out of your chest. Sometimes you need to know that you are not alone and that there are other people with similar secrets going through the the same stuff. Sometimes it helps to just write stuff down. 
-The 'Secrets' app is a place where people can share their secrets and get support from other users in the form of comments or private messages. The users can read other peoples' secrets and the comments they got so that they can relate to them and feel less alone. The Diary is a place where the user can write his/hers thoughts and secrets and nobody else has access to it.
+- Sometimes it is easier to tell your secrets to the world than to people you know. Sometimes you feel the need to just get stuff off your chest. Sometimes you need to know that you are not alone and that there are other people with similar secrets going through the the same stuff. Sometimes it helps to just write stuff down. 
+- The 'Secrets' app is a place where people can share their secrets and get support from other users in the form of comments or private messages. The users can read other peoples' secrets and the comments they got, so that they can relate to them and feel less alone. The Diary is a place where the user can write his/hers thoughts and secrets and nobody else has access to it.
 
 
 ![screenshot](documentation/mockup.jpg)
 
 source: [amiresponsive](https://ui.dev/amiresponsive?url=https://secrets-276f7be740ae.herokuapp.com)
+
+
+The live deployed application can be found deployed on [Heroku](https://secrets-276f7be740ae.herokuapp.com).
 
 ## UX
 
@@ -70,7 +73,7 @@ I chose a very clear font for almost all text in the site except when the user i
 
 
 To follow best practice, wireframes were developed.
-These wireframes were made at the arly stages of the projects so there are some changes made along the way.
+These wireframes were made at the early stages of the projects so there are some changes made along the way.
 They provide the layoutstructure that was used for the site.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
@@ -128,7 +131,7 @@ Profiles
 
 - **Profile**
 
-    - The username appears next. It is an andication that the user is logged in and a link to profile page. From this page the user can edit the profile change the username and the password.
+    - The username appears next. It is an indication that the user is logged in and a link to profile page. From this page the user can edit the profile, change the username and the password.
 
     - ![screenshot](documentation/features/featureprofile.jpg)
     - ![screenshot](documentation/features/featureprofileeditchange.jpg)

@@ -7,11 +7,11 @@
 
 ### HTML
 
-I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate  my HTML files.
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate  my HTML files. I validated the code by deirect input from the page source.
 
 | Directory | File | Screenshot | Links |
 | --- | --- | --- | --- |
-| public | index.html | ![screenshot](documentation/validation/htmlbyinput.jpg) | https://validator.w3.org/nu/?doc=https%3A%2F%2Fsecrets-276f7be740ae.herokuapp.com%2F |
+| public | index.html | ![screenshot](documentation/validation/htmlbyinput.jpg) | |
 
 
 ### CSS
@@ -209,7 +209,7 @@ Any remaining open issues can be tracked [here](https://github.com/EfthymiaKakou
 ## Unfixed Bugs
 
 
-- I have an unfixed bug related to the profiles_id. The link to the profile in the Post component leads to the profile with the previous id than the one in the link. I am suspecting that this happened when at some point I tried to import data from the local environment of my api to heroku, or when I deleted users from the backend. I have not found how it was caused and the rest of the app works fine it is just the link in the Post that has this problem. A quick fix to this was to add 1 to the url that user is requesting. Even though this is not really a solution it fixed the problem for now. Further debugging in the future is going to be needed.
+- I have an unfixed bug related to the profiles_id. The link to the profile in the Post component leads to the profile with the previous id than the one in the link. I am suspecting that this happened when at some point I tried to import data from the local environment of my api to heroku, or when I deleted users from the backend. I have not found how it was caused and the rest of the app works fine. It is just the link in the Post that has this problem. A quick fix to this was to add 1 to the url that user is requesting. Even though this is not really a solution it fixed the problem for now. Further debugging in the future is going to be needed.
 
     ![screenshot](documentation/bugs/bug5.jpg)
 
