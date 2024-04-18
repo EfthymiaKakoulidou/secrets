@@ -17,8 +17,8 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://secrets-276f7be
 
   - The choice of the UX design derives from the charected of the site. Secrets are something that is hidden in the first place and that is why only authenticated users can view the content of the site. 
   - Easy navigation was also goal and thats why the navbar items are descriptive to what they include. The "Share a secret" item is a separate link making even more easy to upload your secrets. The deault picture that is used when the user does not upload his/her owns pictures makes it also very clear that now the secret is revealed. 
-  - The diary section is the only one that uses a different font. This font is like handwritting making it more personal and inticating that this part of the site is only accessible to the specific user. Diary has no CRUD functionality in the same way that you wouldn't go back and change or delete your actual diary. Entries belong to history.
-  - The messages section is structured like the ones we all been used to. The ordering of the messages and the fact that there is no CRUD functionality here either is intentinal to make it more like the social apps we are used to.
+  - The diary section is the only one that uses a different font. This font is like handwritting making it more personal and indicating that this part of the site is only accessible to the specific user. Diary has no CRUD functionality in the same way that you wouldn't go back and change or delete your actual diary. Entries belong to history.
+  - The messages section is structured like the ones we all been used to. The ordering of the messages and the fact that there is no CRUD functionality here either is intentional to make it more like the social apps we are used to.
 
 ### Colour Scheme
 
@@ -128,9 +128,12 @@ Profiles
 
 - **Profile**
 
-    - The username appears next. It is an andication that the user is logged in and a link to profile page.
+    - The username appears next. It is an andication that the user is logged in and a link to profile page. From this page the user can edit the profile change the username and the password.
 
     - ![screenshot](documentation/features/featureprofile.jpg)
+    - ![screenshot](documentation/features/featureprofileeditchange.jpg)
+    - ![screenshot](documentation/features/featureusername.jpg)
+    - ![screenshot](documentation/features/featurepassword.jpg)
 
 - **Profile Page**
 
@@ -214,6 +217,10 @@ Profiles
     - 'Secrets' goal is not popularity so the follow function is not relevant here. The users are connected to each other through comments, hugs and 'reach out' which works like private messages. Maybe in the future some feature could be added to connect profiles between them so that a community can be created.
 - Categories
     - It would also be very helpful to categorize the secrets so that the users can choose which parts of the contents they are interested in.
+- Notifications
+    - Notifications could be implemented in the future to inform the user when he/she has a new message.
+- Message icon
+    - In the future the message icon at the bottom of each secret could lead to a form which would have the reach-out-to field already filled with the that profile's username.
 
 
 ## Tools & Technologies Used
